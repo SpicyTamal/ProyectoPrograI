@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 
 namespace ProyectoProgra
 {
-    public partial class Form1: Form
+    public partial class frm_Login: Form
     {
-        public Form1()
+        public frm_Login()
         {
             InitializeComponent();
         }
@@ -34,19 +34,19 @@ namespace ProyectoProgra
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
+            if (txt_Usuario.Text == "USUARIO")
             {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.DimGray;
+                txt_Usuario.Text = "";
+                txt_Usuario.ForeColor = Color.DimGray;
             }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
+            if (txt_Usuario.Text == "")
             {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.DimGray;
+                txt_Usuario.Text = "USUARIO";
+                txt_Usuario.ForeColor = Color.DimGray;
             }
         }
 
@@ -57,22 +57,22 @@ namespace ProyectoProgra
 
         private void txtContrasena_Enter(object sender, EventArgs e)
         {
-            if (txtContrasena.Text == "CONTRASEÑA")
+            if (txt_Contrasena.Text == "CONTRASEÑA")
             {
-                txtContrasena.Text = "";
-                txtContrasena.ForeColor = Color.DimGray;
-                txtContrasena.UseSystemPasswordChar = true;
+                txt_Contrasena.Text = "";
+                txt_Contrasena.ForeColor = Color.DimGray;
+                txt_Contrasena.UseSystemPasswordChar = true;
             }
 
         }
 
         private void txtContrasena_Leave(object sender, EventArgs e)
         {
-            if (txtContrasena.Text == "")
+            if (txt_Contrasena.Text == "")
             {
-                txtContrasena.Text = "CONTRASEÑA";
-                txtContrasena.ForeColor = Color.DimGray;
-                txtContrasena.UseSystemPasswordChar = false;
+                txt_Contrasena.Text = "CONTRASEÑA";
+                txt_Contrasena.ForeColor = Color.DimGray;
+                txt_Contrasena.UseSystemPasswordChar = false;
             }
         }
 
@@ -86,6 +86,11 @@ namespace ProyectoProgra
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
