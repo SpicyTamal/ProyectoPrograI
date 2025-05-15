@@ -1,5 +1,4 @@
-﻿using ProyectoProgra;
-using ProyectoPrograI_C_.Presentacion;
+﻿using ProyectoPrograI_C_.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace ProyectoPrograI_C_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Usuarios());
+            Application.Run(new frm_Habitaciones());
         }
     }
 }
