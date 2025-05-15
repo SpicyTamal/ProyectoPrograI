@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrograI_C_.Datos
 {
-    class Class1
+    class CD_Conexion
     {
     }
 }
