@@ -36,8 +36,8 @@
             this.btn_Acceder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDisminuir = new FontAwesome.Sharp.IconButton();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.btn_Disminuir = new FontAwesome.Sharp.IconButton();
+            this.btn_Cerrar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 406);
             this.panel1.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 244;
             this.iconPictureBox3.Location = new System.Drawing.Point(36, 87);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
             this.iconPictureBox3.TabIndex = 10;
@@ -81,7 +81,7 @@
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Usuario.Location = new System.Drawing.Point(388, 87);
-            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Usuario.Name = "txt_Usuario";
             this.txt_Usuario.Size = new System.Drawing.Size(600, 19);
             this.txt_Usuario.TabIndex = 1;
@@ -100,7 +100,7 @@
             this.txt_Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Contrasena.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Contrasena.Location = new System.Drawing.Point(388, 146);
-            this.txt_Contrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Contrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Contrasena.Name = "txt_Contrasena";
             this.txt_Contrasena.Size = new System.Drawing.Size(600, 19);
             this.txt_Contrasena.TabIndex = 2;
@@ -136,7 +136,7 @@
             this.btn_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Acceder.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btn_Acceder.Location = new System.Drawing.Point(388, 318);
-            this.btn_Acceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Acceder.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Acceder.Name = "btn_Acceder";
             this.btn_Acceder.Size = new System.Drawing.Size(600, 49);
             this.btn_Acceder.TabIndex = 3;
@@ -150,7 +150,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Location = new System.Drawing.Point(388, 123);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 2);
             this.panel2.TabIndex = 5;
@@ -162,51 +162,51 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Location = new System.Drawing.Point(388, 182);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 2);
             this.panel3.TabIndex = 6;
             // 
-            // btnDisminuir
+            // btn_Disminuir
             // 
-            this.btnDisminuir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_Disminuir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisminuir.BackColor = System.Drawing.Color.Transparent;
-            this.btnDisminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisminuir.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnDisminuir.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnDisminuir.IconColor = System.Drawing.SystemColors.GrayText;
-            this.btnDisminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDisminuir.IconSize = 25;
-            this.btnDisminuir.Location = new System.Drawing.Point(963, 13);
-            this.btnDisminuir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDisminuir.Name = "btnDisminuir";
-            this.btnDisminuir.Size = new System.Drawing.Size(28, 26);
-            this.btnDisminuir.TabIndex = 10;
-            this.btnDisminuir.UseVisualStyleBackColor = false;
-            this.btnDisminuir.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btn_Disminuir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Disminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Disminuir.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_Disminuir.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btn_Disminuir.IconColor = System.Drawing.SystemColors.GrayText;
+            this.btn_Disminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Disminuir.IconSize = 25;
+            this.btn_Disminuir.Location = new System.Drawing.Point(963, 13);
+            this.btn_Disminuir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Disminuir.Name = "btn_Disminuir";
+            this.btn_Disminuir.Size = new System.Drawing.Size(28, 26);
+            this.btn_Disminuir.TabIndex = 10;
+            this.btn_Disminuir.UseVisualStyleBackColor = false;
+            this.btn_Disminuir.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnCerrar
+            // btn_Cerrar
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnCerrar.IconColor = System.Drawing.SystemColors.GrayText;
-            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCerrar.IconSize = 25;
-            this.btnCerrar.Location = new System.Drawing.Point(999, 13);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(28, 27);
-            this.btnCerrar.TabIndex = 11;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btn_Cerrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cerrar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_Cerrar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btn_Cerrar.IconColor = System.Drawing.SystemColors.GrayText;
+            this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btn_Cerrar.IconSize = 25;
+            this.btn_Cerrar.Location = new System.Drawing.Point(999, 13);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(28, 27);
+            this.btn_Cerrar.TabIndex = 11;
+            this.btn_Cerrar.UseVisualStyleBackColor = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frm_Login
             // 
@@ -214,8 +214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1040, 406);
-            this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnDisminuir);
+            this.Controls.Add(this.btn_Cerrar);
+            this.Controls.Add(this.btn_Disminuir);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_Acceder);
@@ -224,7 +224,7 @@
             this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,8 +247,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private FontAwesome.Sharp.IconButton btnDisminuir;
-        private FontAwesome.Sharp.IconButton btnCerrar;
+        private FontAwesome.Sharp.IconButton btn_Disminuir;
+        private FontAwesome.Sharp.IconButton btn_Cerrar;
     }
 }
 
