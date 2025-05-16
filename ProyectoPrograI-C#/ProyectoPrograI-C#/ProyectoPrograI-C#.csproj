@@ -54,10 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CD_Conexion.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Datos\Class1.cs" />
-=======
->>>>>>> 844709ac43a51c5a3066b173340d9d5a37969491
+
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,13 +78,13 @@
     <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="Presentacion\frm_Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frm_Pacientes.Designer.cs">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Presentacion\frm_Medicamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,7 +96,7 @@
     </Compile>
     <Compile Include="Presentacion\frm_Usuarios.Designer.cs">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
->>>>>>> 844709ac43a51c5a3066b173340d9d5a37969491
+
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,10 +112,9 @@
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
       <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,7 +123,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
->>>>>>> 844709ac43a51c5a3066b173340d9d5a37969491
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
