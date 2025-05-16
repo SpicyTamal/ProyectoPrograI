@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoPrograI_C_.Datos
+namespace ProyectoPrograI_C_.Logica
 {
-    class Class1
+    class CL_Tratamientos
     {
     }
 }

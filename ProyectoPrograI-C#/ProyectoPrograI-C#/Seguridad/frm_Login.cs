@@ -11,16 +11,16 @@ using System.Runtime.InteropServices;
 
 namespace ProyectoProgra
 {
-    public partial class frm_Login: Form
+    public partial class frm_Login : Form
     {
         public frm_Login()
         {
             InitializeComponent();
         }
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
-            private extern static void ReleaseCapture();
-            [DllImport("user32.Dll", EntryPoint = "SendMessage")]
-            private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
