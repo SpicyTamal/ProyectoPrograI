@@ -17,11 +17,8 @@ namespace ProyectoPrograI_C_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
+
             Application.Run(new frm_Habitaciones());
-=======
-            Application.Run(new Form1());
->>>>>>> a50aac859e507059f7f6fbbfe764b87206d744e5
         }
     }
 }

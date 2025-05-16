@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoPrograI_C_.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,18 @@ using System.Windows.Forms;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
-    public partial class frm_Habitaciones : Form
+    public partial class frm_Pacientes : Form
     {
-        public frm_Habitaciones()
+        CD_Conexion conectar = new CD_Conexion();
+
+        public frm_Pacientes()
         {
             InitializeComponent();
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
+        private void btn_Conectar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            conectar.MtdAbrirConexion();
         }
     }
 }
