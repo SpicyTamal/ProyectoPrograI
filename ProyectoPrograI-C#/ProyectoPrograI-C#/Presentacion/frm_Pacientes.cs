@@ -13,7 +13,7 @@ namespace ProyectoPrograI_C_.Presentacion
 {
     public partial class frm_Pacientes : Form
     {
-        CD_Conexion conectar = new CD_Conexion();
+        CD_Conexion1 conectar = new CD_Conexion1();
 
         public frm_Pacientes()
         {

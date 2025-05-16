@@ -9,7 +9,7 @@ using System.Data;
 
 namespace ProyectoPrograI_C_.Datos
 {
-    internal class CD_Conexion
+    internal class CD_Conexion1
     {
         SqlConnection db_Conexion = new SqlConnection("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab9111_hospital;User Id=db_ab9111_hospital_admin;Password=Alinktothepast1");
 
