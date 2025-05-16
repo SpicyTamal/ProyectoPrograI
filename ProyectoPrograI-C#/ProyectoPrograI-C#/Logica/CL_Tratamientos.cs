@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoPrograI_C_.Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ProyectoPrograI_C_.Logica
 {
     class CL_Tratamientos
     {
+        CD_Conexion1 cd_conexion = new CD_Conexion1();
         public double mtd_Costo_Tratamiento(string Tipo_Tratamiento)
         {
             if (Tipo_Tratamiento == "Consulta") return 150;

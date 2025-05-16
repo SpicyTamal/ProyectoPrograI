@@ -8,15 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Datos;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
     public partial class frm_Medicamentos: Form
     {
+        CD_Medicamentos cd_medicamentos = new CD_Medicamentos();
+        CL_Medicamentos cl_medicamentos = new CL_Medicamentos();
+
         public frm_Medicamentos()
         {
             InitializeComponent();
         }
+
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.Dll", EntryPoint = "SendMessage")]
