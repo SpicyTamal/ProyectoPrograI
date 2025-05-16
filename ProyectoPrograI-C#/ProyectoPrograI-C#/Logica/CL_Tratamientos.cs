@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrograI_C_.Logica
 {
-    class Class1
+    class CL_Tratamientos
     {
     }
 }

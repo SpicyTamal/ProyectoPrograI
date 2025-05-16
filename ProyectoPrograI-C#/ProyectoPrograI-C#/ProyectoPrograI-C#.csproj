@@ -53,26 +53,33 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Class1.cs" />
+    <Compile Include="Datos\CD_Conexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logica\Class1.cs" />
+    <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
-    <Compile Include="Presentacion\Form1.cs">
+    <Compile Include="Logica\CL_Medicamentos.cs" />
+    <Compile Include="Presentacion\frm_Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
+      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Habitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Medicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Medicamentos.Designer.cs">
+      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Usuarios.cs">
       <SubType>Form</SubType>
@@ -93,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
+      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Tratamientos.resx">
+      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
