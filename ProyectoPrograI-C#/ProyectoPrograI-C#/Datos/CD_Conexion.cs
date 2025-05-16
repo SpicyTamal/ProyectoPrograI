@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 using System.Data;
 
@@ -30,5 +31,12 @@ namespace ProyectoPrograI_C_.Datos
             return db_Conexion;
         }
 
+=======
+
+namespace ProyectoPrograI_C_.Datos
+{
+    class CD_Conexion
+    {
+>>>>>>> 844709ac43a51c5a3066b173340d9d5a37969491
     }
 }
