@@ -42,6 +42,10 @@
             this.dgv_Medicamentos = new System.Windows.Forms.DataGridView();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
+            this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
+            this.btn_Editar = new FontAwesome.Sharp.IconButton();
+            this.btn_Agregar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -123,6 +127,7 @@
             this.cbx_Tipo_Medicamento.Name = "cbx_Tipo_Medicamento";
             this.cbx_Tipo_Medicamento.Size = new System.Drawing.Size(399, 24);
             this.cbx_Tipo_Medicamento.TabIndex = 21;
+            this.cbx_Tipo_Medicamento.SelectedIndexChanged += new System.EventHandler(this.cbx_Tipo_Medicamento_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -234,13 +239,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Medicamentos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgv_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Medicamentos.Location = new System.Drawing.Point(346, 239);
+            this.dgv_Medicamentos.Location = new System.Drawing.Point(346, 268);
             this.dgv_Medicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Medicamentos.Name = "dgv_Medicamentos";
             this.dgv_Medicamentos.RowHeadersWidth = 51;
             this.dgv_Medicamentos.RowTemplate.Height = 24;
-            this.dgv_Medicamentos.Size = new System.Drawing.Size(682, 250);
+            this.dgv_Medicamentos.Size = new System.Drawing.Size(682, 365);
             this.dgv_Medicamentos.TabIndex = 29;
+            this.dgv_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Medicamentos_CellClick);
             // 
             // iconPictureBox3
             // 
@@ -250,7 +256,7 @@
             this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 244;
-            this.iconPictureBox3.Location = new System.Drawing.Point(37, 125);
+            this.iconPictureBox3.Location = new System.Drawing.Point(28, 239);
             this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
@@ -267,16 +273,81 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 500);
+            this.panel1.Size = new System.Drawing.Size(333, 700);
             this.panel1.TabIndex = 12;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
+            this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Eliminar.IconSize = 35;
+            this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Eliminar.Location = new System.Drawing.Point(926, 649);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Eliminar.TabIndex = 30;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
+            this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cancelar.Location = new System.Drawing.Point(926, 224);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Cancelar.TabIndex = 31;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btn_Editar.IconColor = System.Drawing.Color.Black;
+            this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Editar.Location = new System.Drawing.Point(818, 224);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Editar.TabIndex = 32;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btn_Agregar.IconColor = System.Drawing.Color.Black;
+            this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Agregar.Location = new System.Drawing.Point(710, 224);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Agregar.TabIndex = 33;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // frm_Medicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1040, 500);
+            this.ClientSize = new System.Drawing.Size(1040, 700);
+            this.Controls.Add(this.btn_Agregar);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dgv_Medicamentos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbx_Estado_Medicamentos);
@@ -321,5 +392,9 @@
         private System.Windows.Forms.DataGridView dgv_Medicamentos;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btn_Eliminar;
+        private FontAwesome.Sharp.IconButton btn_Cancelar;
+        private FontAwesome.Sharp.IconButton btn_Editar;
+        private FontAwesome.Sharp.IconButton btn_Agregar;
     }
 }

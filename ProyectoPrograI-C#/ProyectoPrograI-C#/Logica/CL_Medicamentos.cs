@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrograI_C_.Logica
 {
-    class CL_Medicamentos
+    public class CL_Medicamentos
     {
+        public DateTime MtdFechaHoy()
+        {
+            return DateTime.Now;
+        }
+
         public double mtd_Costo_Medicamentos(string Tipo_Medicamento)
         {
             if (Tipo_Medicamento == "Jarabe") return 150;

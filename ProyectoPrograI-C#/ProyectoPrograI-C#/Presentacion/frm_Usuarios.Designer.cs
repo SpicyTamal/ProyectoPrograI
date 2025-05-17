@@ -40,6 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
+            this.btn_Agregar = new FontAwesome.Sharp.IconButton();
+            this.btn_Editar = new FontAwesome.Sharp.IconButton();
+            this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
@@ -68,9 +72,9 @@
             this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 500);
+            this.panel1.Size = new System.Drawing.Size(333, 700);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -83,8 +87,8 @@
             this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 244;
-            this.iconPictureBox3.Location = new System.Drawing.Point(37, 125);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconPictureBox3.Location = new System.Drawing.Point(28, 239);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
             this.iconPictureBox3.TabIndex = 10;
@@ -102,7 +106,7 @@
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.RowHeadersWidth = 51;
             this.dgv_Usuarios.RowTemplate.Height = 24;
-            this.dgv_Usuarios.Size = new System.Drawing.Size(682, 250);
+            this.dgv_Usuarios.Size = new System.Drawing.Size(682, 365);
             this.dgv_Usuarios.TabIndex = 14;
             // 
             // btn_Cerrar
@@ -119,9 +123,9 @@
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
             this.btn_Cerrar.Location = new System.Drawing.Point(999, 14);
-            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(28, 121);
+            this.btn_Cerrar.Size = new System.Drawing.Size(28, 31);
             this.btn_Cerrar.TabIndex = 16;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
@@ -139,9 +143,9 @@
             this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Minimizar.IconSize = 25;
             this.btn_Minimizar.Location = new System.Drawing.Point(963, 14);
-            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(28, 120);
+            this.btn_Minimizar.Size = new System.Drawing.Size(28, 31);
             this.btn_Minimizar.TabIndex = 15;
             this.btn_Minimizar.UseVisualStyleBackColor = false;
             this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
@@ -155,7 +159,7 @@
             this.txt_Codigo_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo_Empleado.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Codigo_Empleado.Location = new System.Drawing.Point(544, 76);
-            this.txt_Codigo_Empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Codigo_Empleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Codigo_Empleado.Multiline = true;
             this.txt_Codigo_Empleado.Name = "txt_Codigo_Empleado";
             this.txt_Codigo_Empleado.Size = new System.Drawing.Size(400, 20);
@@ -244,12 +248,76 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "CODIGO EMPLEADO:\r\n";
             // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
+            this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Eliminar.IconSize = 35;
+            this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Eliminar.Location = new System.Drawing.Point(925, 649);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Eliminar.TabIndex = 49;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btn_Agregar.IconColor = System.Drawing.Color.Black;
+            this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Agregar.Location = new System.Drawing.Point(709, 195);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Agregar.TabIndex = 54;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btn_Editar.IconColor = System.Drawing.Color.Black;
+            this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Editar.Location = new System.Drawing.Point(817, 195);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Editar.TabIndex = 53;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
+            this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cancelar.Location = new System.Drawing.Point(925, 195);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Cancelar.TabIndex = 52;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            // 
             // frm_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1040, 500);
+            this.ClientSize = new System.Drawing.Size(1040, 700);
+            this.Controls.Add(this.btn_Agregar);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.btn_Minimizar);
             this.Controls.Add(this.dgv_Usuarios);
@@ -291,5 +359,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton btn_Eliminar;
+        private FontAwesome.Sharp.IconButton btn_Agregar;
+        private FontAwesome.Sharp.IconButton btn_Editar;
+        private FontAwesome.Sharp.IconButton btn_Cancelar;
     }
 }
