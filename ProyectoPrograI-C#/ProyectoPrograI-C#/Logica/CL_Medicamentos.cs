@@ -8,7 +8,7 @@ namespace ProyectoPrograI_C_.Logica
 {
     public class CL_Medicamentos
     {
-        public DateTime MtdFechaHoy()
+        public DateTime mtd_Fecha_De_Hoy()
         {
             return DateTime.Now;
         }

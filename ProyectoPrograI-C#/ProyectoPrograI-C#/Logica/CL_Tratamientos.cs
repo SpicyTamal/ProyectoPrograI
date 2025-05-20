@@ -1,4 +1,5 @@
-﻿using ProyectoPrograI_C_.Datos;
+﻿
+using ProyectoPrograI_C_.Datos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,16 @@ namespace ProyectoPrograI_C_.Logica
     class CL_Tratamientos
     {
         CD_Conexion1 cd_conexion = new CD_Conexion1();
+
+        public DateTime mtd_Fecha_De_Hoy()
+        {
+            return DateTime.Now;
+        }
+
         public double mtd_Costo_Tratamiento(string Tipo_Tratamiento)
         {
-            if (Tipo_Tratamiento == "Consulta") return 150;
-            else if (Tipo_Tratamiento == "Examen") return 200;
-            else if (Tipo_Tratamiento == "Radiografia") return 300;
-            else if (Tipo_Tratamiento == "Ultrasonido") return 400;
-            else if (Tipo_Tratamiento == "Tomografia") return 500;
-            else return 0;
+            //Aún no resuelvo este método
+            return 0;
         }
     }
 }

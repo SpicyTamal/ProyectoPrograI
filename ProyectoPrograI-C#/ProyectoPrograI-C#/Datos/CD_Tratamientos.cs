@@ -31,6 +31,7 @@ namespace ProyectoPrograI_C_.Datos
             cd_conexion.MtdCerrarConexion();
             return Lista_Citas;
         }
+
         public List<dynamic> mtd_Lista_Medicamentos()
         {
             List<dynamic> Lista_Medicamentos = new List<dynamic>();
