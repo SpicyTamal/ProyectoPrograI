@@ -147,15 +147,15 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    string CodigoCita = cbx_foreign_Codigo_Cita.Text;
-                    string CodigoMedicamento = cbx_foreign_Codigo_Medicamento.Text;
-                    //double Costo = cl_tratamientos.mtd_Costo_Tratamiento(Falta un parámetro);
+                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
+                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
+                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
                     string UsuarioAuditoria = "Kevin_Monterroso";
 
-                    cd_tratamientos.mtd_Agregar_Tratamientos(CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria); //Aun no resuelvo el método de Costo de los tratamientos
+                    cd_tratamientos.mtd_Agregar_Tratamientos(CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Tratamiento agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_Consultar_Tratamientos();
                     mtd_Limpiar_Campos();
@@ -179,15 +179,15 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoTratamiento = (int.Parse(txt_Codigo_Tratamiento.Text));
-                    int CodigoCita = (int)((dynamic)cbx_foreign_Codigo_Cita.SelectedItem).Value;
-                    int CodigoMedicamento = (int)((dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem).Value;
-                    // double Costo = cl_tratamientos.mtd_Costo_Tratamiento(Falta un parámetro);
+                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
+                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
+                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
                     string UsuarioAuditoria = "Kevin_Monterroso";
 
-                    cd_tratamientos.mtd_Actualizar_Tratamientos(CodigoTratamiento, CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria); //Aun no resuelvo el método de Costo de los tratamientos
+                    cd_tratamientos.mtd_Actualizar_Tratamientos(CodigoTratamiento, CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria); 
                     MessageBox.Show("Tratamiento actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_Consultar_Tratamientos();
                     mtd_Limpiar_Campos();

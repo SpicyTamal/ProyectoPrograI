@@ -35,7 +35,7 @@ namespace ProyectoPrograI_C_.Datos
         public List<dynamic> mtd_Lista_Medicamentos()
         {
             List<dynamic> Lista_Medicamentos = new List<dynamic>();
-            string QueryLista_Medicamentos = "Select CodigoMedicamento, Nombre from tbl_categorias";
+            string QueryLista_Medicamentos = "Select CodigoMedicamento, Nombre from tbl_Medicamentos";
             SqlCommand cmd = new SqlCommand(QueryLista_Medicamentos, cd_conexion.MtdAbrirConexion());
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -50,6 +50,7 @@ namespace ProyectoPrograI_C_.Datos
             cd_conexion.MtdCerrarConexion();
             return Lista_Medicamentos;
         }
+
         public DataTable mtd_Consultar_Tratamientos()
         {
             string QueryConsultarTratamientos = "Select * from tbl_Tratamientos";
