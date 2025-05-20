@@ -21,7 +21,7 @@ namespace ProyectoPrograI_C_.Logica
 
         public double mtd_Costo_Tratamiento(int CodigoMedicamento)
         {
-            var ListaMedicamentos = cd_tratamientos.mtd_Lista_Medicamentos();
+            var ListaMedicamentos = cd_tratamientos.mtd_Lista_Costo_Medicamentos();
 
             foreach (double Costo in ListaMedicamentos)
             {
