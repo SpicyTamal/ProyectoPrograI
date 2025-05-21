@@ -36,13 +36,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_Editar = new FontAwesome.Sharp.IconButton();
+            this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
+            this.btn_Agregar = new FontAwesome.Sharp.IconButton();
+            this.btn_Salir = new FontAwesome.Sharp.IconButton();
+            this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btn_Editar);
+            this.groupBox1.Controls.Add(this.btn_Cancelar);
+            this.groupBox1.Controls.Add(this.btn_Agregar);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
@@ -126,26 +138,110 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pacientes";
             // 
-            // comboBox3
+            // dataGridView1
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(304, 77);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(180, 28);
-            this.comboBox3.TabIndex = 7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 311);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1162, 270);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(304, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_Editar.IconColor = System.Drawing.Color.Black;
+            this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Editar.Location = new System.Drawing.Point(966, 134);
+            this.btn_Editar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Editar.TabIndex = 12;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
+            this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Cancelar.Location = new System.Drawing.Point(966, 208);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_Agregar.IconColor = System.Drawing.Color.Black;
+            this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Agregar.Location = new System.Drawing.Point(966, 73);
+            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Agregar.TabIndex = 10;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_Salir.IconColor = System.Drawing.Color.Black;
+            this.btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Salir.Location = new System.Drawing.Point(1039, 622);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(112, 35);
+            this.btn_Salir.TabIndex = 11;
+            this.btn_Salir.Text = "Salir";
+            this.btn_Salir.UseVisualStyleBackColor = true;
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
+            this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Eliminar.Location = new System.Drawing.Point(884, 622);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Eliminar.TabIndex = 10;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(304, 77);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 26);
+            this.textBox1.TabIndex = 13;
             // 
             // frm_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btn_Salir);
+            this.Controls.Add(this.btn_Eliminar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Pacientes";
             this.Text = "frm_Pacientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,6 +256,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton btn_Editar;
+        private FontAwesome.Sharp.IconButton btn_Cancelar;
+        private FontAwesome.Sharp.IconButton btn_Agregar;
+        private FontAwesome.Sharp.IconButton btn_Salir;
+        private FontAwesome.Sharp.IconButton btn_Eliminar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
