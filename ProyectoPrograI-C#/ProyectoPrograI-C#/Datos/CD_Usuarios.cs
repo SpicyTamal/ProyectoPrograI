@@ -42,7 +42,7 @@ namespace ProyectoPrograI_C_.Datos
             return Dt;
         }
 
-        public void mtd_Agregar_Usuarios(string CodigoEmpleado, string Usuario, string Clave, string TipoUsuario, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
+        public void mtd_Agregar_Usuarios(int CodigoEmpleado, string Usuario, string Clave, string TipoUsuario, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
             string QueryAgregarMedicamentos = "Insert into tbl_Usuarios (Usuario,Clave,TipoUsuario, Estado, FechaAuditoria, UsuarioAuditoria) values (@Usuario, @Clave, @TipoUsuario, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarMedicamentos, cd_conexion.MtdAbrirConexion());
@@ -56,7 +56,7 @@ namespace ProyectoPrograI_C_.Datos
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
-        public void mtd_Actualizar_Usuarios(int CodigoUsuario, string CodigoEmpleado, string Usuario, string Clave, string TipoUsuario, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
+        public void mtd_Actualizar_Usuarios(int CodigoUsuario, int CodigoEmpleado, string Usuario, string Clave, string TipoUsuario, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
             string QueryActualizarMedicamentos = "Update tbl_Usuarios set CodigoEmpleado=@CidigoEmpleado, Usuario=@Usuario, Clave=@Clave, TipoUsuario=@TipoUsuario, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoUsuario=@CodigoUsuario";
             SqlCommand cmd = new SqlCommand(QueryActualizarMedicamentos, cd_conexion.MtdAbrirConexion());

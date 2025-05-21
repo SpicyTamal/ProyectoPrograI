@@ -47,6 +47,7 @@ namespace ProyectoPrograI_C_.Presentacion
         private void frm_Usuarios_Load(object sender, EventArgs e)
         {
             mtd_Consultar_Usuarios();
+            mtd_Mostrar_Lista_Empleados();
         }
 
         private void mtd_Limpiar_Campos()
@@ -121,7 +122,8 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    string CodigoEmpleado = cbx_foreign_Codigo_Empleado.Text;
+                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
+                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
@@ -154,7 +156,8 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoUsuario = (int.Parse(txt_Codigo_Usuario.Text));
-                    string CodigoEmpleado = cbx_foreign_Codigo_Empleado.Text;
+                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
+                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
