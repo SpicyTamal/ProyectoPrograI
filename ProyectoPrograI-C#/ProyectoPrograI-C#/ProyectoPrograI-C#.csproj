@@ -54,27 +54,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CD_Conexion1.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Datos\CD_Medicamentos.cs" />
-    <Compile Include="Datos\CD_Tratamientos.cs" />
-    <Compile Include="Datos\CD_Usuarios.cs" />
-    <Compile Include="Datos\Class1.cs" />
->>>>>>> dbb6ac10ba5e620f54dd412835a038d38da01451
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\CL_Pacientes.cs" />
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
-    <Compile Include="Presentacion\frm_Tratamientos.cs">
+    <Compile Include="Presentacion\frm_Citas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
-      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_Citas.Designer.cs">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Habitaciones.cs">
       <SubType>Form</SubType>
@@ -87,6 +81,18 @@
     </Compile>
     <Compile Include="Presentacion\frm_Pacientes.Designer.cs">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoCitas.Designer.cs">
+      <DependentUpon>frm_PagoCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tratamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
+      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Medicamentos.cs">
       <SubType>Form</SubType>
@@ -111,14 +117,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Citas.resx">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
+      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
-      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frm_PagoCitas.resx">
+      <DependentUpon>frm_PagoCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Tratamientos.resx">
       <DependentUpon>frm_Tratamientos.cs</DependentUpon>
