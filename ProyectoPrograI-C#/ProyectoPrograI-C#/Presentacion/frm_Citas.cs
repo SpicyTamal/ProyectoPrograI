@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
-    public partial class frm_Pacientes : Form
+    public partial class frm_Citas : Form
     {
-        public frm_Pacientes()
+        public frm_Citas()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace ProyectoPrograI_C_.Presentacion
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_Eliminar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

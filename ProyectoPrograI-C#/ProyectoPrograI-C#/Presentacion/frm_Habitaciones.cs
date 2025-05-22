@@ -19,7 +19,12 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Salir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
