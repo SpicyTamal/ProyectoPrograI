@@ -53,7 +53,7 @@ namespace ProyectoPrograI_C_.Datos
 
         public DataTable mtd_Consultar_Tratamientos()
         {
-            string QueryConsultarTratamientos = "Select * from tbl_Tratamientos";
+            string QueryConsultarTratamientos = "Select * from tbl_Tratamiento";
             SqlDataAdapter Adapter = new SqlDataAdapter(QueryConsultarTratamientos, cd_conexion.MtdAbrirConexion());
             DataTable Dt = new DataTable();
             Adapter.Fill(Dt);
