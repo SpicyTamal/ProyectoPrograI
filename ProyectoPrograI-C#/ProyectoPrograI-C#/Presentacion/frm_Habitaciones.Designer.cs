@@ -70,7 +70,11 @@
             this.label1.Location = new System.Drawing.Point(789, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
+<<<<<<< HEAD
             this.label1.Size = new System.Drawing.Size(202, 37);
+=======
+            this.label1.Size = new System.Drawing.Size(172, 31);
+>>>>>>> main
             this.label1.TabIndex = 32;
             this.label1.Text = "Habitaciones";
             // 
@@ -85,7 +89,11 @@
             this.label7.Location = new System.Drawing.Point(384, 106);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
+<<<<<<< HEAD
             this.label7.Size = new System.Drawing.Size(188, 25);
+=======
+            this.label7.Size = new System.Drawing.Size(146, 20);
+>>>>>>> main
             this.label7.TabIndex = 53;
             this.label7.Text = "Codigo Habitacion";
             // 
@@ -101,7 +109,11 @@
             this.txt_CodigoMedicamento.Location = new System.Drawing.Point(630, 109);
             this.txt_CodigoMedicamento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_CodigoMedicamento.Name = "txt_CodigoMedicamento";
+<<<<<<< HEAD
             this.txt_CodigoMedicamento.Size = new System.Drawing.Size(406, 23);
+=======
+            this.txt_CodigoMedicamento.Size = new System.Drawing.Size(312, 19);
+>>>>>>> main
             this.txt_CodigoMedicamento.TabIndex = 54;
             this.txt_CodigoMedicamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -116,7 +128,11 @@
             this.label2.Location = new System.Drawing.Point(384, 165);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(189, 25);
+=======
+            this.label2.Size = new System.Drawing.Size(145, 20);
+>>>>>>> main
             this.label2.TabIndex = 55;
             this.label2.Text = "Tipo de habitacion";
             // 
@@ -131,7 +147,11 @@
             this.label3.Location = new System.Drawing.Point(384, 225);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(68, 25);
+=======
+            this.label3.Size = new System.Drawing.Size(53, 20);
+>>>>>>> main
             this.label3.TabIndex = 56;
             this.label3.Text = "Costo";
             // 
@@ -146,7 +166,11 @@
             this.label4.Location = new System.Drawing.Point(384, 280);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
+<<<<<<< HEAD
             this.label4.Size = new System.Drawing.Size(79, 25);
+=======
+            this.label4.Size = new System.Drawing.Size(61, 20);
+>>>>>>> main
             this.label4.TabIndex = 57;
             this.label4.Text = "Estado";
             // 
@@ -166,7 +190,11 @@
             "Cancelado"});
             this.cbox_TipoHabitacion.Location = new System.Drawing.Point(630, 165);
             this.cbox_TipoHabitacion.Name = "cbox_TipoHabitacion";
+<<<<<<< HEAD
             this.cbox_TipoHabitacion.Size = new System.Drawing.Size(406, 28);
+=======
+            this.cbox_TipoHabitacion.Size = new System.Drawing.Size(312, 28);
+>>>>>>> main
             this.cbox_TipoHabitacion.TabIndex = 62;
             // 
             // txt_Costo
@@ -181,7 +209,11 @@
             this.txt_Costo.Location = new System.Drawing.Point(630, 228);
             this.txt_Costo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Costo.Name = "txt_Costo";
+<<<<<<< HEAD
             this.txt_Costo.Size = new System.Drawing.Size(406, 23);
+=======
+            this.txt_Costo.Size = new System.Drawing.Size(312, 19);
+>>>>>>> main
             this.txt_Costo.TabIndex = 63;
             this.txt_Costo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -201,11 +233,16 @@
             "Cancelado"});
             this.btn_Estado.Location = new System.Drawing.Point(630, 280);
             this.btn_Estado.Name = "btn_Estado";
+<<<<<<< HEAD
             this.btn_Estado.Size = new System.Drawing.Size(406, 28);
+=======
+            this.btn_Estado.Size = new System.Drawing.Size(312, 28);
+>>>>>>> main
             this.btn_Estado.TabIndex = 64;
             // 
             // dgv_Medicamentos
             // 
+<<<<<<< HEAD
             this.dgv_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -217,6 +254,15 @@
             this.dgv_Medicamentos.Size = new System.Drawing.Size(968, 231);
             this.dgv_Medicamentos.TabIndex = 65;
             this.dgv_Medicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Medicamentos_CellContentClick);
+=======
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(388, 372);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(968, 231);
+            this.dataGridView1.TabIndex = 65;
+>>>>>>> main
             // 
             // btn_Agregar
             // 
