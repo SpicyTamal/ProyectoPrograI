@@ -49,8 +49,10 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Orange;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -99,7 +101,7 @@
             this.txt_CodigoMedicamento.Location = new System.Drawing.Point(630, 109);
             this.txt_CodigoMedicamento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_CodigoMedicamento.Name = "txt_CodigoMedicamento";
-            this.txt_CodigoMedicamento.Size = new System.Drawing.Size(312, 23);
+            this.txt_CodigoMedicamento.Size = new System.Drawing.Size(406, 23);
             this.txt_CodigoMedicamento.TabIndex = 54;
             this.txt_CodigoMedicamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -164,7 +166,7 @@
             "Cancelado"});
             this.cbox_TipoHabitacion.Location = new System.Drawing.Point(630, 165);
             this.cbox_TipoHabitacion.Name = "cbox_TipoHabitacion";
-            this.cbox_TipoHabitacion.Size = new System.Drawing.Size(312, 28);
+            this.cbox_TipoHabitacion.Size = new System.Drawing.Size(406, 28);
             this.cbox_TipoHabitacion.TabIndex = 62;
             // 
             // txt_Costo
@@ -179,7 +181,7 @@
             this.txt_Costo.Location = new System.Drawing.Point(630, 228);
             this.txt_Costo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Costo.Name = "txt_Costo";
-            this.txt_Costo.Size = new System.Drawing.Size(312, 23);
+            this.txt_Costo.Size = new System.Drawing.Size(406, 23);
             this.txt_Costo.TabIndex = 63;
             this.txt_Costo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -199,11 +201,14 @@
             "Cancelado"});
             this.btn_Estado.Location = new System.Drawing.Point(630, 280);
             this.btn_Estado.Name = "btn_Estado";
-            this.btn_Estado.Size = new System.Drawing.Size(312, 28);
+            this.btn_Estado.Size = new System.Drawing.Size(406, 28);
             this.btn_Estado.TabIndex = 64;
             // 
             // dgv_Medicamentos
             // 
+            this.dgv_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Medicamentos.Location = new System.Drawing.Point(388, 372);
             this.dgv_Medicamentos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -215,6 +220,9 @@
             // 
             // btn_Agregar
             // 
+            this.btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btn_Agregar.IconColor = System.Drawing.Color.Black;
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -230,6 +238,9 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btn_Editar.IconColor = System.Drawing.Color.Black;
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -245,6 +256,9 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -260,6 +274,9 @@
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
             this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -276,6 +293,9 @@
             // 
             // btn_Salir
             // 
+            this.btn_Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Salir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btn_Salir.IconColor = System.Drawing.Color.Black;
             this.btn_Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
