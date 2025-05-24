@@ -41,6 +41,11 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void frm_Habitaciones_Load(object sender, EventArgs e)
         {
+            Mtd_ConsultarHabitaciones();
+        }
+
+        private void dgv_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
