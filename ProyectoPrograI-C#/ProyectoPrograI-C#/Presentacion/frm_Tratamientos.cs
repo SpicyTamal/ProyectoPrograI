@@ -147,9 +147,11 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
-                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
-                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
+                    var CitaSeleccionada = (dynamic)cbx_foreign_Codigo_Cita.SelectedItem;
+                    int CodigoCita = (int)CitaSeleccionada.Value;
+                    var MedicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
+                    int CodigoMedicamento = (int)MedicamentoSeleccionado.Value;
+                    double Costo = cl_tratamientos.mtd_Costo_Medicamento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
@@ -179,9 +181,11 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoTratamiento = (int.Parse(txt_Codigo_Tratamiento.Text));
-                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
-                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
-                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
+                    var CitaSeleccionada = (dynamic)cbx_foreign_Codigo_Cita.SelectedItem;
+                    int CodigoCita = (int)CitaSeleccionada.Value;
+                    var MedicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
+                    int CodigoMedicamento = (int)MedicamentoSeleccionado.Value;
+                    double Costo = cl_tratamientos.mtd_Costo_Medicamento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();

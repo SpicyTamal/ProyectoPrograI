@@ -180,7 +180,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Fecha_Vencimiento_Tratamientos.Location = new System.Drawing.Point(409, 199);
-            this.dtp_Fecha_Vencimiento_Tratamientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_Fecha_Vencimiento_Tratamientos.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_Fecha_Vencimiento_Tratamientos.Name = "dtp_Fecha_Vencimiento_Tratamientos";
             this.dtp_Fecha_Vencimiento_Tratamientos.Size = new System.Drawing.Size(209, 20);
             this.dtp_Fecha_Vencimiento_Tratamientos.TabIndex = 39;
@@ -219,7 +219,7 @@
             this.dgv_Tratamientos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgv_Tratamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Tratamientos.Location = new System.Drawing.Point(260, 289);
-            this.dgv_Tratamientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Tratamientos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Tratamientos.Name = "dgv_Tratamientos";
             this.dgv_Tratamientos.RowHeadersWidth = 51;
             this.dgv_Tratamientos.RowTemplate.Height = 24;
@@ -229,13 +229,16 @@
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
             this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Eliminar.IconSize = 35;
+            this.btn_Eliminar.IconSize = 25;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Eliminar.Location = new System.Drawing.Point(764, 527);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(76, 32);
             this.btn_Eliminar.TabIndex = 48;
@@ -246,13 +249,16 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.IconSize = 25;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Location = new System.Drawing.Point(844, 527);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(76, 32);
             this.btn_Cancelar.TabIndex = 49;
@@ -263,13 +269,16 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btn_Editar.IconColor = System.Drawing.Color.Black;
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.IconSize = 25;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Location = new System.Drawing.Point(844, 254);
-            this.btn_Editar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(76, 32);
             this.btn_Editar.TabIndex = 50;
@@ -280,13 +289,16 @@
             // 
             // btn_Agregar
             // 
+            this.btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btn_Agregar.IconColor = System.Drawing.Color.Black;
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.IconSize = 25;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(764, 254);
-            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(76, 32);
             this.btn_Agregar.TabIndex = 51;
@@ -456,7 +468,7 @@
             "Suspendido",
             "Cancelado"});
             this.cbx_Estado_Tratamientos.Location = new System.Drawing.Point(689, 48);
-            this.cbx_Estado_Tratamientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_Estado_Tratamientos.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_Estado_Tratamientos.Name = "cbx_Estado_Tratamientos";
             this.cbx_Estado_Tratamientos.Size = new System.Drawing.Size(209, 21);
             this.cbx_Estado_Tratamientos.TabIndex = 48;
@@ -476,7 +488,7 @@
             "Suspendido",
             "Cancelado"});
             this.cbx_foreign_Codigo_Cita.Location = new System.Drawing.Point(409, 81);
-            this.cbx_foreign_Codigo_Cita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_foreign_Codigo_Cita.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_foreign_Codigo_Cita.Name = "cbx_foreign_Codigo_Cita";
             this.cbx_foreign_Codigo_Cita.Size = new System.Drawing.Size(209, 21);
             this.cbx_foreign_Codigo_Cita.TabIndex = 61;
@@ -497,7 +509,7 @@
             "Suspendido",
             "Cancelado"});
             this.cbx_foreign_Codigo_Medicamento.Location = new System.Drawing.Point(409, 120);
-            this.cbx_foreign_Codigo_Medicamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_foreign_Codigo_Medicamento.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_foreign_Codigo_Medicamento.Name = "cbx_foreign_Codigo_Medicamento";
             this.cbx_foreign_Codigo_Medicamento.Size = new System.Drawing.Size(209, 21);
             this.cbx_foreign_Codigo_Medicamento.TabIndex = 62;
@@ -552,7 +564,7 @@
             this.Controls.Add(this.btn_Disminuir);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Tratamientos";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
