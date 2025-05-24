@@ -38,13 +38,13 @@
             this.cbox_TipoHabitacion = new System.Windows.Forms.ComboBox();
             this.txt_Costo = new System.Windows.Forms.TextBox();
             this.btn_Estado = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Medicamentos = new System.Windows.Forms.DataGridView();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_Salir = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Medicamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -196,13 +196,13 @@
             this.btn_Estado.Size = new System.Drawing.Size(209, 21);
             this.btn_Estado.TabIndex = 64;
             // 
-            // dataGridView1
+            // dgv_Medicamentos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(259, 242);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 150);
-            this.dataGridView1.TabIndex = 65;
+            this.dgv_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Medicamentos.Location = new System.Drawing.Point(259, 242);
+            this.dgv_Medicamentos.Name = "dgv_Medicamentos";
+            this.dgv_Medicamentos.Size = new System.Drawing.Size(645, 150);
+            this.dgv_Medicamentos.TabIndex = 65;
             // 
             // btn_Agregar
             // 
@@ -297,7 +297,7 @@
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Agregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Medicamentos);
             this.Controls.Add(this.btn_Estado);
             this.Controls.Add(this.txt_Costo);
             this.Controls.Add(this.cbox_TipoHabitacion);
@@ -312,7 +312,8 @@
             this.Name = "frm_Habitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Habitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frm_Habitaciones_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Medicamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +331,7 @@
         private System.Windows.Forms.ComboBox cbox_TipoHabitacion;
         private System.Windows.Forms.TextBox txt_Costo;
         private System.Windows.Forms.ComboBox btn_Estado;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Medicamentos;
         private FontAwesome.Sharp.IconButton btn_Agregar;
         private FontAwesome.Sharp.IconButton btn_Editar;
         private FontAwesome.Sharp.IconButton btn_Cancelar;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrograI_C_.Logica
 {
-    internal class CL_Pacientes
+    internal class CL_PagoCitas
     {
     }
 }
