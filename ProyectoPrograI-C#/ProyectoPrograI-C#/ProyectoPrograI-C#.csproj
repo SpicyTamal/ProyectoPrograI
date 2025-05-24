@@ -54,13 +54,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CD_Conexion1.cs" />
+    <Compile Include="Datos\CD_Habitaciones.cs" />
+    <Compile Include="Datos\CD_Medicamentos.cs" />
+    <Compile Include="Datos\CD_Tratamientos.cs" />
+    <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logica\CL_Pacientes.cs" />
+    <Compile Include="Logica\CL_Citas.cs" />
+    <Compile Include="Logica\CL_PagoCitas.cs" />
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
