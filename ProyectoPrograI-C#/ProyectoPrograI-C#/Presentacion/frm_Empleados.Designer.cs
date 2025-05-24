@@ -43,9 +43,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbox_TipoTrabajo = new System.Windows.Forms.ComboBox();
             this.cbox_Estado = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txt_NombreEmpleado = new System.Windows.Forms.TextBox();
+            this.txt_Especialidad = new System.Windows.Forms.TextBox();
+            this.dtp_FechaAlta = new System.Windows.Forms.DateTimePicker();
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
@@ -248,26 +248,26 @@
             this.cbox_Estado.Size = new System.Drawing.Size(189, 24);
             this.cbox_Estado.TabIndex = 33;
             // 
-            // textBox1
+            // txt_NombreEmpleado
             // 
-            this.textBox1.Location = new System.Drawing.Point(468, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 22);
-            this.textBox1.TabIndex = 34;
+            this.txt_NombreEmpleado.Location = new System.Drawing.Point(468, 108);
+            this.txt_NombreEmpleado.Name = "txt_NombreEmpleado";
+            this.txt_NombreEmpleado.Size = new System.Drawing.Size(277, 22);
+            this.txt_NombreEmpleado.TabIndex = 34;
             // 
-            // textBox2
+            // txt_Especialidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(538, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 22);
-            this.textBox2.TabIndex = 35;
+            this.txt_Especialidad.Location = new System.Drawing.Point(538, 231);
+            this.txt_Especialidad.Name = "txt_Especialidad";
+            this.txt_Especialidad.Size = new System.Drawing.Size(207, 22);
+            this.txt_Especialidad.TabIndex = 35;
             // 
-            // dateTimePicker1
+            // dtp_FechaAlta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(934, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dtp_FechaAlta.Location = new System.Drawing.Point(934, 106);
+            this.dtp_FechaAlta.Name = "dtp_FechaAlta";
+            this.dtp_FechaAlta.Size = new System.Drawing.Size(270, 22);
+            this.dtp_FechaAlta.TabIndex = 36;
             // 
             // btn_Cancelar
             // 
@@ -343,9 +343,9 @@
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtp_FechaAlta);
+            this.Controls.Add(this.txt_Especialidad);
+            this.Controls.Add(this.txt_NombreEmpleado);
             this.Controls.Add(this.cbox_Estado);
             this.Controls.Add(this.cbox_TipoTrabajo);
             this.Controls.Add(this.label8);
@@ -388,9 +388,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbox_TipoTrabajo;
         private System.Windows.Forms.ComboBox cbox_Estado;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txt_NombreEmpleado;
+        private System.Windows.Forms.TextBox txt_Especialidad;
+        private System.Windows.Forms.DateTimePicker dtp_FechaAlta;
         private FontAwesome.Sharp.IconButton btn_Cancelar;
         private FontAwesome.Sharp.IconButton btn_Eliminar;
         private FontAwesome.Sharp.IconButton btn_Agregar;
