@@ -234,6 +234,7 @@
             this.cbox_TipoTrabajo.Name = "cbox_TipoTrabajo";
             this.cbox_TipoTrabajo.Size = new System.Drawing.Size(212, 24);
             this.cbox_TipoTrabajo.TabIndex = 32;
+            this.cbox_TipoTrabajo.SelectedIndexChanged += new System.EventHandler(this.cbox_TipoTrabajo_SelectedIndexChanged);
             // 
             // cbox_Estado
             // 
@@ -308,9 +309,9 @@
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Agregar.IconSize = 35;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Agregar.Location = new System.Drawing.Point(1017, 311);
+            this.btn_Agregar.Location = new System.Drawing.Point(1004, 311);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(102, 39);
+            this.btn_Agregar.Size = new System.Drawing.Size(115, 39);
             this.btn_Agregar.TabIndex = 40;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

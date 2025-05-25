@@ -12,6 +12,8 @@ namespace ProyectoPrograI_C_.Presentacion
 {
     public partial class frm_Empleados : Form
     {
+        // Instancia de la clase de lógica de empleados
+        Logica.CL_Empleados instancia = new Logica.CL_Empleados();
         public frm_Empleados()
         {
             InitializeComponent();
@@ -45,6 +47,11 @@ namespace ProyectoPrograI_C_.Presentacion
         private void btn_Editar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbox_TipoTrabajo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_Sueldo.Text = instancia.mtd_Salarios(cbox_TipoTrabajo.Text).ToString("C2");
         }
     }
 }
