@@ -8,11 +8,13 @@ namespace ProyectoPrograI_C_.Logica
 {
     internal class CL_Empleados
     {
-        public double mtd_Salarios()
+        public double mtd_Salarios(string puesto)
         {
-            if (puesto == "") return 0;
-            else if (puesto == "Gerente") return 2500;
-            retun 0;
+            if (puesto == "Director") return 30000;
+            else if (puesto == "Medico") return 20000;
+            else if (puesto == "Enfermero") return 10000;
+            else if (puesto == "Tecnico") return 7000;
+            else return 6000;
         }
     }
 }
