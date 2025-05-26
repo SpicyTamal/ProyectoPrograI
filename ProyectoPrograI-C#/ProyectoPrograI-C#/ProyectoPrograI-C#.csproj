@@ -54,10 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CD_Conexion1.cs" />
-<<<<<<< HEAD
     <Compile Include="Datos\CD_Habitaciones.cs" />
-=======
->>>>>>> 3f9fedd27af095380047e4e5a2483016f8f533f4
     <Compile Include="Datos\CD_Medicamentos.cs" />
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
@@ -102,6 +99,12 @@
     <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
       <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frm_Medicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Medicamentos.Designer.cs">
+      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frm_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
+      <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
