@@ -38,16 +38,14 @@ namespace ProyectoPrograI_C_.Datos
 
         public void mtd_ActualizarEmpleados(string Nombre, string TipoTrabajo, double Sueldo, string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryActualizarEmpleados = "Update tbl_Empleados set Nombre=@Nombre, TipoMedicamento=@TipoMedicamento, Costo=@Costo, Stock=@Stock, FechaVencimiento=@FechaVencimiento, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoMedicamento=@CodigoMedicamento";
+            string QueryActualizarEmpleados = "Update tbl_Empleados set Nombre=@Nombre, TipoTrabajo=@TipoTrabajo, Especialidad=@Especialidad, Sueldo=@Sueldo, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoEmpleado=@CodigoEmpleado";
             SqlCommand cmd = new SqlCommand(QueryActualizarEmpleados, cd_conexion.MtdAbrirConexion());
-            cmd.Parameters.AddWithValue("@CodigoMedicamento", CodigoEmpleado);
-            cmd.Parameters.AddWithValue("@Nombre", Nombre);
-            cmd.Parameters.AddWithValue("@TipoMedicamento", TipoMedicamento);
-            cmd.Parameters.AddWithValue("@Costo", Costo);
-            cmd.Parameters.AddWithValue("@Stock", Stock);
-            cmd.Parameters.AddWithValue("@FechaVencimiento", FechaVencimiento);
+            cmd.Parameters.AddWithValue("@Nombres", Nombre);
+            cmd.Parameters.AddWithValue("@TipoTrabajo", TipoTrabajo);
+            cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+            cmd.Parameters.AddWithValue("@Sueldo", Sueldo);
             cmd.Parameters.AddWithValue("@Estado", Estado);
-            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAlta);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
