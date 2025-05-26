@@ -87,7 +87,7 @@
             this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 700);
             this.panel1.TabIndex = 8;
@@ -103,7 +103,7 @@
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 244;
             this.iconPictureBox3.Location = new System.Drawing.Point(28, 239);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
             this.iconPictureBox3.TabIndex = 10;
@@ -142,7 +142,7 @@
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
             this.btn_Cerrar.Location = new System.Drawing.Point(1199, 14);
-            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(28, 31);
             this.btn_Cerrar.TabIndex = 16;
@@ -162,7 +162,7 @@
             this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Minimizar.IconSize = 25;
             this.btn_Minimizar.Location = new System.Drawing.Point(1163, 14);
-            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Minimizar.Name = "btn_Minimizar";
             this.btn_Minimizar.Size = new System.Drawing.Size(28, 31);
             this.btn_Minimizar.TabIndex = 15;
@@ -305,7 +305,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Location = new System.Drawing.Point(545, 78);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(277, 2);
             this.panel3.TabIndex = 57;
@@ -320,7 +320,7 @@
             this.txt_Codigo_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo_Usuario.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Codigo_Usuario.Location = new System.Drawing.Point(545, 54);
-            this.txt_Codigo_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Codigo_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Codigo_Usuario.Name = "txt_Codigo_Usuario";
             this.txt_Codigo_Usuario.Size = new System.Drawing.Size(277, 19);
             this.txt_Codigo_Usuario.TabIndex = 56;
@@ -348,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel4.Location = new System.Drawing.Point(547, 170);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(277, 2);
             this.panel4.TabIndex = 62;
@@ -363,7 +363,7 @@
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Usuario.Location = new System.Drawing.Point(547, 146);
-            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Usuario.Name = "txt_Usuario";
             this.txt_Usuario.Size = new System.Drawing.Size(277, 19);
             this.txt_Usuario.TabIndex = 61;
@@ -391,7 +391,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Location = new System.Drawing.Point(547, 219);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(277, 2);
             this.panel5.TabIndex = 65;
@@ -406,7 +406,7 @@
             this.txt_Clave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Clave.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Clave.Location = new System.Drawing.Point(547, 194);
-            this.txt_Clave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Clave.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Clave.Name = "txt_Clave";
             this.txt_Clave.Size = new System.Drawing.Size(277, 19);
             this.txt_Clave.TabIndex = 64;
@@ -434,7 +434,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel7.Location = new System.Drawing.Point(913, 265);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(277, 2);
             this.panel7.TabIndex = 73;
@@ -446,7 +446,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel6.Location = new System.Drawing.Point(913, 170);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(277, 2);
             this.panel6.TabIndex = 70;
@@ -461,7 +461,7 @@
             this.txt_Fecha_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Fecha_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Fecha_Auditoria.Location = new System.Drawing.Point(913, 241);
-            this.txt_Fecha_Auditoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Fecha_Auditoria.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Fecha_Auditoria.Name = "txt_Fecha_Auditoria";
             this.txt_Fecha_Auditoria.Size = new System.Drawing.Size(277, 19);
             this.txt_Fecha_Auditoria.TabIndex = 72;
@@ -477,7 +477,7 @@
             this.txt_Usuario_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Usuario_Auditoria.Location = new System.Drawing.Point(913, 146);
-            this.txt_Usuario_Auditoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Usuario_Auditoria.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Usuario_Auditoria.Name = "txt_Usuario_Auditoria";
             this.txt_Usuario_Auditoria.Size = new System.Drawing.Size(277, 19);
             this.txt_Usuario_Auditoria.TabIndex = 69;
@@ -553,11 +553,6 @@
             this.cbx_foreign_Codigo_Empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cbx_foreign_Codigo_Empleado.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbx_foreign_Codigo_Empleado.FormattingEnabled = true;
-            this.cbx_foreign_Codigo_Empleado.Items.AddRange(new object[] {
-            "Admin",
-            "Doctor",
-            "Asistente",
-            "Digitador"});
             this.cbx_foreign_Codigo_Empleado.Location = new System.Drawing.Point(545, 100);
             this.cbx_foreign_Codigo_Empleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_foreign_Codigo_Empleado.Name = "cbx_foreign_Codigo_Empleado";
