@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoPrograI_C_.Logica;
 
 namespace ProyectoPrograI_C_.Datos
 {
@@ -12,7 +13,7 @@ namespace ProyectoPrograI_C_.Datos
     {
         CD_Conexion1 cd_conexion = new CD_Conexion1();
 
-        public DataTable mtd_ConsultarEmpleado() 
+        public DataTable mtd_ConsultarEmpleados() 
         {
             string QueryConsultarMedicamentos = "Select * from tbl_Empleados";
             SqlDataAdapter Adapter = new SqlDataAdapter(QueryConsultarMedicamentos, cd_conexion.MtdAbrirConexion());
@@ -21,9 +22,9 @@ namespace ProyectoPrograI_C_.Datos
             cd_conexion.MtdCerrarConexion();
             return Dt;
         }
-        public void mtd_Agregar_Medicamentos(string Nombre, string TipoTrabajo, double Sueldo,string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
+        public void mtd_AgregarEmpleado(string Nombre, string TipoTrabajo, double Sueldo,string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryAgregarEmpleado = "Insert into tbl_Empleados(Nombre,TipoMedicamento,Costo, Stock, FechaVencimiento, CodigoCategoria, CodigoProveedor, Estado, FechaAuditoria, UsuarioAuditoria) values (@Nombre, @TipoMedicamento, @Costo, @Stock, @FechaVencimiento, @CodigoCategoria, @CodigoProveedor, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
+            string QueryAgregarEmpleado = "Insert into tbl_Empleados(Nombre,TipoTrabajo,Especialidad, Sueldo, Estado, Estado, FechaAuditoria, UsuarioAuditoria) values (@Nombre, @TipoTrabajo, @Especialidad, @Sueldo, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarEmpleado, cd_conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@Nombres", Nombre);
             cmd.Parameters.AddWithValue("@TipoTrabajo", TipoTrabajo);
@@ -35,7 +36,7 @@ namespace ProyectoPrograI_C_.Datos
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
-
+        
         public void mtd_ActualizarEmpleados(string Nombre, string TipoTrabajo, double Sueldo, string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
             string QueryActualizarEmpleados = "Update tbl_Empleados set Nombre=@Nombre, TipoTrabajo=@TipoTrabajo, Especialidad=@Especialidad, Sueldo=@Sueldo, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoEmpleado=@CodigoEmpleado";
@@ -47,6 +48,15 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAlta);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
+
+        public void mtd_EliminarEmpleado(int CodigoEmpleado)
+        {
+            string QueryEliminarEmpleado = "Delete tbl_Empleados where CodigoEmpleado=@CodigoEmpleado";
+            SqlCommand cmd = new SqlCommand(QueryEliminarEmpleado, cd_conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
