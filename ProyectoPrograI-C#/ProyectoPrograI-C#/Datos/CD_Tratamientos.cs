@@ -24,7 +24,7 @@ namespace ProyectoPrograI_C_.Datos
                 Lista_Citas.Add(new
                 {
                     Value = reader["CodigoCita"],
-                    Text = $"{reader["CodigoCitas"]} - {reader["FechaIngreso"]}"
+                    Text = $"{reader["CodigoCita"]} - {reader["FechaIngreso"]}"
                 });
             }
 

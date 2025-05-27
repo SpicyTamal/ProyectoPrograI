@@ -123,7 +123,7 @@
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
             this.btn_Cerrar.Location = new System.Drawing.Point(1205, 14);
-            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(28, 31);
             this.btn_Cerrar.TabIndex = 33;
@@ -143,7 +143,7 @@
             this.btn_Disminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Disminuir.IconSize = 25;
             this.btn_Disminuir.Location = new System.Drawing.Point(1168, 15);
-            this.btn_Disminuir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Disminuir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Disminuir.Name = "btn_Disminuir";
             this.btn_Disminuir.Size = new System.Drawing.Size(28, 31);
             this.btn_Disminuir.TabIndex = 32;
@@ -200,7 +200,7 @@
             this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 700);
             this.panel1.TabIndex = 47;
@@ -214,7 +214,7 @@
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 244;
             this.iconPictureBox3.Location = new System.Drawing.Point(28, 239);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
             this.iconPictureBox3.TabIndex = 10;
@@ -326,7 +326,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Location = new System.Drawing.Point(545, 78);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(277, 2);
             this.panel3.TabIndex = 54;
@@ -341,7 +341,7 @@
             this.txt_Codigo_Tratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo_Tratamiento.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Codigo_Tratamiento.Location = new System.Drawing.Point(545, 54);
-            this.txt_Codigo_Tratamiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Codigo_Tratamiento.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Codigo_Tratamiento.Name = "txt_Codigo_Tratamiento";
             this.txt_Codigo_Tratamiento.Size = new System.Drawing.Size(277, 19);
             this.txt_Codigo_Tratamiento.TabIndex = 53;
@@ -354,7 +354,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Location = new System.Drawing.Point(545, 217);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(277, 2);
             this.panel5.TabIndex = 60;
@@ -369,7 +369,7 @@
             this.txt_Costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Costo.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Costo.Location = new System.Drawing.Point(545, 192);
-            this.txt_Costo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Costo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Costo.Name = "txt_Costo";
             this.txt_Costo.Size = new System.Drawing.Size(277, 19);
             this.txt_Costo.TabIndex = 59;
@@ -382,7 +382,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel7.Location = new System.Drawing.Point(919, 265);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(277, 2);
             this.panel7.TabIndex = 55;
@@ -394,7 +394,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel6.Location = new System.Drawing.Point(919, 170);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(277, 2);
             this.panel6.TabIndex = 52;
@@ -409,7 +409,7 @@
             this.txt_Fecha_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Fecha_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Fecha_Auditoria.Location = new System.Drawing.Point(919, 241);
-            this.txt_Fecha_Auditoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Fecha_Auditoria.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Fecha_Auditoria.Name = "txt_Fecha_Auditoria";
             this.txt_Fecha_Auditoria.Size = new System.Drawing.Size(277, 19);
             this.txt_Fecha_Auditoria.TabIndex = 54;
@@ -425,7 +425,7 @@
             this.txt_Usuario_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_Usuario_Auditoria.Location = new System.Drawing.Point(919, 146);
-            this.txt_Usuario_Auditoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Usuario_Auditoria.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Usuario_Auditoria.Name = "txt_Usuario_Auditoria";
             this.txt_Usuario_Auditoria.Size = new System.Drawing.Size(277, 19);
             this.txt_Usuario_Auditoria.TabIndex = 51;
@@ -504,12 +504,6 @@
             this.cbx_foreign_Codigo_Cita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cbx_foreign_Codigo_Cita.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbx_foreign_Codigo_Cita.FormattingEnabled = true;
-            this.cbx_foreign_Codigo_Cita.Items.AddRange(new object[] {
-            "Pendiente",
-            "Progreso",
-            "Completado",
-            "Suspendido",
-            "Cancelado"});
             this.cbx_foreign_Codigo_Cita.Location = new System.Drawing.Point(545, 100);
             this.cbx_foreign_Codigo_Cita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_foreign_Codigo_Cita.Name = "cbx_foreign_Codigo_Cita";
@@ -525,17 +519,12 @@
             this.cbx_foreign_Codigo_Medicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cbx_foreign_Codigo_Medicamento.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbx_foreign_Codigo_Medicamento.FormattingEnabled = true;
-            this.cbx_foreign_Codigo_Medicamento.Items.AddRange(new object[] {
-            "Pendiente",
-            "Progreso",
-            "Completado",
-            "Suspendido",
-            "Cancelado"});
             this.cbx_foreign_Codigo_Medicamento.Location = new System.Drawing.Point(545, 148);
             this.cbx_foreign_Codigo_Medicamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_foreign_Codigo_Medicamento.Name = "cbx_foreign_Codigo_Medicamento";
             this.cbx_foreign_Codigo_Medicamento.Size = new System.Drawing.Size(277, 24);
             this.cbx_foreign_Codigo_Medicamento.TabIndex = 62;
+            this.cbx_foreign_Codigo_Medicamento.SelectedIndexChanged += new System.EventHandler(this.cbx_foreign_Codigo_Medicamento_SelectedIndexChanged);
             // 
             // label7
             // 
