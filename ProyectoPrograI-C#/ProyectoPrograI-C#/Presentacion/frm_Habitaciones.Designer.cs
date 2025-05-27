@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_CodigoHabitacion = new System.Windows.Forms.TextBox();
@@ -48,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbox_Ubicacion = new System.Windows.Forms.ComboBox();
             this.lbl_Costo = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Habitaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +60,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 569);
             this.panel1.TabIndex = 0;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 152;
+            this.iconPictureBox1.Location = new System.Drawing.Point(44, 158);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(152, 152);
+            this.iconPictureBox1.TabIndex = 1;
+            this.iconPictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -101,6 +119,7 @@
             this.txt_CodigoHabitacion.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_CodigoHabitacion.Location = new System.Drawing.Point(422, 65);
             this.txt_CodigoHabitacion.Name = "txt_CodigoHabitacion";
+            this.txt_CodigoHabitacion.ReadOnly = true;
             this.txt_CodigoHabitacion.Size = new System.Drawing.Size(208, 15);
             this.txt_CodigoHabitacion.TabIndex = 54;
             this.txt_CodigoHabitacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -162,7 +181,7 @@
             "Aislamiento",
             "Observacion"});
             this.cbox_TipoHabitacion.Location = new System.Drawing.Point(422, 165);
-            this.cbox_TipoHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbox_TipoHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.cbox_TipoHabitacion.Name = "cbox_TipoHabitacion";
             this.cbox_TipoHabitacion.Size = new System.Drawing.Size(210, 21);
             this.cbox_TipoHabitacion.TabIndex = 62;
@@ -183,7 +202,7 @@
             "Suspendido",
             "Cancelado"});
             this.cbox_Estado.Location = new System.Drawing.Point(420, 242);
-            this.cbox_Estado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbox_Estado.Margin = new System.Windows.Forms.Padding(2);
             this.cbox_Estado.Name = "cbox_Estado";
             this.cbox_Estado.Size = new System.Drawing.Size(210, 21);
             this.cbox_Estado.TabIndex = 64;
@@ -213,7 +232,7 @@
             this.btn_Agregar.IconSize = 35;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(785, 63);
-            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(94, 32);
             this.btn_Agregar.TabIndex = 66;
@@ -233,7 +252,7 @@
             this.btn_Editar.IconSize = 35;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Location = new System.Drawing.Point(785, 107);
-            this.btn_Editar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(94, 32);
             this.btn_Editar.TabIndex = 67;
@@ -253,7 +272,7 @@
             this.btn_Cancelar.IconSize = 35;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Location = new System.Drawing.Point(785, 158);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(94, 32);
             this.btn_Cancelar.TabIndex = 68;
@@ -273,7 +292,7 @@
             this.btn_Eliminar.IconSize = 35;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Eliminar.Location = new System.Drawing.Point(644, 422);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(94, 32);
             this.btn_Eliminar.TabIndex = 69;
@@ -293,7 +312,7 @@
             this.btn_Salir.IconSize = 35;
             this.btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Salir.Location = new System.Drawing.Point(768, 422);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(94, 32);
             this.btn_Salir.TabIndex = 70;
@@ -409,9 +428,12 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Habitaciones";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Habitaciones";
             this.Load += new System.EventHandler(this.frm_Habitaciones_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Habitaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -440,5 +462,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbox_Ubicacion;
         private System.Windows.Forms.Label lbl_Costo;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

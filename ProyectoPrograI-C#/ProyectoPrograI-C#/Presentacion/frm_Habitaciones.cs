@@ -141,11 +141,9 @@ namespace ProyectoPrograI_C_.Presentacion
                     string Ubicacion = cbox_Ubicacion.Text;
                     string TipoHabitacion = cbox_TipoHabitacion.Text;
                     double Costo = double.Parse(lbl_Costo.Text);
-                    string Estado = cbox_Estado.Text;
-                    string UsuarioAuditoria = "Dylan";
-                    DateTime FechaAuditoria = CL_Habitaciones.MtdFechaHoy();
+                    string Estado = cbox_Estado.Text;;
 
-                    CD_Habitaciones.Mtd_ActualizarHabitaciones(CodigoHabitacion, NuumeroHabitacion, Ubicacion, TipoHabitacion, Costo, Estado, UsuarioAuditoria, FechaAuditoria);
+                    CD_Habitaciones.Mtd_ActualizarHabitaciones(CodigoHabitacion, NuumeroHabitacion, Ubicacion, TipoHabitacion, Costo, Estado);
                     MessageBox.Show("Habitacion Actualizada", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Mtd_ConsultarHabitaciones();
                     Mtd_LimpiarCampos();

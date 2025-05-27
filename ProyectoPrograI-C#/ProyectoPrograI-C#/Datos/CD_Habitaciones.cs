@@ -37,9 +37,9 @@ namespace ProyectoPrograI_C_.Datos
             CD_Conexion1.MtdCerrarConexion();
         }
 
-        public void Mtd_ActualizarHabitaciones(int CodigoHabitacion, string Numero, string Ubicacion, string TipoHabitacion, double Costo, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        public void Mtd_ActualizarHabitaciones(int CodigoHabitacion, string Numero, string Ubicacion, string TipoHabitacion, double Costo, string Estado)
         {
-            string QueryActualizarHabitaciones = "update tbl_Habitaciones set Numero=@Numero, Ubicacion=@Ubicacion, TipoHabitaciones=@TipoHabitaciones, Costo=@Costo, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditoria=@FechaAuditoria where CodigoHabitacion=@CodigoHabitacion";
+            string QueryActualizarHabitaciones = "update tbl_Habitaciones set Numero=@Numero, Ubicacion=@Ubicacion, TipoHabitaciones=@TipoHabitaciones, Costo=@Costo, Estado=@Estado where CodigoHabitacion=@CodigoHabitacion";
 
             SqlCommand cmd = new SqlCommand(QueryActualizarHabitaciones, CD_Conexion1.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoHabitacion", CodigoHabitacion);
@@ -48,8 +48,6 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@TipoHabitaciones", TipoHabitacion);
             cmd.Parameters.AddWithValue("@Costo", Costo);
             cmd.Parameters.AddWithValue("@Estado", Estado);
-            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
-            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
             cmd.ExecuteNonQuery();
             CD_Conexion1.MtdCerrarConexion();
         }
