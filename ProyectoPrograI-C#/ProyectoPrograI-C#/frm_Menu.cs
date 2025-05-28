@@ -111,14 +111,10 @@ namespace ProyectoPrograI_C_.Presentacion
             this.Location = new Point(lx, ly);
         }
 
-        private void btn_Empleados_Click(object sender, EventArgs e) 
+        private void btn_Empleados_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Empleados>();            
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         //METODO PARA ARRASTRAR EL FORMULARIO

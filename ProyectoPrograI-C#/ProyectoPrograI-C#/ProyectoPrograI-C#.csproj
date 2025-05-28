@@ -60,6 +60,18 @@
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Datos\CD_Citas.cs" />
+    <Compile Include="Presentacion\frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Empleados.Designer.cs">
+      <DependentUpon>frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\Cache_Usuario.cs" />
     <Compile Include="Seguridad\DAO_Usuario.cs" />
     <Compile Include="Seguridad\Modelo_Usuario.cs" />
@@ -76,12 +88,6 @@
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
     <Compile Include="Logica\CL_Citas.cs" />
-    <Compile Include="Presentacion\frm_Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frm_Empleados.Designer.cs">
-      <DependentUpon>frm_Empleados.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\frm_Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,7 +130,7 @@
     <Compile Include="Presentacion\frm_Usuarios.Designer.cs">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </Compile>
-     <Compile Include="Presentacion\frm_Citas.cs">
+    <Compile Include="Presentacion\frm_Citas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frm_Citas.Designer.cs">
@@ -147,8 +153,11 @@
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
     </EmbeddedResource>
-     <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
+    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
       <DependentUpon>frm_Medicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
@@ -162,7 +171,7 @@
     <EmbeddedResource Include="Presentacion\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-     <EmbeddedResource Include="Presentacion\frm_Citas.resx">
+    <EmbeddedResource Include="Presentacion\frm_Citas.resx">
       <DependentUpon>frm_Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
