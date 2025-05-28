@@ -18,9 +18,9 @@ namespace ProyectoPrograI_C_.Seguridad
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conexion;
-                    command.CommandText = "select * from tbl_Usuarios where NombreUsuario=@NombreUsuario and Contrasenia=@Contrasenia";
-                    command.Parameters.AddWithValue("@NombreUsuario", Usuario);
-                    command.Parameters.AddWithValue("@Contrasenia", Clave);
+                    command.CommandText = "select * from tbl_Usuarios where Usuario=@Usuario and Clave=@Clave";
+                    command.Parameters.AddWithValue("@Usuario", Usuario);
+                    command.Parameters.AddWithValue("@Clave", Clave);
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)

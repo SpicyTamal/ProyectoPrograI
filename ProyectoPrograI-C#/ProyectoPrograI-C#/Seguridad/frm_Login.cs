@@ -28,6 +28,11 @@ namespace ProyectoProgra
             lbl_Error.Visible = true;
         }
 
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+            lbl_Error.Visible = false;
+        }
+
         private void btn_Acceder_Click(object sender, EventArgs e)
         {
             if (txt_Usuario.Text != "USUARIO" && txt_Usuario.TextLength > 2)
@@ -52,10 +57,20 @@ namespace ProyectoProgra
                         txt_Usuario.Focus();
                     }
                 }
-                else msgError("Please enter password.");
+                else msgError("Por favor ingerese la constraseña correcta.");
             }
-            else msgError("Please enter username.");
+            else msgError("Por favor ingrese un usuario correcto.");
         }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txt_Contrasena.Text = "CONTRASEÑA";
+            txt_Contrasena.UseSystemPasswordChar = false;
+            txt_Usuario.Text = "USUARIO";
+            lbl_Error.Visible = false;
+            this.Show();
+        }
+
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
             if (txt_Usuario.Text == "USUARIO")
@@ -127,11 +142,6 @@ namespace ProyectoProgra
         }
 
         //OTROS
-
-        private void frm_Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
