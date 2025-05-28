@@ -111,12 +111,48 @@ namespace ProyectoPrograI_C_.Presentacion
             this.Location = new Point(lx, ly);
         }
 
+        private void btn_Empleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_Empleados>();            
+            
+        }
+
         //METODO PARA ARRASTRAR EL FORMULARIO
         [DllImport("user32.dll")]    
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
+        //INICIO DE VENTANAS EN EL MENU
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = pnl_Formularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+                                                                                     //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                pnl_Formularios.Controls.Add(formulario);
+                pnl_Formularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+
+
+
+
+        //FIN VENTANAS EN EL MENU
 
     }
 }
