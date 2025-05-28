@@ -24,7 +24,7 @@ namespace ProyectoPrograI_C_.Datos
                 Lista_Citas.Add(new
                 {
                     Value = reader["CodigoCita"],
-                    Text = $"{reader["CodigoCitas"]} - {reader["FechaIngreso"]}"
+                    Text = $"{reader["CodigoCita"]} - {reader["FechaIngreso"]}"
                 });
             }
 
@@ -53,7 +53,7 @@ namespace ProyectoPrograI_C_.Datos
 
         public DataTable mtd_Consultar_Tratamientos()
         {
-            string QueryConsultarTratamientos = "Select * from tbl_Tratamiento";
+            string QueryConsultarTratamientos = "Select * from tbl_Tratamiento  ";
             SqlDataAdapter Adapter = new SqlDataAdapter(QueryConsultarTratamientos, cd_conexion.MtdAbrirConexion());
             DataTable Dt = new DataTable();
             Adapter.Fill(Dt);

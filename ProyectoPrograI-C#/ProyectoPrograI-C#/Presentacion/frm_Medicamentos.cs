@@ -51,10 +51,15 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void mtd_Limpiar_Campos()
         {
+            txt_Codigo_Medicamento.Text = "";
+            txt_Nombre.Text = "";
             cbx_Tipo_Medicamento.Text = "";
             txt_Costo_Medicamentos.Text = "";
+            txt_Stock.Text = "";
             dtp_Fecha_Vencimiento_Medicamentos.Text = "";
             cbx_Estado_Medicamentos.Text = "";
+            txt_Usuario_Auditoria.Text = "";
+            txt_Fecha_Auditoria.Text = "";
         }
 
         private void dgv_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -73,9 +78,9 @@ namespace ProyectoPrograI_C_.Presentacion
                 txt_Costo_Medicamentos.Text = dgv_Medicamentos.SelectedCells[3].Value.ToString();
                 txt_Stock.Text = dgv_Medicamentos.SelectedCells[4].Value.ToString();
                 dtp_Fecha_Vencimiento_Medicamentos.Text = dgv_Medicamentos.SelectedCells[5].Value.ToString();
-                cbx_Estado_Medicamentos.Text = dgv_Medicamentos.SelectedCells[7].Value.ToString();
-                txt_Usuario_Auditoria.Text = dgv_Medicamentos.SelectedCells[8].Value.ToString();
-                txt_Fecha_Auditoria.Text = dgv_Medicamentos.SelectedCells[9].Value.ToString();
+                cbx_Estado_Medicamentos.Text = dgv_Medicamentos.SelectedCells[6].Value.ToString();
+                txt_Usuario_Auditoria.Text = dgv_Medicamentos.SelectedCells[7].Value.ToString();
+                txt_Fecha_Auditoria.Text = dgv_Medicamentos.SelectedCells[8].Value.ToString();
             }
         }
 
@@ -112,9 +117,9 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_Codigo_Medicamento.Text) || string.IsNullOrEmpty(txt_Nombre.Text) || string.IsNullOrEmpty(cbx_Tipo_Medicamento.Text) || 
-                string.IsNullOrEmpty(txt_Costo_Medicamentos.Text) || string.IsNullOrEmpty(txt_Stock.Text) || string.IsNullOrEmpty(dtp_Fecha_Vencimiento_Medicamentos.Text) || 
-                string.IsNullOrEmpty(cbx_Estado_Medicamentos.Text) || string.IsNullOrEmpty(txt_Usuario_Auditoria.Text) || string.IsNullOrEmpty(txt_Fecha_Auditoria.Text))
+            if (string.IsNullOrEmpty(txt_Nombre.Text) || string.IsNullOrEmpty(cbx_Tipo_Medicamento.Text) ||
+                string.IsNullOrEmpty(txt_Costo_Medicamentos.Text) || string.IsNullOrEmpty(txt_Stock.Text) || 
+                string.IsNullOrEmpty(dtp_Fecha_Vencimiento_Medicamentos.Text) || string.IsNullOrEmpty(cbx_Estado_Medicamentos.Text))
             {
                 MessageBox.Show("Favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -122,7 +127,7 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    string Nombre = cbx_Tipo_Medicamento.Text;
+                    string Nombre = txt_Nombre.Text;
                     string Tipo_Medicamento = cbx_Tipo_Medicamento.Text;
                     double Costo = cl_medicamentos.mtd_Costo_Medicamentos(Tipo_Medicamento);
                     double Stock = double.Parse(txt_Stock.Text);
@@ -145,9 +150,9 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_Codigo_Medicamento.Text) || string.IsNullOrEmpty(txt_Nombre.Text) || string.IsNullOrEmpty(cbx_Tipo_Medicamento.Text) ||
-                string.IsNullOrEmpty(txt_Costo_Medicamentos.Text) || string.IsNullOrEmpty(txt_Stock.Text) || string.IsNullOrEmpty(dtp_Fecha_Vencimiento_Medicamentos.Text) ||
-                string.IsNullOrEmpty(cbx_Estado_Medicamentos.Text) || string.IsNullOrEmpty(txt_Usuario_Auditoria.Text) || string.IsNullOrEmpty(txt_Fecha_Auditoria.Text))
+            if (string.IsNullOrEmpty(txt_Nombre.Text) || string.IsNullOrEmpty(cbx_Tipo_Medicamento.Text) ||
+                string.IsNullOrEmpty(txt_Costo_Medicamentos.Text) || string.IsNullOrEmpty(txt_Stock.Text) || 
+                string.IsNullOrEmpty(dtp_Fecha_Vencimiento_Medicamentos.Text) || string.IsNullOrEmpty(cbx_Estado_Medicamentos.Text))
             {
                 MessageBox.Show("Favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
