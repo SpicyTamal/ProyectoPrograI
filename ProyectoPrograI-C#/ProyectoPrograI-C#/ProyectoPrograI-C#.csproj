@@ -55,10 +55,11 @@
   <ItemGroup>
     <Compile Include="Datos\CD_Conexion1.cs" />
     <Compile Include="Datos\CD_Empleados.cs" />
-    <Compile Include="Datos\CD_Habitaciones.cs" />
     <Compile Include="Datos\CD_Medicamentos.cs" />
+    <Compile Include="Datos\CD_Habitaciones.cs" />
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
+    <Compile Include="Datos\CD_Citas.cs" />
     <Compile Include="Seguridad\Cache_Usuario.cs" />
     <Compile Include="Seguridad\DAO_Usuario.cs" />
     <Compile Include="Seguridad\Modelo_Usuario.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
+    <Compile Include="Logica\CL_Citas.cs" />
     <Compile Include="Presentacion\frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +85,8 @@
     <Compile Include="Presentacion\frm_Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Citas.Designer.cs">
-      <DependentUpon>frm_Citas.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
+      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Habitaciones.cs">
       <SubType>Form</SubType>
@@ -122,6 +124,12 @@
     <Compile Include="Presentacion\frm_Usuarios.Designer.cs">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </Compile>
+     <Compile Include="Presentacion\frm_Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Citas.Designer.cs">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\frm_Login.cs">
@@ -139,7 +147,7 @@
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
+     <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
       <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
@@ -153,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+     <EmbeddedResource Include="Presentacion\frm_Citas.resx">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
