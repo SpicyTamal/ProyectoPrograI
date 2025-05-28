@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -61,7 +62,7 @@ namespace ProyectoPrograI_C_.Presentacion
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)
         {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(244, 244, 244));
+            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(0, 0, 0));
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
 
             base.OnPaint(e);
@@ -72,5 +73,50 @@ namespace ProyectoPrograI_C_.Presentacion
         {
 
         }
+
+        private void btn_Cerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        int lx, ly, sw, sh;
+
+        private void btn_Maximizar_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            btn_Maximizar.Visible = false;
+            btn_Restaurar.Visible = true;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+        }
+
+        private void pnl_Titulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_Restaurar_Click(object sender, EventArgs e)
+        {
+            btn_Maximizar.Visible = true;
+            btn_Restaurar.Visible = false;
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+        }
+
+        //METODO PARA ARRASTRAR EL FORMULARIO
+        [DllImport("user32.dll")]    
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
     }
 }
