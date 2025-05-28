@@ -19,18 +19,26 @@ namespace ProyectoPrograI_C_.Logica
             return DateTime.Now;
         }
 
-        public double mtd_Costo_Tratamiento(int CodigoMedicamento)
+        public double mtd_Costo_Medicamento(int CodigoMedicamento)
         {
-            var ListaMedicamentos = cd_tratamientos.mtd_Lista_Costo_Medicamentos();
+            double CostoMedicamento = 0;
 
-            foreach (double Costo in ListaMedicamentos)
+            string QueryConsultarCostoMedicamento = "Select Costo from tbl_Medicamentos where CodigoMedicamento=@CodigoMedicamento";
+            SqlCommand CommandCostoMedicamento = new SqlCommand(QueryConsultarCostoMedicamento, cd_conexion.MtdAbrirConexion());
+            CommandCostoMedicamento.Parameters.AddWithValue("@CodigoMedicamento", CodigoMedicamento);
+            SqlDataReader reader = CommandCostoMedicamento.ExecuteReader();
+
+            if (reader.Read())
             {
-                if (Costo == CodigoMedicamento)
-                {
-                    return Costo;
-                }
+                CostoMedicamento = double.Parse(reader["Costo"].ToString());
             }
-            return 0.0;
+            else
+            {
+                CostoMedicamento = 0;
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return CostoMedicamento;
         }
     }
 }

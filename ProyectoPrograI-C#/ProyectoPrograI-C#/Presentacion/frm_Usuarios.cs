@@ -47,14 +47,19 @@ namespace ProyectoPrograI_C_.Presentacion
         private void frm_Usuarios_Load(object sender, EventArgs e)
         {
             mtd_Consultar_Usuarios();
+            mtd_Mostrar_Lista_Empleados();
         }
 
         private void mtd_Limpiar_Campos()
         {
+            txt_Codigo_Usuario.Text = "";
             cbx_foreign_Codigo_Empleado.Text = "";
             txt_Usuario.Text = "";
             txt_Clave.Text = "";
             cbx_Tipo_Usuario.Text = "";
+            cbx_Estado_Usuarios.Text = "";
+            txt_Usuario_Auditoria.Text = "";
+            txt_Fecha_Auditoria.Text = "";
         }
 
         private void dgv_Usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -68,10 +73,18 @@ namespace ProyectoPrograI_C_.Presentacion
             else
             {
                 txt_Codigo_Usuario.Text = dgv_Usuarios.SelectedCells[0].Value.ToString();
-                cbx_foreign_Codigo_Empleado.Text = dgv_Usuarios.SelectedCells[1].Value.ToString();
+                int CodigoEmpleado = (int)dgv_Usuarios.SelectedCells[1].Value;
+                foreach (var codigoemp in cbx_foreign_Codigo_Empleado.Items)
+                {
+                    if (((dynamic)codigoemp).Value == CodigoEmpleado)
+                    {
+                        cbx_foreign_Codigo_Empleado.SelectedItem = codigoemp;
+                        break;
+                    }
+                }
                 txt_Usuario.Text = dgv_Usuarios.SelectedCells[2].Value.ToString();
                 txt_Clave.Text = dgv_Usuarios.SelectedCells[3].Value.ToString();
-                txt_Codigo_Usuario.Text = dgv_Usuarios.SelectedCells[4].Value.ToString();
+                cbx_Tipo_Usuario.Text = dgv_Usuarios.SelectedCells[4].Value.ToString();
                 cbx_Estado_Usuarios.Text = dgv_Usuarios.SelectedCells[5].Value.ToString();
                 txt_Usuario_Auditoria.Text = dgv_Usuarios.SelectedCells[6].Value.ToString();
                 txt_Fecha_Auditoria.Text = dgv_Usuarios.SelectedCells[7].Value.ToString();
@@ -111,9 +124,8 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_Codigo_Usuario.Text) || string.IsNullOrEmpty(cbx_foreign_Codigo_Empleado.Text) || string.IsNullOrEmpty(txt_Usuario.Text) ||
-               string.IsNullOrEmpty(txt_Clave.Text) || string.IsNullOrEmpty(cbx_Tipo_Usuario.Text) || string.IsNullOrEmpty(cbx_Estado_Usuarios.Text) ||
-               string.IsNullOrEmpty(txt_Usuario_Auditoria.Text) || string.IsNullOrEmpty(txt_Fecha_Auditoria.Text))
+            if (string.IsNullOrEmpty(txt_Usuario.Text) || string.IsNullOrEmpty(txt_Clave.Text) || 
+                string.IsNullOrEmpty(cbx_Tipo_Usuario.Text) || string.IsNullOrEmpty(cbx_Estado_Usuarios.Text))
             {
                 MessageBox.Show("Favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -121,7 +133,8 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    string CodigoEmpleado = cbx_foreign_Codigo_Empleado.Text;
+                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
+                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
@@ -143,9 +156,8 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_Codigo_Usuario.Text) || string.IsNullOrEmpty(cbx_foreign_Codigo_Empleado.Text) || string.IsNullOrEmpty(txt_Usuario.Text) ||
-               string.IsNullOrEmpty(txt_Clave.Text) || string.IsNullOrEmpty(cbx_Tipo_Usuario.Text) || string.IsNullOrEmpty(cbx_Estado_Usuarios.Text) ||
-               string.IsNullOrEmpty(txt_Usuario_Auditoria.Text) || string.IsNullOrEmpty(txt_Fecha_Auditoria.Text))
+            if (string.IsNullOrEmpty(txt_Usuario.Text) || string.IsNullOrEmpty(txt_Clave.Text) || 
+                string.IsNullOrEmpty(cbx_Tipo_Usuario.Text) || string.IsNullOrEmpty(cbx_Estado_Usuarios.Text))
             {
                 MessageBox.Show("Favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -154,7 +166,8 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoUsuario = (int.Parse(txt_Codigo_Usuario.Text));
-                    string CodigoEmpleado = cbx_foreign_Codigo_Empleado.Text;
+                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
+                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;

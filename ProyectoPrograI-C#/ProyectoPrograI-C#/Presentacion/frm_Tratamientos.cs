@@ -25,16 +25,11 @@ namespace ProyectoPrograI_C_.Presentacion
 
         //METODOS Y LOGICA DEL FORM
 
-        private void cbx_foreign_Codigo_Cita_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbx_foreign_Codigo_Medicamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cbx_foreign_Codigo_Cita.Text))
-            {
-                MessageBox.Show("Seleccione una cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                //txt_Costo.Text = cl_tratamientos.mtd_Costo_Tratamiento(cboxDescripcion.Text).ToString("c");
-            }
+            var medicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
+            int codigoMedicamento = (int)medicamentoSeleccionado.Value;
+            txt_Costo.Text = cl_tratamientos.mtd_Costo_Medicamento(codigoMedicamento).ToString();
         }
 
         private void frm_Tratamientos_Load(object sender, EventArgs e)
@@ -52,7 +47,6 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 cbx_foreign_Codigo_Cita.Items.Add(cita);
             }
-
             cbx_foreign_Codigo_Cita.DisplayMember = "Text";
             cbx_foreign_Codigo_Cita.ValueMember = "Value";
         }
@@ -78,10 +72,14 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void mtd_Limpiar_Campos()
         {
+            txt_Codigo_Tratamiento.Text = "";
             cbx_foreign_Codigo_Cita.Text = "";
             cbx_foreign_Codigo_Medicamento.Text = "";
+            txt_Costo.Text = "";
             dtp_Fecha_Vencimiento_Tratamientos.Text = "";
             cbx_Estado_Tratamientos.Text = "";
+            txt_Usuario_Auditoria.Text = "";
+            txt_Fecha_Auditoria.Text = "";
         }
 
         private void dgv_Tratamientos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -95,8 +93,24 @@ namespace ProyectoPrograI_C_.Presentacion
             else
             {
                 txt_Codigo_Tratamiento.Text = dgv_Tratamientos.SelectedCells[0].Value.ToString();
-                cbx_foreign_Codigo_Cita.Text = dgv_Tratamientos.SelectedCells[1].Value.ToString();
-                cbx_foreign_Codigo_Medicamento.Text = dgv_Tratamientos.SelectedCells[2].Value.ToString();
+                int CodigoCita = (int)dgv_Tratamientos.SelectedCells[1].Value;
+                foreach (var codigoci in cbx_foreign_Codigo_Cita.Items)
+                {
+                    if (((dynamic)codigoci).Value == CodigoCita)
+                    {
+                        cbx_foreign_Codigo_Cita.SelectedItem = codigoci;
+                        break;
+                    }
+                }
+                int CodigoMedicamento = (int)dgv_Tratamientos.SelectedCells[2].Value;
+                foreach(var codigomed in cbx_foreign_Codigo_Medicamento.Items)
+                {
+                    if (((dynamic)codigomed).Value == CodigoMedicamento)
+                    {
+                        cbx_foreign_Codigo_Medicamento.SelectedItem = codigomed;
+                        break;
+                    }
+                }
                 txt_Costo.Text = dgv_Tratamientos.SelectedCells[3].Value.ToString();
                 dtp_Fecha_Vencimiento_Tratamientos.Text = dgv_Tratamientos.SelectedCells[4].Value.ToString();
                 cbx_Estado_Tratamientos.Text = dgv_Tratamientos.SelectedCells[5].Value.ToString();
@@ -147,9 +161,11 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
-                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
-                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
+                    var CitaSeleccionada = (dynamic)cbx_foreign_Codigo_Cita.SelectedItem;
+                    int CodigoCita = (int)CitaSeleccionada.Value;
+                    var MedicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
+                    int CodigoMedicamento = (int)MedicamentoSeleccionado.Value;
+                    double Costo = cl_tratamientos.mtd_Costo_Medicamento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
@@ -179,9 +195,11 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoTratamiento = (int.Parse(txt_Codigo_Tratamiento.Text));
-                    int CodigoCita = int.Parse(cbx_foreign_Codigo_Cita.Text);
-                    int CodigoMedicamento = int.Parse(cbx_foreign_Codigo_Medicamento.Text);
-                    double Costo = cl_tratamientos.mtd_Costo_Tratamiento(CodigoMedicamento);
+                    var CitaSeleccionada = (dynamic)cbx_foreign_Codigo_Cita.SelectedItem;
+                    int CodigoCita = (int)CitaSeleccionada.Value;
+                    var MedicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
+                    int CodigoMedicamento = (int)MedicamentoSeleccionado.Value;
+                    double Costo = cl_tratamientos.mtd_Costo_Medicamento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
@@ -231,6 +249,11 @@ namespace ProyectoPrograI_C_.Presentacion
         //OTROS
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbx_foreign_Codigo_Cita_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

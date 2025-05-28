@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -24,7 +24,7 @@ namespace ProyectoPrograI_C_.Datos
                 Lista_Citas.Add(new
                 {
                     Value = reader["CodigoCita"],
-                    Text = $"{reader["CodigoCitas"]} - {reader["FechaIngreso"]}"
+                    Text = $"{reader["CodigoCita"]} - {reader["FechaIngreso"]}"
                 });
             }
 
@@ -51,28 +51,9 @@ namespace ProyectoPrograI_C_.Datos
             return Lista_Medicamentos;
         }
 
-        public List<dynamic> mtd_Lista_Costo_Medicamentos()
-        {
-            List<dynamic> Lista_Medicamentos = new List<dynamic>();
-            string QueryLista_Medicamentos = "Select CodigoMedicamento, Costo from tbl_Medicamentos";
-            SqlCommand cmd = new SqlCommand(QueryLista_Medicamentos, cd_conexion.MtdAbrirConexion());
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Lista_Medicamentos.Add(new
-                {
-                    Value = reader["CodigoMedicamento"],
-                    Text = $"{reader["CodigoMedicamento"]} - {reader["Costo"]}"
-                });
-            }
-            cd_conexion.MtdCerrarConexion();
-            return Lista_Medicamentos;
-        }
-
         public DataTable mtd_Consultar_Tratamientos()
         {
-            string QueryConsultarTratamientos = "Select * from tbl_Tratamientos";
+            string QueryConsultarTratamientos = "Select * from tbl_Tratamiento  ";
             SqlDataAdapter Adapter = new SqlDataAdapter(QueryConsultarTratamientos, cd_conexion.MtdAbrirConexion());
             DataTable Dt = new DataTable();
             Adapter.Fill(Dt);
