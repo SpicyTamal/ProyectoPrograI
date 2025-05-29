@@ -104,10 +104,11 @@ namespace ProyectoPrograI_C_.Presentacion
                     int codigoEmpleado = (int)item.Value;
                     lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[3].Value).ToString("C2");
                     lbl_Bono.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
-                    lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[5].Value).ToString("C2");
+                    lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[6].Value).ToString("C2");
                     txt_HorasExtras.Text = FilaSeleccionada.Cells[10].Value.ToString();
                     txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[8].Value.ToString();
                     dtp_FechaPago.Value = Convert.ToDateTime(FilaSeleccionada.Cells[2].Value);
+                    cbox_Estado.Text = FilaSeleccionada.Cells[7].Value.ToString();
                 }
                 else
                 {
@@ -115,84 +116,8 @@ namespace ProyectoPrograI_C_.Presentacion
                 }
             }
 
-
-            /*
-            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
-
-            if (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
-            {
-                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                cbox_CodigoEmpleado.Text = FilaSeleccionada.Cells[1].Value.ToString();
-
-                if (cbox_CodigoEmpleado.SelectedItem != null)
-                {
-                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
-
-                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
-                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
-                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
-                }
-                else
-                {
-                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
 
             
-            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
-            if (FilaSeleccionada.Index == dgv_PagoPlanilla.RowCount - 1)
-            {
-                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                cbox_CodigoEmpleado.Text = dgv_PagoPlanilla.SelectedCells[1].Value.ToString();
-
-                // Ahora que has actualizado el ComboBox, puedes obtener SelectedItem
-                if (cbox_CodigoEmpleado.SelectedItem != null)
-                {
-                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
-
-                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
-                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
-                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
-                }
-                else
-                {
-                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            
-            int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
-            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
-            if (FilaSeleccionada.Index == dgv_PagoPlanilla.RowCount - 1)
-            {
-                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                cbox_CodigoEmpleado.Text = dgv_PagoPlanilla.SelectedCells[0].Value.ToString();
-
-                lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
-                lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
-                lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
-
-
-                
-                txt_NombreEmpleado.Text = dgv_PagoPlanilla.SelectedCells[1].Value.ToString();
-                cbox_TipoTrabajo.Text = dgv_PagoPlanilla.SelectedCells[2].Value.ToString();
-                txt_Especialidad.Text = dgv_PagoPlanilla.SelectedCells[3].Value.ToString();
-                lbl_Sueldo.Text = sueldos.mtd_Salarios(cbox_TipoTrabajo.Text).ToString("C2");
-                dtp_FechaAlta.Text = dgv_PagoPlanilla.SelectedCells[5].Value.ToString();
-                cbox_Estado.Text = dgv_PagoPlanilla.SelectedCells[6].Value.ToString();
-                txt_UsuarioAuditoria.Text = dgv_PagoPlanilla.SelectedCells[7].Value.ToString();
-                
-
-            } */
         }
         
 
@@ -233,9 +158,104 @@ namespace ProyectoPrograI_C_.Presentacion
             mtd_VaciarEspacios();
         }
 
-        private void btn_Editar_Click(object sender, EventArgs e)
+        private void btn_Editar_Click(object sender, EventArgs e) //pendiente de arreglar
         {
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
+            {
+                MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+                if (dgv_PagoPlanilla.CurrentRow != null)
+                {
+                    try
+                    {
+                        string CodigoPago = dgv_PagoPlanilla.CurrentRow.Cells[0].Value.ToString();
+                        int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                        DateTime FechaPago = dtp_FechaPago.Value.Date;
+                        double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
+                        double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
+                        double MontoHorasExtras = string.IsNullOrEmpty(txt_HorasExtras.Text) ? 0 : double.Parse(txt_HorasExtras.Text);
+                        double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
+                        string Estado = cbox_Estado.Text;
+                        string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                        DateTime FechaAuditoria = DateTime.Today.Date;
+                        string HorasExtras = txt_HorasExtras.Text;
 
+                        conexion.mtd_ActualizarPago(CodigoPago, codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
+                        MessageBox.Show("Empleado actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mtd_ConsultarPagos();
+                        mtd_VaciarEspacios();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor selecciona un pago en la tabla para actualizar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+
+
+            /*
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
+            {
+                MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    string CodigoPago = dgv_PagoPlanilla.SelectedCells[0].Value.ToString();
+                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                    DateTime FechaPago = dtp_FechaPago.Value.Date;
+                    double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
+                    double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
+                    double MontoHorasExtras = string.IsNullOrEmpty(txt_HorasExtras.Text) ? 0 : double.Parse(txt_HorasExtras.Text);
+                    double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
+                    string Estado = cbox_Estado.Text;
+                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                    DateTime FechaAuditoria = DateTime.Today.Date;
+                    string HorasExtras = txt_HorasExtras.Text;
+                    conexion.mtd_ActualizarPago(CodigoPago, codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
+                    MessageBox.Show("Empleado actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtd_ConsultarPagos();
+                    mtd_VaciarEspacios();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }*/
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
+            if (FilaSeleccionada.Index == dgv_PagoPlanilla.RowCount - 1)
+            {
+                MessageBox.Show("Por favor seleccione el registro de pago a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    string CodigoPago = dgv_PagoPlanilla.SelectedCells[0].Value.ToString(); ;
+
+                    conexion.mtd_EliminarPago(CodigoPago);
+                    MessageBox.Show("Registro eliminado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtd_ConsultarPagos();
+                    mtd_VaciarEspacios();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

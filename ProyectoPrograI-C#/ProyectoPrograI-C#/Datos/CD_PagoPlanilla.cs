@@ -82,8 +82,8 @@ namespace ProyectoPrograI_C_.Datos
        
         public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, string HorasExtras)
         {
-            string QueryAgregarEmpleado = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora, HorasExtras) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria, @HorasExtras)";
-            SqlCommand cmd = new SqlCommand(QueryAgregarEmpleado, conexion.MtdAbrirConexion());
+            string QueryAgregarPago = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora, HorasExtras) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria, @HorasExtras)";
+            SqlCommand cmd = new SqlCommand(QueryAgregarPago, conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.Parameters.AddWithValue("@FechaPago", FechaPago);
             cmd.Parameters.AddWithValue("@Sueldo", Sueldo);
@@ -98,29 +98,30 @@ namespace ProyectoPrograI_C_.Datos
             conexion.MtdCerrarConexion();
         }
 
-        public void mtd_ActualizarPago(string CodigoEmpleado, string Nombre, string TipoTrabajo, double Sueldo, string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
+        public void mtd_ActualizarPago(string CodigoPago, int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, string HorasExtras)
         {
-            string QueryActualizarEmpleados = "Update tbl_Empleados set Nombres=@Nombres, TipoTrabajo=@TipoTrabajo, Especialidad=@Especialidad, Sueldo=@Sueldo, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoEmpleado=@CodigoEmpleado";
-
-            SqlCommand cmd = new SqlCommand(QueryActualizarEmpleados, conexion.MtdAbrirConexion());
+            string QueryActualizarPago = "Update tbl_PagoEmpleados set CodigoEmpleado=@CodigoEmpleado, FechaPago=@FechaPago, Sueldo=@Sueldo, Bono=@Bono, MontoHorasExtra=@MontoHorasExtras, TotalMonto=@TotalMonto, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditora=@FechaAuditoria, HorasExtras=@HorasExtras where CodigoPago=@CodigoPago";
+            SqlCommand cmd = new SqlCommand(QueryActualizarPago, conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoPago", CodigoPago);
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
-            cmd.Parameters.AddWithValue("@Nombres", Nombre);
-            cmd.Parameters.AddWithValue("@TipoTrabajo", TipoTrabajo);
-            cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+            cmd.Parameters.AddWithValue("@FechaPago", FechaPago);
             cmd.Parameters.AddWithValue("@Sueldo", Sueldo);
-            cmd.Parameters.AddWithValue("@FechaAlta", FechaAlta);
+            cmd.Parameters.AddWithValue("@Bono", Bono);
+            cmd.Parameters.AddWithValue("@MontoHorasExtras", MontoHorasExtras);
+            cmd.Parameters.AddWithValue("@TotalMonto", TotalMonto);
             cmd.Parameters.AddWithValue("@Estado", Estado);
-            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.Parameters.AddWithValue("@HorasExtras", HorasExtras);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
-        }
+        } 
 
-        public void mtd_EliminarPago(string CodigoEmpleado)
+        public void mtd_EliminarPago(string CodigoPago)
         {
-            string QueryEliminarEmpleado = "Delete from tbl_Empleados where CodigoEmpleado=@CodigoEmpleado";
+            string QueryEliminarEmpleado = "Delete from tbl_PagoEmpleados where CodigoPago=@CodigoPago";
             SqlCommand cmd = new SqlCommand(QueryEliminarEmpleado, conexion.MtdAbrirConexion());
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cmd.Parameters.AddWithValue("@CodigoPago", CodigoPago);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
         }
