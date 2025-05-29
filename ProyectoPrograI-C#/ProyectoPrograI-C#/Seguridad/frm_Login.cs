@@ -22,7 +22,7 @@ namespace ProyectoProgra
         }
 
         //METODOS Y LOGICA DEL FORM
-
+        
         private void msgError(string msg)
         {
             lbl_Error.Text = "    " + msg;
@@ -44,6 +44,7 @@ namespace ProyectoProgra
                     var validLogin = user.LoginUsuario(txt_Usuario.Text, txt_Contrasena.Text);
                     if (validLogin == true)
                     {
+                        Cache_Usuario.Usuario = txt_Usuario.Text;
                         frm_Menu menu = new frm_Menu();
                         MessageBox.Show("Bienvenido " + Cache_Usuario.Usuario + ", " + Cache_Usuario.TipoUsuario);
                         menu.Show();

@@ -1,5 +1,7 @@
-﻿using ProyectoPrograI_C_.Datos;
+﻿using ProyectoProgra;
+using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +50,9 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             mtd_Consultar_Usuarios();
             mtd_Mostrar_Lista_Empleados();
+            txt_Fecha_Auditoria.Text = cl_medicamentos.mtd_Fecha_De_Hoy().ToString("dd/MM/yyyy");
+            string Usuario_Auditoria = Cache_Usuario.Usuario;
+            txt_Usuario_Auditoria.Text = Usuario_Auditoria;
         }
 
         private void mtd_Limpiar_Campos()
@@ -58,7 +63,6 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Clave.Text = "";
             cbx_Tipo_Usuario.Text = "";
             cbx_Estado_Usuarios.Text = "";
-            txt_Usuario_Auditoria.Text = "";
             txt_Fecha_Auditoria.Text = "";
         }
 
@@ -134,7 +138,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
                     string Estado = cbx_Estado_Usuarios.Text;
                     DateTime FechaAuditoria = cl_medicamentos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_usuarios.mtd_Agregar_Usuarios(CodigoEmpleado, Usuario, Clave, TipoUsuario, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Usuario agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -166,7 +170,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
                     string Estado = cbx_Estado_Usuarios.Text;
                     DateTime FechaAuditoria = cl_medicamentos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_usuarios.mtd_Actualizar_Usuarios(CodigoUsuario, CodigoEmpleado, Usuario, Clave, TipoUsuario, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Usuario actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,7 +188,7 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             if (string.IsNullOrEmpty(cbx_foreign_Codigo_Empleado.Text))
             {
-                MessageBox.Show("Favor seleccionar empleado a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Favor seleccionar usuario a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

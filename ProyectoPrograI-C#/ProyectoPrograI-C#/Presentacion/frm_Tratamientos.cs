@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
@@ -37,6 +38,9 @@ namespace ProyectoPrograI_C_.Presentacion
             mtd_Mostrar_Lista_Medicamentos();
             mtd_Mostrar_Lista_Citas();
             mtd_Consultar_Tratamientos();
+            txt_Fecha_Auditoria.Text = cl_tratamientos.mtd_Fecha_De_Hoy().ToString("dd/MM/yyyy");
+            string Usuario_Auditoria = Cache_Usuario.Usuario;
+            txt_Usuario_Auditoria.Text = Usuario_Auditoria;
         }
 
         private void mtd_Mostrar_Lista_Citas()
@@ -78,8 +82,6 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Costo.Text = "";
             dtp_Fecha_Vencimiento_Tratamientos.Text = "";
             cbx_Estado_Tratamientos.Text = "";
-            txt_Usuario_Auditoria.Text = "";
-            txt_Fecha_Auditoria.Text = "";
         }
 
         private void dgv_Tratamientos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -162,7 +164,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_tratamientos.mtd_Agregar_Tratamientos(CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Tratamiento agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -196,7 +198,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;
                     DateTime FechaAuditoria = cl_tratamientos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_tratamientos.mtd_Actualizar_Tratamientos(CodigoTratamiento, CodigoCita, CodigoMedicamento, Costo, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria); 
                     MessageBox.Show("Tratamiento actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
