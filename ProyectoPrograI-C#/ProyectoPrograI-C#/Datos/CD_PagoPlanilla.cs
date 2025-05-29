@@ -80,9 +80,9 @@ namespace ProyectoPrograI_C_.Datos
             return Dt;
         }
        
-        public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
+        public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, string HorasExtras)
         {
-            string QueryAgregarEmpleado = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
+            string QueryAgregarEmpleado = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora, HorasExtras) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria, @HorasExtras)";
             SqlCommand cmd = new SqlCommand(QueryAgregarEmpleado, conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.Parameters.AddWithValue("@FechaPago", FechaPago);
@@ -93,6 +93,7 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.Parameters.AddWithValue("@HorasExtras", HorasExtras);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
         }

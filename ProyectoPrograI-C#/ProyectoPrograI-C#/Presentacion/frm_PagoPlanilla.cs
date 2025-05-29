@@ -71,7 +71,8 @@ namespace ProyectoPrograI_C_.Presentacion
                     string Estado = cbox_Estado.Text;
                     string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
                     DateTime FechaAuditoria = DateTime.Today.Date;
-                    conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria);
+                    string HorasExtras = txt_HorasExtras.Text;
+                    conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
                     MessageBox.Show("Pago realizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_ConsultarPagos();
                     mtd_VaciarEspacios();
@@ -102,9 +103,11 @@ namespace ProyectoPrograI_C_.Presentacion
                 {
                     int codigoEmpleado = (int)item.Value;
                     lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[3].Value).ToString("C2");
-                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
-                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[5].Value).ToString("C2");
-                    txt_HorasExtras.Text = "";
+                    lbl_Bono.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
+                    lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[5].Value).ToString("C2");
+                    txt_HorasExtras.Text = FilaSeleccionada.Cells[10].Value.ToString();
+                    txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[8].Value.ToString();
+                    dtp_FechaPago.Value = Convert.ToDateTime(FilaSeleccionada.Cells[2].Value);
                 }
                 else
                 {
@@ -214,7 +217,7 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void mtd_VaciarEspacios()
         {
-            cbox_CodigoEmpleado.SelectedIndex = -1;
+            cbox_CodigoEmpleado.Text = "";
             cbox_Estado.SelectedIndex = -1;
             dtp_FechaPago.Value = DateTime.Today;
             txt_HorasExtras.Clear();
@@ -228,6 +231,11 @@ namespace ProyectoPrograI_C_.Presentacion
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             mtd_VaciarEspacios();
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
