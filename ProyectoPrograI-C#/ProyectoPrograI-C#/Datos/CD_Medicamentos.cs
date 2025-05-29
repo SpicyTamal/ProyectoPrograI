@@ -23,7 +23,7 @@ namespace ProyectoPrograI_C_.Datos
         }
         public void mtd_Agregar_Medicamentos(string Nombre, string TipoMedicamento, double Costo, double Stock, DateTime FechaVencimiento, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryAgregarMedicamentos = "Insert into tbl_Medicamentos(Nombre,TipoMedicamento,Costo, Stock, FechaVencimiento, CodigoCategoria, CodigoProveedor, Estado, FechaAuditoria, UsuarioAuditoria) values (@Nombre, @TipoMedicamento, @Costo, @Stock, @FechaVencimiento, @CodigoCategoria, @CodigoProveedor, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
+            string QueryAgregarMedicamentos = "Insert into tbl_Medicamentos(Nombre,TipoMedicamento,Costo, Stock, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria) values (@Nombre, @TipoMedicamento, @Costo, @Stock, @FechaVencimiento, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarMedicamentos, cd_conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@Nombre", Nombre);
             cmd.Parameters.AddWithValue("@TipoMedicamento", TipoMedicamento);

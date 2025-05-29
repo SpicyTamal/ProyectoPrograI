@@ -21,7 +21,7 @@ namespace ProyectoPrograI_C_.Logica
 
         public double mtd_Costo_Medicamento(int CodigoMedicamento)
         {
-            double CostoMedica = 0;
+            double CostoMedicamento = 0;
 
             string QueryConsultarCostoMedicamento = "Select Costo from tbl_Medicamentos where CodigoMedicamento=@CodigoMedicamento";
             SqlCommand CommandCostoMedicamento = new SqlCommand(QueryConsultarCostoMedicamento, cd_conexion.MtdAbrirConexion());
@@ -30,15 +30,15 @@ namespace ProyectoPrograI_C_.Logica
 
             if (reader.Read())
             {
-                CostoMedica = double.Parse(reader["Costo"].ToString());
+                CostoMedicamento = double.Parse(reader["Costo"].ToString());
             }
             else
             {
-                CostoMedica = 0;
+                CostoMedicamento = 0;
             }
 
             cd_conexion.MtdCerrarConexion();
-            return CostoMedica;
+            return CostoMedicamento;
         }
     }
 }
