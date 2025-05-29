@@ -47,6 +47,8 @@
             this.cbox_CodigoHabitacion = new System.Windows.Forms.ComboBox();
             this.cbox_Estado = new System.Windows.Forms.ComboBox();
             this.cbox_TipoGestion = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GestionHabitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -98,6 +100,7 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // btn_Editar
             // 
@@ -352,12 +355,35 @@
             this.cbox_TipoGestion.Size = new System.Drawing.Size(154, 21);
             this.cbox_TipoGestion.TabIndex = 83;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label5.Location = new System.Drawing.Point(581, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 17);
+            this.label5.TabIndex = 84;
+            this.label5.Text = "Usuario Auditoria:";
+            // 
+            // txt_UsuarioAuditoria
+            // 
+            this.txt_UsuarioAuditoria.Location = new System.Drawing.Point(719, 156);
+            this.txt_UsuarioAuditoria.Name = "txt_UsuarioAuditoria";
+            this.txt_UsuarioAuditoria.Size = new System.Drawing.Size(161, 20);
+            this.txt_UsuarioAuditoria.TabIndex = 85;
+            // 
             // frm_GestionHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.txt_UsuarioAuditoria);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbox_TipoGestion);
             this.Controls.Add(this.cbox_Estado);
             this.Controls.Add(this.cbox_CodigoHabitacion);
@@ -409,5 +435,7 @@
         private System.Windows.Forms.ComboBox cbox_CodigoHabitacion;
         private System.Windows.Forms.ComboBox cbox_Estado;
         private System.Windows.Forms.ComboBox cbox_TipoGestion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
     }
 }

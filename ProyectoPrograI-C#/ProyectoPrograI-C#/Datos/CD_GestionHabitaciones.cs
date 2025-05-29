@@ -60,5 +60,20 @@ namespace ProyectoPrograI_C_.Datos
             conexion.MtdCerrarConexion();
             return Dt;
         }
+
+        public void mtd_AgregarGestion(int CodigoEmpleado, int CodigoHabitacion, string TipoGestion, string Estado, DateTime FechaGestion, string UsuarioAuditoria, DateTime FechaAuditoria)
+        {
+            string QueryAgregarGestion = "Insert into tbl_GestionHabitaciones(CodigoEmpleado,CodigoHabitacion, TipoGestion, Estado, FechaGestion, UsuarioAuditoria, FechaAuditoria) values (@CodigoEmpleado, @CodigoHabitacion, @TipoGestion, @Estado, @FechaGestion, @UsuarioAuditoria, @FechaAuditoria)";
+            SqlCommand cmd = new SqlCommand(QueryAgregarGestion, conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cmd.Parameters.AddWithValue("@CodigoHabitacion", CodigoHabitacion);
+            cmd.Parameters.AddWithValue("@TipoGestion", TipoGestion);
+            cmd.Parameters.AddWithValue("@Estado", Estado);
+            cmd.Parameters.AddWithValue("@FechaGestion", FechaGestion);
+            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);    
+            cmd.ExecuteNonQuery();
+            conexion.MtdCerrarConexion();
+        }
     }
 }

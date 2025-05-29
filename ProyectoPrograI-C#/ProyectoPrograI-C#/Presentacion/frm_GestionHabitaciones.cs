@@ -57,5 +57,44 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             this.Close();
         }
+
+        private void mtd_VaciarEspacios()
+        {
+            cbox_CodigoEmpleado.Text = "";
+            cbox_CodigoHabitacion.Text = "";
+            cbox_TipoGestion.Text = "";
+            cbox_Estado.Text = "";
+            dtp_FechaGestion.Value = DateTime.Today;
+            txt_UsuarioAuditoria.Clear();
+        }   
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_CodigoHabitacion.Text) || string.IsNullOrEmpty(cbox_TipoGestion.Text) || string.IsNullOrEmpty(cbox_Estado.Text))
+            {
+                MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    int CodigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                    int CodigoHabitacion = (int)((dynamic)cbox_CodigoHabitacion.SelectedItem).Value;
+                    string TipoGestion = cbox_TipoGestion.Text;
+                    string Estado = cbox_Estado.Text;
+                    DateTime FechaGestion = dtp_FechaGestion.Value.Date;
+                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                    DateTime FechaAuditoria = DateTime.Today.Date;
+                    conexion.mtd_AgregarGestion(CodigoEmpleado, CodigoHabitacion, TipoGestion, Estado, FechaGestion, UsuarioAuditoria, FechaAuditoria);
+                    MessageBox.Show("Registro guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtd_ConsultarGestiones();
+                    mtd_VaciarEspacios();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
