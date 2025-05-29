@@ -32,6 +32,7 @@ namespace ProyectoPrograI_C_.Presentacion
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
 
+        /*
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -47,6 +48,8 @@ namespace ProyectoPrograI_C_.Presentacion
                     break;
             }
         }
+        */
+
         //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
         protected override void OnSizeChanged(EventArgs e)
         {

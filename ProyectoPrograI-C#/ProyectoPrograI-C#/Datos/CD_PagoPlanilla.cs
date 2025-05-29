@@ -56,6 +56,20 @@ namespace ProyectoPrograI_C_.Datos
             return Salario;
         }
 
+        public double mtd_ConsultarBono(int CodigoEmpleado)
+        {
+            return mtd_ConsultarSalario(CodigoEmpleado) * 0.12;
+        }
+
+        public double mtd_ConsultarMontoTotal(int CodigoEmpleado, string HorasExtras)
+        {
+            HorasExtras = string.IsNullOrEmpty(HorasExtras) ? "0" : HorasExtras; 
+            int horas = int.Parse(HorasExtras);
+            double sueldo = mtd_ConsultarSalario(CodigoEmpleado);
+            double bono = mtd_ConsultarBono(CodigoEmpleado);
+            return sueldo + bono + (horas * 20);
+        }
+
         public DataTable mtd_ConsultarPagos()
         {
             string QueryConsultarEmpleados = "Select * from tbl_PagoEmpleados";
@@ -68,7 +82,7 @@ namespace ProyectoPrograI_C_.Datos
        
         public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria)
         {
-            string QueryAgregarEmpleado = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria) values (@Nombres, @TipoTrabajo, @Especialidad, @Sueldo, @FechaAlta, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
+            string QueryAgregarEmpleado = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarEmpleado, conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.Parameters.AddWithValue("@FechaPago", FechaPago);
@@ -78,6 +92,7 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@TotalMonto", TotalMonto);
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
         }
