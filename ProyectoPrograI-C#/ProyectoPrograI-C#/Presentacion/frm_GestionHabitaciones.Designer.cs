@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txt_Codigo_Medicamento = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.txt_Fecha_Auditoria = new System.Windows.Forms.TextBox();
             this.txt_Usuario_Auditoria = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_Stock = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
@@ -48,7 +40,7 @@
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
-            this.dgv_Medicamentos = new System.Windows.Forms.DataGridView();
+            this.dgv_GestionHabitaciones = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.cbx_Estado_Medicamentos = new System.Windows.Forms.ComboBox();
             this.dtp_Fecha_Vencimiento_Medicamentos = new System.Windows.Forms.DateTimePicker();
@@ -61,47 +53,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Medicamentos)).BeginInit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_GestionHabitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel7.Location = new System.Drawing.Point(686, 214);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(208, 2);
-            this.panel7.TabIndex = 79;
-            // 
-            // txt_Codigo_Medicamento
-            // 
-            this.txt_Codigo_Medicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Codigo_Medicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Codigo_Medicamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Codigo_Medicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Codigo_Medicamento.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Codigo_Medicamento.Location = new System.Drawing.Point(409, 47);
-            this.txt_Codigo_Medicamento.Name = "txt_Codigo_Medicamento";
-            this.txt_Codigo_Medicamento.Size = new System.Drawing.Size(208, 15);
-            this.txt_Codigo_Medicamento.TabIndex = 65;
-            this.txt_Codigo_Medicamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(686, 137);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(208, 2);
-            this.panel6.TabIndex = 76;
             // 
             // txt_Fecha_Auditoria
             // 
@@ -146,65 +103,6 @@
             this.label10.Size = new System.Drawing.Size(111, 17);
             this.label10.TabIndex = 77;
             this.label10.Text = "Fecha Auditoria:";
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel5.Location = new System.Drawing.Point(408, 215);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(208, 2);
-            this.panel5.TabIndex = 74;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(408, 178);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(208, 2);
-            this.panel4.TabIndex = 73;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(409, 98);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(208, 2);
-            this.panel2.TabIndex = 72;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(409, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(208, 2);
-            this.panel3.TabIndex = 71;
-            // 
-            // txt_Stock
-            // 
-            this.txt_Stock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Stock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Stock.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Stock.Location = new System.Drawing.Point(408, 199);
-            this.txt_Stock.Name = "txt_Stock";
-            this.txt_Stock.Size = new System.Drawing.Size(208, 15);
-            this.txt_Stock.TabIndex = 70;
-            this.txt_Stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -259,9 +157,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label7.Location = new System.Drawing.Point(271, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 17);
+            this.label7.Size = new System.Drawing.Size(127, 17);
             this.label7.TabIndex = 66;
-            this.label7.Text = "Nombre:";
+            this.label7.Text = "Codigo Habitacion:";
             // 
             // label6
             // 
@@ -273,9 +171,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label6.Location = new System.Drawing.Point(271, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 17);
+            this.label6.Size = new System.Drawing.Size(123, 17);
             this.label6.TabIndex = 64;
-            this.label6.Text = "Codigo Medicamento:";
+            this.label6.Text = "Codigo Empleado:";
             // 
             // btn_Agregar
             // 
@@ -320,7 +218,7 @@
             this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Cancelar.IconSize = 25;
@@ -353,23 +251,23 @@
             this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // dgv_Medicamentos
+            // dgv_GestionHabitaciones
             // 
-            this.dgv_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_GestionHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Medicamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgv_Medicamentos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgv_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Medicamentos.Location = new System.Drawing.Point(257, 288);
-            this.dgv_Medicamentos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.dgv_Medicamentos.Name = "dgv_Medicamentos";
-            this.dgv_Medicamentos.ReadOnly = true;
-            this.dgv_Medicamentos.RowHeadersWidth = 51;
-            this.dgv_Medicamentos.RowTemplate.Height = 24;
-            this.dgv_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Medicamentos.Size = new System.Drawing.Size(662, 234);
-            this.dgv_Medicamentos.TabIndex = 59;
+            this.dgv_GestionHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgv_GestionHabitaciones.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgv_GestionHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_GestionHabitaciones.Location = new System.Drawing.Point(257, 288);
+            this.dgv_GestionHabitaciones.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dgv_GestionHabitaciones.Name = "dgv_GestionHabitaciones";
+            this.dgv_GestionHabitaciones.ReadOnly = true;
+            this.dgv_GestionHabitaciones.RowHeadersWidth = 51;
+            this.dgv_GestionHabitaciones.RowTemplate.Height = 24;
+            this.dgv_GestionHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_GestionHabitaciones.Size = new System.Drawing.Size(662, 234);
+            this.dgv_GestionHabitaciones.TabIndex = 59;
             // 
             // label5
             // 
@@ -469,9 +367,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Location = new System.Drawing.Point(271, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 52;
-            this.label2.Text = "Tipo Medicamento:";
+            this.label2.Text = "Tipo de Gestion:";
             // 
             // cbx_Tipo_Medicamento
             // 
@@ -481,17 +379,10 @@
             this.cbx_Tipo_Medicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cbx_Tipo_Medicamento.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbx_Tipo_Medicamento.FormattingEnabled = true;
-            this.cbx_Tipo_Medicamento.Items.AddRange(new object[] {
-            "Jarabe",
-            "Suero",
-            "Crema",
-            "Tableta",
-            "Aerosol",
-            "Inyeccion"});
-            this.cbx_Tipo_Medicamento.Location = new System.Drawing.Point(408, 118);
+            this.cbx_Tipo_Medicamento.Location = new System.Drawing.Point(407, 48);
             this.cbx_Tipo_Medicamento.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.cbx_Tipo_Medicamento.Name = "cbx_Tipo_Medicamento";
-            this.cbx_Tipo_Medicamento.Size = new System.Drawing.Size(209, 21);
+            this.cbx_Tipo_Medicamento.Size = new System.Drawing.Size(154, 21);
             this.cbx_Tipo_Medicamento.TabIndex = 51;
             // 
             // btn_Cerrar
@@ -551,24 +442,52 @@
             this.iconPictureBox3.TabIndex = 81;
             this.iconPictureBox3.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(407, 81);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(154, 21);
+            this.comboBox1.TabIndex = 81;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.comboBox2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Creada",
+            "Pendiente ",
+            "Progreso ",
+            "Completa ",
+            "Cancelada"});
+            this.comboBox2.Location = new System.Drawing.Point(407, 117);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(154, 21);
+            this.comboBox2.TabIndex = 82;
+            // 
             // frm_GestionHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.txt_Codigo_Medicamento);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.txt_Fecha_Auditoria);
             this.Controls.Add(this.txt_Usuario_Auditoria);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txt_Stock);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_Nombre);
@@ -578,7 +497,7 @@
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.dgv_Medicamentos);
+            this.Controls.Add(this.dgv_GestionHabitaciones);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbx_Estado_Medicamentos);
             this.Controls.Add(this.dtp_Fecha_Vencimiento_Medicamentos);
@@ -593,7 +512,8 @@
             this.Name = "frm_GestionHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_GestionHabitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Medicamentos)).EndInit();
+            this.Load += new System.EventHandler(this.frm_GestionHabitaciones_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_GestionHabitaciones)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -602,18 +522,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txt_Codigo_Medicamento;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txt_Fecha_Auditoria;
         private System.Windows.Forms.TextBox txt_Usuario_Auditoria;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt_Stock;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_Nombre;
@@ -623,7 +534,7 @@
         private FontAwesome.Sharp.IconButton btn_Editar;
         private FontAwesome.Sharp.IconButton btn_Cancelar;
         private FontAwesome.Sharp.IconButton btn_Eliminar;
-        private System.Windows.Forms.DataGridView dgv_Medicamentos;
+        private System.Windows.Forms.DataGridView dgv_GestionHabitaciones;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbx_Estado_Medicamentos;
         private System.Windows.Forms.DateTimePicker dtp_Fecha_Vencimiento_Medicamentos;
@@ -636,5 +547,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -16,5 +16,10 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             InitializeComponent();
         }
+
+        private void frm_GestionHabitaciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
