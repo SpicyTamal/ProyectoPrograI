@@ -134,7 +134,7 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Habitaciones_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<frm_Habitaciones>();
+            AbrirFormulario<frm_Habitaciones>();
         }
 
         private void btn_GestionHabitaciones_Click(object sender, EventArgs e)
