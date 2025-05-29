@@ -9,6 +9,11 @@ namespace ProyectoPrograI_C_.Logica
     internal class CL_Habitaciones
     {
 
+        public DateTime MtdFechaHoy()
+        {
+            return DateTime.Now;
+        }
+
         public int MtdCostoHabitaciones(string tipoHabitacion)
         {
             if (tipoHabitacion == "General") return 300;

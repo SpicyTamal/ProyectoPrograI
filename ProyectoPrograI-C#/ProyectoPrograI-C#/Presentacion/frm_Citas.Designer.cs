@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
@@ -40,25 +41,46 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dt_FechaEgreso = new System.Windows.Forms.DateTimePicker();
-            this.txt_CodigoMedicamento = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Citas = new System.Windows.Forms.DataGridView();
             this.btn_Salir = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_CodigoCita = new System.Windows.Forms.TextBox();
+            this.cbox_CodigoPacientes = new System.Windows.Forms.ComboBox();
+            this.cbox_CodigoEmpleado = new System.Windows.Forms.ComboBox();
+            this.lbl_CostoTratamiento = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_CostoHabitacion = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 569);
+            this.panel1.Size = new System.Drawing.Size(250, 569);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 139;
+            this.iconPictureBox1.Location = new System.Drawing.Point(22, 105);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(139, 139);
+            this.iconPictureBox1.TabIndex = 1;
+            this.iconPictureBox1.TabStop = false;
             // 
             // btn_Cancelar
             // 
@@ -67,7 +89,7 @@
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Cancelar.IconSize = 35;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cancelar.Location = new System.Drawing.Point(716, 156);
+            this.btn_Cancelar.Location = new System.Drawing.Point(796, 154);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(94, 32);
@@ -75,6 +97,7 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Editar
             // 
@@ -83,7 +106,7 @@
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Editar.IconSize = 35;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Editar.Location = new System.Drawing.Point(716, 105);
+            this.btn_Editar.Location = new System.Drawing.Point(796, 109);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(94, 32);
@@ -91,6 +114,7 @@
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Agregar
             // 
@@ -99,7 +123,7 @@
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Agregar.IconSize = 35;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Agregar.Location = new System.Drawing.Point(716, 61);
+            this.btn_Agregar.Location = new System.Drawing.Point(796, 62);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(94, 32);
@@ -107,10 +131,11 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // dt_FechaIngreso
             // 
-            this.dt_FechaIngreso.Location = new System.Drawing.Point(369, 140);
+            this.dt_FechaIngreso.Location = new System.Drawing.Point(416, 158);
             this.dt_FechaIngreso.Name = "dt_FechaIngreso";
             this.dt_FechaIngreso.Size = new System.Drawing.Size(200, 20);
             this.dt_FechaIngreso.TabIndex = 78;
@@ -123,7 +148,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(215, 185);
+            this.label4.Location = new System.Drawing.Point(262, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 76;
@@ -137,7 +162,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(215, 143);
+            this.label3.Location = new System.Drawing.Point(262, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 75;
@@ -151,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(215, 102);
+            this.label2.Location = new System.Drawing.Point(262, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 74;
@@ -165,11 +190,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(215, 59);
+            this.label7.Location = new System.Drawing.Point(262, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 17);
+            this.label7.Size = new System.Drawing.Size(118, 17);
             this.label7.TabIndex = 73;
-            this.label7.Text = "Codigo Habitacion";
+            this.label7.Text = "Codigo Pacientes";
             // 
             // label1
             // 
@@ -193,7 +218,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(217, 221);
+            this.label5.Location = new System.Drawing.Point(264, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 17);
             this.label5.TabIndex = 84;
@@ -207,86 +232,27 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(217, 259);
+            this.label6.Location = new System.Drawing.Point(264, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 17);
             this.label6.TabIndex = 85;
             this.label6.Text = "Costo Habitacion";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(361, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 15);
-            this.textBox1.TabIndex = 87;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dt_FechaEgreso
             // 
-            this.dt_FechaEgreso.Location = new System.Drawing.Point(369, 185);
+            this.dt_FechaEgreso.Location = new System.Drawing.Point(416, 203);
             this.dt_FechaEgreso.Name = "dt_FechaEgreso";
             this.dt_FechaEgreso.Size = new System.Drawing.Size(200, 20);
             this.dt_FechaEgreso.TabIndex = 88;
             // 
-            // txt_CodigoMedicamento
+            // dgv_Citas
             // 
-            this.txt_CodigoMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_CodigoMedicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_CodigoMedicamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_CodigoMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CodigoMedicamento.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_CodigoMedicamento.Location = new System.Drawing.Point(369, 223);
-            this.txt_CodigoMedicamento.Name = "txt_CodigoMedicamento";
-            this.txt_CodigoMedicamento.Size = new System.Drawing.Size(208, 15);
-            this.txt_CodigoMedicamento.TabIndex = 89;
-            this.txt_CodigoMedicamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox2.Location = new System.Drawing.Point(369, 261);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 15);
-            this.textBox2.TabIndex = 90;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox3.Location = new System.Drawing.Point(361, 105);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 15);
-            this.textBox3.TabIndex = 91;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(218, 300);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(700, 150);
-            this.dataGridView1.TabIndex = 92;
+            this.dgv_Citas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Citas.Location = new System.Drawing.Point(267, 311);
+            this.dgv_Citas.Name = "dgv_Citas";
+            this.dgv_Citas.Size = new System.Drawing.Size(651, 150);
+            this.dgv_Citas.TabIndex = 92;
+            this.dgv_Citas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Citas_CellClick);
             // 
             // btn_Salir
             // 
@@ -320,6 +286,92 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label8.Location = new System.Drawing.Point(265, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 17);
+            this.label8.TabIndex = 95;
+            this.label8.Text = "Codigo Cita";
+            // 
+            // txt_CodigoCita
+            // 
+            this.txt_CodigoCita.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_CodigoCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txt_CodigoCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_CodigoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CodigoCita.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txt_CodigoCita.Location = new System.Drawing.Point(416, 44);
+            this.txt_CodigoCita.Name = "txt_CodigoCita";
+            this.txt_CodigoCita.ReadOnly = true;
+            this.txt_CodigoCita.Size = new System.Drawing.Size(208, 15);
+            this.txt_CodigoCita.TabIndex = 96;
+            this.txt_CodigoCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbox_CodigoPacientes
+            // 
+            this.cbox_CodigoPacientes.FormattingEnabled = true;
+            this.cbox_CodigoPacientes.Location = new System.Drawing.Point(416, 77);
+            this.cbox_CodigoPacientes.Name = "cbox_CodigoPacientes";
+            this.cbox_CodigoPacientes.Size = new System.Drawing.Size(121, 21);
+            this.cbox_CodigoPacientes.TabIndex = 97;
+            // 
+            // cbox_CodigoEmpleado
+            // 
+            this.cbox_CodigoEmpleado.FormattingEnabled = true;
+            this.cbox_CodigoEmpleado.Location = new System.Drawing.Point(416, 120);
+            this.cbox_CodigoEmpleado.Name = "cbox_CodigoEmpleado";
+            this.cbox_CodigoEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cbox_CodigoEmpleado.TabIndex = 98;
+            // 
+            // lbl_CostoTratamiento
+            // 
+            this.lbl_CostoTratamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CostoTratamiento.AutoSize = true;
+            this.lbl_CostoTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CostoTratamiento.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_CostoTratamiento.Location = new System.Drawing.Point(413, 239);
+            this.lbl_CostoTratamiento.Name = "lbl_CostoTratamiento";
+            this.lbl_CostoTratamiento.Size = new System.Drawing.Size(0, 17);
+            this.lbl_CostoTratamiento.TabIndex = 99;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(465, 276);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 17);
+            this.label9.TabIndex = 100;
+            // 
+            // lbl_CostoHabitacion
+            // 
+            this.lbl_CostoHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CostoHabitacion.AutoSize = true;
+            this.lbl_CostoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CostoHabitacion.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_CostoHabitacion.Location = new System.Drawing.Point(413, 277);
+            this.lbl_CostoHabitacion.Name = "lbl_CostoHabitacion";
+            this.lbl_CostoHabitacion.Size = new System.Drawing.Size(0, 17);
+            this.lbl_CostoHabitacion.TabIndex = 101;
             // 
             // frm_Citas
             // 
@@ -327,14 +379,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.lbl_CostoHabitacion);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbl_CostoTratamiento);
+            this.Controls.Add(this.cbox_CodigoEmpleado);
+            this.Controls.Add(this.cbox_CodigoPacientes);
+            this.Controls.Add(this.txt_CodigoCita);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txt_CodigoMedicamento);
+            this.Controls.Add(this.dgv_Citas);
             this.Controls.Add(this.dt_FechaEgreso);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Cancelar);
@@ -349,9 +404,13 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Citas";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Citas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frm_Citas_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,13 +430,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dt_FechaEgreso;
-        private System.Windows.Forms.TextBox txt_CodigoMedicamento;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Citas;
         private FontAwesome.Sharp.IconButton btn_Salir;
         private FontAwesome.Sharp.IconButton btn_Eliminar;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_CodigoCita;
+        private System.Windows.Forms.ComboBox cbox_CodigoPacientes;
+        private System.Windows.Forms.ComboBox cbox_CodigoEmpleado;
+        private System.Windows.Forms.Label lbl_CostoTratamiento;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_CostoHabitacion;
     }
 }

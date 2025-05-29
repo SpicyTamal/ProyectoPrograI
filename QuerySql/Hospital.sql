@@ -140,4 +140,5 @@ Create table tbl_Tratamiento
 	foreign key (CodigoMedicamento) references tbl_Medicamentos(CodigoMedicamento)
 );
 
-select * from tbl_GestionHabitaciones;
+select * from tbl_Tratamiento;
+
