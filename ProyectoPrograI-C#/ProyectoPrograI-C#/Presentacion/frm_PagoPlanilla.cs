@@ -86,6 +86,86 @@ namespace ProyectoPrograI_C_.Presentacion
         private void dgv_PagoPlanilla_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
+
+            if (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
+            {
+                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                cbox_CodigoEmpleado.Text = FilaSeleccionada.Cells[1].Value.ToString();                 
+                string codigoTexto = cbox_CodigoEmpleado.Text;
+                var item = cbox_CodigoEmpleado.Items.Cast<dynamic>().FirstOrDefault(x => x.Value.ToString() == codigoTexto);
+
+                if (item != null)
+                {
+                    int codigoEmpleado = (int)item.Value;
+                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
+                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
+                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
+                    txt_HorasExtras.Text = FilaSeleccionada.Cells[5].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+            /*
+            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
+
+            if (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
+            {
+                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                cbox_CodigoEmpleado.Text = FilaSeleccionada.Cells[1].Value.ToString();
+
+                if (cbox_CodigoEmpleado.SelectedItem != null)
+                {
+                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+
+                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
+                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
+                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
+                }
+                else
+                {
+                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            
+            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
+            if (FilaSeleccionada.Index == dgv_PagoPlanilla.RowCount - 1)
+            {
+                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                cbox_CodigoEmpleado.Text = dgv_PagoPlanilla.SelectedCells[1].Value.ToString();
+
+                // Ahora que has actualizado el ComboBox, puedes obtener SelectedItem
+                if (cbox_CodigoEmpleado.SelectedItem != null)
+                {
+                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+
+                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
+                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
+                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
+                }
+                else
+                {
+                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+            int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+            var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
             if (FilaSeleccionada.Index == dgv_PagoPlanilla.RowCount - 1)
             {
                 MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -94,9 +174,12 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 cbox_CodigoEmpleado.Text = dgv_PagoPlanilla.SelectedCells[0].Value.ToString();
 
+                lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
+                lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
+                lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
 
 
-
+                
                 txt_NombreEmpleado.Text = dgv_PagoPlanilla.SelectedCells[1].Value.ToString();
                 cbox_TipoTrabajo.Text = dgv_PagoPlanilla.SelectedCells[2].Value.ToString();
                 txt_Especialidad.Text = dgv_PagoPlanilla.SelectedCells[3].Value.ToString();
@@ -104,10 +187,11 @@ namespace ProyectoPrograI_C_.Presentacion
                 dtp_FechaAlta.Text = dgv_PagoPlanilla.SelectedCells[5].Value.ToString();
                 cbox_Estado.Text = dgv_PagoPlanilla.SelectedCells[6].Value.ToString();
                 txt_UsuarioAuditoria.Text = dgv_PagoPlanilla.SelectedCells[7].Value.ToString();
+                
 
-
-            }
+            } */
         }
+        
 
         private void Mtd_MostrarCodigoEmpleados()
         {
