@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_Fecha_Auditoria = new System.Windows.Forms.TextBox();
-            this.txt_Usuario_Auditoria = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
@@ -41,11 +35,8 @@
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.dgv_GestionHabitaciones = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbx_Estado_Medicamentos = new System.Windows.Forms.ComboBox();
             this.dtp_Fecha_Vencimiento_Medicamentos = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Costo_Medicamentos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbx_Tipo_Medicamento = new System.Windows.Forms.ComboBox();
@@ -55,97 +46,11 @@
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GestionHabitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_Fecha_Auditoria
-            // 
-            this.txt_Fecha_Auditoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Fecha_Auditoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Fecha_Auditoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Fecha_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fecha_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Fecha_Auditoria.Location = new System.Drawing.Point(686, 195);
-            this.txt_Fecha_Auditoria.Name = "txt_Fecha_Auditoria";
-            this.txt_Fecha_Auditoria.Size = new System.Drawing.Size(208, 15);
-            this.txt_Fecha_Auditoria.TabIndex = 78;
-            this.txt_Fecha_Auditoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_Usuario_Auditoria
-            // 
-            this.txt_Usuario_Auditoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Usuario_Auditoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Usuario_Auditoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Usuario_Auditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario_Auditoria.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Usuario_Auditoria.Location = new System.Drawing.Point(686, 118);
-            this.txt_Usuario_Auditoria.Name = "txt_Usuario_Auditoria";
-            this.txt_Usuario_Auditoria.Size = new System.Drawing.Size(208, 15);
-            this.txt_Usuario_Auditoria.TabIndex = 75;
-            this.txt_Usuario_Auditoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(631, 160);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 17);
-            this.label10.TabIndex = 77;
-            this.label10.Text = "Fecha Auditoria:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(271, 198);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 17);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Stock:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(631, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 17);
-            this.label8.TabIndex = 68;
-            this.label8.Text = "Usuario Auditoria:";
-            // 
-            // txt_Nombre
-            // 
-            this.txt_Nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Nombre.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Nombre.Location = new System.Drawing.Point(409, 82);
-            this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(208, 15);
-            this.txt_Nombre.TabIndex = 67;
-            this.txt_Nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -155,7 +60,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(271, 83);
+            this.label7.Location = new System.Drawing.Point(271, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 17);
             this.label7.TabIndex = 66;
@@ -169,7 +74,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(271, 48);
+            this.label6.Location = new System.Drawing.Point(271, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 17);
             this.label6.TabIndex = 64;
@@ -185,7 +90,7 @@
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Agregar.IconSize = 25;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Agregar.Location = new System.Drawing.Point(761, 253);
+            this.btn_Agregar.Location = new System.Drawing.Point(761, 194);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(76, 32);
@@ -204,7 +109,7 @@
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Editar.IconSize = 25;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Editar.Location = new System.Drawing.Point(841, 253);
+            this.btn_Editar.Location = new System.Drawing.Point(841, 194);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(76, 32);
@@ -223,7 +128,7 @@
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Cancelar.IconSize = 25;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cancelar.Location = new System.Drawing.Point(841, 526);
+            this.btn_Cancelar.Location = new System.Drawing.Point(841, 500);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(76, 32);
@@ -242,7 +147,7 @@
             this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Eliminar.IconSize = 25;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar.Location = new System.Drawing.Point(761, 526);
+            this.btn_Eliminar.Location = new System.Drawing.Point(761, 500);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(76, 32);
@@ -259,7 +164,7 @@
             this.dgv_GestionHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv_GestionHabitaciones.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgv_GestionHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_GestionHabitaciones.Location = new System.Drawing.Point(257, 288);
+            this.dgv_GestionHabitaciones.Location = new System.Drawing.Point(260, 248);
             this.dgv_GestionHabitaciones.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgv_GestionHabitaciones.Name = "dgv_GestionHabitaciones";
             this.dgv_GestionHabitaciones.ReadOnly = true;
@@ -269,46 +174,12 @@
             this.dgv_GestionHabitaciones.Size = new System.Drawing.Size(662, 234);
             this.dgv_GestionHabitaciones.TabIndex = 59;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(631, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Estado:";
-            // 
-            // cbx_Estado_Medicamentos
-            // 
-            this.cbx_Estado_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbx_Estado_Medicamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.cbx_Estado_Medicamentos.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbx_Estado_Medicamentos.FormattingEnabled = true;
-            this.cbx_Estado_Medicamentos.Items.AddRange(new object[] {
-            "Disponible",
-            "Vencido",
-            "Agotado",
-            "Retirado",
-            "Transito"});
-            this.cbx_Estado_Medicamentos.Location = new System.Drawing.Point(686, 47);
-            this.cbx_Estado_Medicamentos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.cbx_Estado_Medicamentos.Name = "cbx_Estado_Medicamentos";
-            this.cbx_Estado_Medicamentos.Size = new System.Drawing.Size(209, 21);
-            this.cbx_Estado_Medicamentos.TabIndex = 57;
-            // 
             // dtp_Fecha_Vencimiento_Medicamentos
             // 
             this.dtp_Fecha_Vencimiento_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Fecha_Vencimiento_Medicamentos.Location = new System.Drawing.Point(408, 231);
+            this.dtp_Fecha_Vencimiento_Medicamentos.Location = new System.Drawing.Point(710, 67);
             this.dtp_Fecha_Vencimiento_Medicamentos.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_Fecha_Vencimiento_Medicamentos.Name = "dtp_Fecha_Vencimiento_Medicamentos";
             this.dtp_Fecha_Vencimiento_Medicamentos.Size = new System.Drawing.Size(209, 20);
@@ -322,26 +193,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(271, 234);
+            this.label4.Location = new System.Drawing.Point(581, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 17);
+            this.label4.Size = new System.Drawing.Size(124, 17);
             this.label4.TabIndex = 55;
-            this.label4.Text = "Fecha Vencimiento:";
-            // 
-            // txt_Costo_Medicamentos
-            // 
-            this.txt_Costo_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Costo_Medicamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txt_Costo_Medicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Costo_Medicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Costo_Medicamentos.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Costo_Medicamentos.Location = new System.Drawing.Point(408, 162);
-            this.txt_Costo_Medicamentos.Name = "txt_Costo_Medicamentos";
-            this.txt_Costo_Medicamentos.Size = new System.Drawing.Size(208, 15);
-            this.txt_Costo_Medicamentos.TabIndex = 54;
-            this.txt_Costo_Medicamentos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label4.Text = "Fecha de Gestion:";
             // 
             // label3
             // 
@@ -351,11 +207,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(271, 160);
+            this.label3.Location = new System.Drawing.Point(649, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 53;
-            this.label3.Text = "Costo:";
+            this.label3.Text = "Estado:";
             // 
             // label2
             // 
@@ -365,7 +221,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(271, 120);
+            this.label2.Location = new System.Drawing.Point(271, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 52;
@@ -379,7 +235,7 @@
             this.cbx_Tipo_Medicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cbx_Tipo_Medicamento.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbx_Tipo_Medicamento.FormattingEnabled = true;
-            this.cbx_Tipo_Medicamento.Location = new System.Drawing.Point(407, 48);
+            this.cbx_Tipo_Medicamento.Location = new System.Drawing.Point(407, 64);
             this.cbx_Tipo_Medicamento.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.cbx_Tipo_Medicamento.Name = "cbx_Tipo_Medicamento";
             this.cbx_Tipo_Medicamento.Size = new System.Drawing.Size(154, 21);
@@ -450,7 +306,7 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(407, 81);
+            this.comboBox1.Location = new System.Drawing.Point(407, 121);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(154, 21);
@@ -470,11 +326,30 @@
             "Progreso ",
             "Completa ",
             "Cancelada"});
-            this.comboBox2.Location = new System.Drawing.Point(407, 117);
+            this.comboBox2.Location = new System.Drawing.Point(710, 115);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(154, 21);
             this.comboBox2.TabIndex = 82;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.comboBox3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Preparacion ",
+            "Limpieza",
+            "Observacion",
+            "Alimentacion"});
+            this.comboBox3.Location = new System.Drawing.Point(407, 179);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(154, 21);
+            this.comboBox3.TabIndex = 83;
             // 
             // frm_GestionHabitaciones
             // 
@@ -482,15 +357,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txt_Fecha_Auditoria);
-            this.Controls.Add(this.txt_Usuario_Auditoria);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_Nombre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Agregar);
@@ -498,11 +368,8 @@
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dgv_GestionHabitaciones);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbx_Estado_Medicamentos);
             this.Controls.Add(this.dtp_Fecha_Vencimiento_Medicamentos);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_Costo_Medicamentos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbx_Tipo_Medicamento);
@@ -522,12 +389,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_Fecha_Auditoria;
-        private System.Windows.Forms.TextBox txt_Usuario_Auditoria;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btn_Agregar;
@@ -535,11 +396,8 @@
         private FontAwesome.Sharp.IconButton btn_Cancelar;
         private FontAwesome.Sharp.IconButton btn_Eliminar;
         private System.Windows.Forms.DataGridView dgv_GestionHabitaciones;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbx_Estado_Medicamentos;
         private System.Windows.Forms.DateTimePicker dtp_Fecha_Vencimiento_Medicamentos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_Costo_Medicamentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbx_Tipo_Medicamento;
@@ -549,5 +407,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
