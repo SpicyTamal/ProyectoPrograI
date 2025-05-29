@@ -120,6 +120,7 @@
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Cancelar
             // 
@@ -139,6 +140,7 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Eliminar
             // 

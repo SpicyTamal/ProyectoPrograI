@@ -138,27 +138,8 @@ namespace ProyectoPrograI_C_.Presentacion
                 cbox_Estado.Text = FilaSeleccionada.Cells[5].Value.ToString();
                 txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[6].Value.ToString();
                 string codigoTexto = cbox_CodigoEmpleado.Text;
-                dtp_FechaGestion.Text = dgv_GestionHabitaciones.SelectedCells[5].Value.ToString();
+                dtp_FechaGestion.Text = dgv_GestionHabitaciones.SelectedCells[4].Value.ToString();
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             /*
 
@@ -194,6 +175,42 @@ namespace ProyectoPrograI_C_.Presentacion
                     MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } 
             }*/
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            mtd_VaciarEspacios();
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_CodigoHabitacion.Text) || string.IsNullOrEmpty(cbox_TipoGestion.Text) || string.IsNullOrEmpty(cbox_Estado.Text))
+            {
+                MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    string CodigoGestion = dgv_GestionHabitaciones.SelectedCells[0].Value.ToString();
+                    int CodigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                    int CodigoHabitacion = (int)((dynamic)cbox_CodigoHabitacion.SelectedItem).Value;
+                    string TipoGestion = cbox_TipoGestion.Text;
+                    string Estado = cbox_Estado.Text;
+                    DateTime FechaGestion = dtp_FechaGestion.Value.Date;
+                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                    DateTime FechaAuditoria = DateTime.Today.Date;
+
+                    conexion.mtd_ActualizarGestion(CodigoGestion, CodigoEmpleado, CodigoHabitacion, TipoGestion, Estado, FechaGestion, UsuarioAuditoria, FechaAuditoria);
+                    MessageBox.Show("Registro actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtd_ConsultarGestiones();
+                    mtd_VaciarEspacios();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

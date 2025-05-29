@@ -83,5 +83,21 @@ namespace ProyectoPrograI_C_.Datos
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
         }
+        public void mtd_ActualizarGestion(string CodigoGestion, int CodigoEmpleado, int CodigoHabitacion, string TipoGestion, string Estado, DateTime FechaGestion, String UsuarioAuditoria, DateTime FechaAuditoria)
+        {
+            string QueryActualizarEmpleados = "Update tbl_GestionHabitaciones set CodigoEmpleado=@CodigoEmpleado, CodigoHabitacion=@CodigoHabitacion, TipoGestion=@TipoGestion, Estado=@Estado, FechaGestion=@FechaGestion, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditoria=@FechaAuditoria where CodigoGestion=@CodigoGestion";
+
+            SqlCommand cmd = new SqlCommand(QueryActualizarEmpleados, conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoGestion", CodigoGestion);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cmd.Parameters.AddWithValue("@CodigoHabitacion", CodigoHabitacion);
+            cmd.Parameters.AddWithValue("@TipoGestion", TipoGestion);
+            cmd.Parameters.AddWithValue("@Estado", Estado);
+            cmd.Parameters.AddWithValue("@FechaGestion", FechaGestion);
+            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
+            cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
+            cmd.ExecuteNonQuery();
+            conexion.MtdCerrarConexion();
+        }
     }
 }
