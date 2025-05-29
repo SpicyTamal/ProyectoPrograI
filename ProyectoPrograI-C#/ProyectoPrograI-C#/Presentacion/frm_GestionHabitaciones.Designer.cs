@@ -35,18 +35,18 @@
             this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.dgv_GestionHabitaciones = new System.Windows.Forms.DataGridView();
-            this.dtp_Fecha_Vencimiento_Medicamentos = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaGestion = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbx_Tipo_Medicamento = new System.Windows.Forms.ComboBox();
+            this.cbox_CodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.btn_Cerrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbox_CodigoHabitacion = new System.Windows.Forms.ComboBox();
+            this.cbox_Estado = new System.Windows.Forms.ComboBox();
+            this.cbox_TipoGestion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GestionHabitaciones)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -174,16 +174,16 @@
             this.dgv_GestionHabitaciones.Size = new System.Drawing.Size(662, 234);
             this.dgv_GestionHabitaciones.TabIndex = 59;
             // 
-            // dtp_Fecha_Vencimiento_Medicamentos
+            // dtp_FechaGestion
             // 
-            this.dtp_Fecha_Vencimiento_Medicamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtp_FechaGestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Fecha_Vencimiento_Medicamentos.Location = new System.Drawing.Point(710, 67);
-            this.dtp_Fecha_Vencimiento_Medicamentos.Margin = new System.Windows.Forms.Padding(2);
-            this.dtp_Fecha_Vencimiento_Medicamentos.Name = "dtp_Fecha_Vencimiento_Medicamentos";
-            this.dtp_Fecha_Vencimiento_Medicamentos.Size = new System.Drawing.Size(209, 20);
-            this.dtp_Fecha_Vencimiento_Medicamentos.TabIndex = 56;
+            this.dtp_FechaGestion.Location = new System.Drawing.Point(710, 67);
+            this.dtp_FechaGestion.Margin = new System.Windows.Forms.Padding(2);
+            this.dtp_FechaGestion.Name = "dtp_FechaGestion";
+            this.dtp_FechaGestion.Size = new System.Drawing.Size(209, 20);
+            this.dtp_FechaGestion.TabIndex = 56;
             // 
             // label4
             // 
@@ -227,19 +227,19 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Tipo de Gestion:";
             // 
-            // cbx_Tipo_Medicamento
+            // cbox_CodigoEmpleado
             // 
-            this.cbx_Tipo_Medicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbox_CodigoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbx_Tipo_Medicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.cbx_Tipo_Medicamento.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbx_Tipo_Medicamento.FormattingEnabled = true;
-            this.cbx_Tipo_Medicamento.Location = new System.Drawing.Point(407, 64);
-            this.cbx_Tipo_Medicamento.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.cbx_Tipo_Medicamento.Name = "cbx_Tipo_Medicamento";
-            this.cbx_Tipo_Medicamento.Size = new System.Drawing.Size(154, 21);
-            this.cbx_Tipo_Medicamento.TabIndex = 51;
+            this.cbox_CodigoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cbox_CodigoEmpleado.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbox_CodigoEmpleado.FormattingEnabled = true;
+            this.cbox_CodigoEmpleado.Location = new System.Drawing.Point(407, 64);
+            this.cbox_CodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbox_CodigoEmpleado.Name = "cbox_CodigoEmpleado";
+            this.cbox_CodigoEmpleado.Size = new System.Drawing.Size(154, 21);
+            this.cbox_CodigoEmpleado.TabIndex = 51;
             // 
             // btn_Cerrar
             // 
@@ -259,6 +259,7 @@
             this.btn_Cerrar.Size = new System.Drawing.Size(21, 25);
             this.btn_Cerrar.TabIndex = 50;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
             // label1
             // 
@@ -298,58 +299,58 @@
             this.iconPictureBox3.TabIndex = 81;
             this.iconPictureBox3.TabStop = false;
             // 
-            // comboBox1
+            // cbox_CodigoHabitacion
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbox_CodigoHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(407, 121);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
-            this.comboBox1.TabIndex = 81;
+            this.cbox_CodigoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cbox_CodigoHabitacion.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbox_CodigoHabitacion.FormattingEnabled = true;
+            this.cbox_CodigoHabitacion.Location = new System.Drawing.Point(407, 121);
+            this.cbox_CodigoHabitacion.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbox_CodigoHabitacion.Name = "cbox_CodigoHabitacion";
+            this.cbox_CodigoHabitacion.Size = new System.Drawing.Size(154, 21);
+            this.cbox_CodigoHabitacion.TabIndex = 81;
             // 
-            // comboBox2
+            // cbox_Estado
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbox_Estado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbox_Estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cbox_Estado.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbox_Estado.FormattingEnabled = true;
+            this.cbox_Estado.Items.AddRange(new object[] {
             "Creada",
             "Pendiente ",
             "Progreso ",
             "Completa ",
             "Cancelada"});
-            this.comboBox2.Location = new System.Drawing.Point(710, 115);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 21);
-            this.comboBox2.TabIndex = 82;
+            this.cbox_Estado.Location = new System.Drawing.Point(710, 115);
+            this.cbox_Estado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbox_Estado.Name = "cbox_Estado";
+            this.cbox_Estado.Size = new System.Drawing.Size(154, 21);
+            this.cbox_Estado.TabIndex = 82;
             // 
-            // comboBox3
+            // cbox_TipoGestion
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbox_TipoGestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbox_TipoGestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cbox_TipoGestion.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbox_TipoGestion.FormattingEnabled = true;
+            this.cbox_TipoGestion.Items.AddRange(new object[] {
             "Preparacion ",
             "Limpieza",
             "Observacion",
             "Alimentacion"});
-            this.comboBox3.Location = new System.Drawing.Point(407, 179);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(154, 21);
-            this.comboBox3.TabIndex = 83;
+            this.cbox_TipoGestion.Location = new System.Drawing.Point(407, 179);
+            this.cbox_TipoGestion.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbox_TipoGestion.Name = "cbox_TipoGestion";
+            this.cbox_TipoGestion.Size = new System.Drawing.Size(154, 21);
+            this.cbox_TipoGestion.TabIndex = 83;
             // 
             // frm_GestionHabitaciones
             // 
@@ -357,9 +358,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbox_TipoGestion);
+            this.Controls.Add(this.cbox_Estado);
+            this.Controls.Add(this.cbox_CodigoHabitacion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -368,11 +369,11 @@
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dgv_GestionHabitaciones);
-            this.Controls.Add(this.dtp_Fecha_Vencimiento_Medicamentos);
+            this.Controls.Add(this.dtp_FechaGestion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbx_Tipo_Medicamento);
+            this.Controls.Add(this.cbox_CodigoEmpleado);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -396,17 +397,17 @@
         private FontAwesome.Sharp.IconButton btn_Cancelar;
         private FontAwesome.Sharp.IconButton btn_Eliminar;
         private System.Windows.Forms.DataGridView dgv_GestionHabitaciones;
-        private System.Windows.Forms.DateTimePicker dtp_Fecha_Vencimiento_Medicamentos;
+        private System.Windows.Forms.DateTimePicker dtp_FechaGestion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbx_Tipo_Medicamento;
+        private System.Windows.Forms.ComboBox cbox_CodigoEmpleado;
         private FontAwesome.Sharp.IconButton btn_Cerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbox_CodigoHabitacion;
+        private System.Windows.Forms.ComboBox cbox_Estado;
+        private System.Windows.Forms.ComboBox cbox_TipoGestion;
     }
 }

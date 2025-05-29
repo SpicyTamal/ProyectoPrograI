@@ -142,7 +142,7 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_GestionHabitaciones_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<frm_GestionHabitaciones>();
+            AbrirFormulario<frm_GestionHabitaciones>();
         }
 
         private void btn_Pacientes_Click(object sender, EventArgs e)
