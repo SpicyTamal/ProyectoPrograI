@@ -18,11 +18,7 @@ namespace ProyectoPrograI_C_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new frm_Citas());
-=======
             Application.Run(new frm_Login());
->>>>>>> a2067711bfca14a58752b382d28bda0ba8626e5b
         }
     }
 }
