@@ -156,10 +156,8 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    var CitaSeleccionada = (dynamic)cbx_foreign_Codigo_Cita.SelectedItem;
-                    int CodigoCita = (int)CitaSeleccionada.Value;
-                    var MedicamentoSeleccionado = (dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem;
-                    int CodigoMedicamento = (int)MedicamentoSeleccionado.Value;
+                    int CodigoCita = (int)((dynamic)cbx_foreign_Codigo_Cita.SelectedItem).Value;
+                    int CodigoMedicamento = (int)((dynamic)cbx_foreign_Codigo_Medicamento.SelectedItem).Value;
                     double Costo = cl_tratamientos.mtd_Costo_Medicamento(CodigoMedicamento);
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Tratamientos.Value;
                     string Estado = cbx_Estado_Tratamientos.Text;

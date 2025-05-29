@@ -44,7 +44,7 @@ namespace ProyectoPrograI_C_.Datos
 
         public void mtd_Agregar_Usuarios(int CodigoEmpleado, string Usuario, string Clave, string TipoUsuario, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryAgregarUsuarios = "Insert into tbl_Usuarios (Usuario,Clave,TipoUsuario, Estado, FechaAuditoria, UsuarioAuditoria) values (@Usuario, @Clave, @TipoUsuario, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
+            string QueryAgregarUsuarios = "Insert into tbl_Usuarios (CodigoEmpleado, Usuario, Clave, TipoUsuario, Estado, FechaAuditoria, UsuarioAuditoria) values (@CodigoEmpleado, @Usuario, @Clave, @TipoUsuario, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarUsuarios, cd_conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.Parameters.AddWithValue("@Usuario", Usuario);

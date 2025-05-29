@@ -86,25 +86,6 @@
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btn_Disminuir
-            // 
-            this.btn_Disminuir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Disminuir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Disminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Disminuir.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Disminuir.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btn_Disminuir.IconColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Disminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Disminuir.IconSize = 25;
-            this.btn_Disminuir.Location = new System.Drawing.Point(876, 12);
-            this.btn_Disminuir.Name = "btn_Disminuir";
-            this.btn_Disminuir.Size = new System.Drawing.Size(21, 25);
-            this.btn_Disminuir.TabIndex = 19;
-            this.btn_Disminuir.UseVisualStyleBackColor = false;
-            this.btn_Disminuir.Click += new System.EventHandler(this.btnDisminuir_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using ProyectoPrograI_C_.Seguridad;
+using ProyectoPrograI_C_.Presentacion;
 
 namespace ProyectoProgra
 {
@@ -43,10 +44,10 @@ namespace ProyectoProgra
                     var validLogin = user.LoginUsuario(txt_Usuario.Text, txt_Contrasena.Text);
                     if (validLogin == true)
                     {
-                        //FrmMenuPrincipal menuPrincipal = new FrmMenuPrincipal(); Esperando a que Alex haga el form Munu
+                        frm_Menu menu = new frm_Menu();
                         MessageBox.Show("Bienvenido " + Cache_Usuario.Usuario + ", " + Cache_Usuario.TipoUsuario);
-                        //mainMenu.Show();
-                        //mainMenu.FormClosed += Logout;
+                        menu.Show();
+                        menu.FormClosed += Logout;
                         this.Hide();
                     }
                     else

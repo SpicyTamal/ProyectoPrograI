@@ -128,8 +128,7 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
-                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
+                    int CodigoEmpleado = (int)((dynamic)cbx_foreign_Codigo_Empleado.SelectedItem).Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
@@ -161,8 +160,7 @@ namespace ProyectoPrograI_C_.Presentacion
                 try
                 {
                     int CodigoUsuario = (int.Parse(txt_Codigo_Usuario.Text));
-                    var EmpleadoSeleccionado = (dynamic)cbx_foreign_Codigo_Empleado.SelectedItem;
-                    int CodigoEmpleado = (int)EmpleadoSeleccionado.Value;
+                    int CodigoEmpleado = (int)((dynamic)cbx_foreign_Codigo_Empleado.SelectedItem).Value;
                     string Usuario = txt_Usuario.Text;
                     string Clave = txt_Clave.Text;
                     string TipoUsuario = cbx_Tipo_Usuario.Text;
