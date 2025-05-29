@@ -75,5 +75,13 @@ namespace ProyectoPrograI_C_.Datos
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
         }
+        public void mtd_EliminarGestion(string CodigoGestion)
+        {
+            string QueryEliminarGestion = "Delete from tbl_GestionHabitaciones where CodigoGestion=@CodigoGestion";
+            SqlCommand cmd = new SqlCommand(QueryEliminarGestion, conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoGestion", CodigoGestion);
+            cmd.ExecuteNonQuery();
+            conexion.MtdCerrarConexion();
+        }
     }
 }

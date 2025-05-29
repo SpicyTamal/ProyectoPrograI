@@ -158,6 +158,7 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // dgv_GestionHabitaciones
             // 
@@ -176,6 +177,7 @@
             this.dgv_GestionHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_GestionHabitaciones.Size = new System.Drawing.Size(662, 234);
             this.dgv_GestionHabitaciones.TabIndex = 59;
+            this.dgv_GestionHabitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_GestionHabitaciones_CellClick);
             // 
             // dtp_FechaGestion
             // 
