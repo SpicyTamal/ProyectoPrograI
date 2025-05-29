@@ -44,7 +44,7 @@ namespace ProyectoPrograI_C_.Presentacion
             if (cbox_CodigoEmpleado.SelectedItem != null)
             {
                 int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
-                lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2"); //devuelve el salario con el cboxcodigo empleado
+                lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2"); //devuelve el salario con el cboxcodigo usado
                 lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
                 lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
             }
@@ -101,10 +101,10 @@ namespace ProyectoPrograI_C_.Presentacion
                 if (item != null)
                 {
                     int codigoEmpleado = (int)item.Value;
-                    lbl_Sueldo.Text = conexion.mtd_ConsultarSalario(codigoEmpleado).ToString("C2");
-                    lbl_Bono.Text = conexion.mtd_ConsultarBono(codigoEmpleado).ToString("C2");
-                    lbl_MontoTotal.Text = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text).ToString("C2");
-                    txt_HorasExtras.Text = FilaSeleccionada.Cells[5].Value.ToString();
+                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[3].Value).ToString("C2");
+                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
+                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[5].Value).ToString("C2");
+                    txt_HorasExtras.Text = "";
                 }
                 else
                 {
