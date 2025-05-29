@@ -55,12 +55,40 @@
   <ItemGroup>
     <Compile Include="Datos\CD_Citas.cs" />
     <Compile Include="Datos\CD_Conexion1.cs" />
+    <Compile Include="Datos\CD_Empleados.cs" />    
+    <Compile Include="Datos\CD_PagoPlanilla.cs" />
     <Compile Include="Datos\CD_Habitaciones.cs" />
     <Compile Include="Datos\CD_Medicamentos.cs" />
     <Compile Include="Datos\CD_Pacientes.cs" />
     <Compile Include="Datos\CD_PagoCitas.cs" />
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
+    <Compile Include="Datos\CD_Citas.cs" />
+    <Compile Include="Logica\CL_PagoPlanilla.cs" />
+    <Compile Include="Presentacion\frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Empleados.Designer.cs">
+      <DependentUpon>frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
+      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoPlanilla.Designer.cs">
+      <DependentUpon>frm_PagoPlanilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\Cache_Usuario.cs" />
     <Compile Include="Seguridad\DAO_Usuario.cs" />
     <Compile Include="Seguridad\Modelo_Usuario.cs" />
@@ -71,22 +99,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\CL_Empleados.cs" />
+    <Compile Include="Logica\CL_Pacientes.cs" />
     <Compile Include="Logica\CL_Citas.cs" />
     <Compile Include="Logica\CL_PagoCitas.cs" />
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
-    <Compile Include="Presentacion\frm_Citas.cs">
+    <Compile Include="Logica\CL_Citas.cs" />
+    <Compile Include="Presentacion\frm_Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frm_Citas.Designer.cs">
-      <DependentUpon>frm_Citas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
-      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
+    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
+      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Pacientes.cs">
       <SubType>Form</SubType>
@@ -118,6 +143,12 @@
     <Compile Include="Presentacion\frm_Usuarios.Designer.cs">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frm_Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Citas.Designer.cs">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\frm_Login.cs">
@@ -129,8 +160,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Citas.resx">
-      <DependentUpon>frm_Citas.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frm_Empleados.resx">
+      <DependentUpon>frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
       <DependentUpon>frm_Habitaciones.cs</DependentUpon>
@@ -138,17 +169,26 @@
     <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
       <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Pacientes.resx">
       <DependentUpon>frm_Pacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_PagoCitas.resx">
       <DependentUpon>frm_PagoCitas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_PagoPlanilla.resx">
+      <DependentUpon>frm_PagoPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Tratamientos.resx">
       <DependentUpon>frm_Tratamientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Citas.resx">
+      <DependentUpon>frm_Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
