@@ -113,12 +113,53 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Empleados_Click(object sender, EventArgs e) 
         {
+            
             AbrirFormulario<frm_Empleados>();            
         }
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frm_Tratamientos>();
+        }
 
+        private void btn_Usuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_Usuarios>();
+        }
+
+        private void btn_PagoPlantillas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_PagoPlanilla>();
+        }
+
+        private void btn_Habitaciones_Click(object sender, EventArgs e)
+        {
+            //AbrirFormulario<frm_Habitaciones>();
+        }
+
+        private void btn_GestionHabitaciones_Click(object sender, EventArgs e)
+        {
+            //AbrirFormulario<frm_GestionHabitaciones>();
+        }
+
+        private void btn_Pacientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_Pacientes>();
+        }
+
+        private void btn_Citas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_Citas>();
+        }
+
+        private void btn_Medicamentos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_Medicamentos>();
+        }
+
+        private void btn_PagoCitas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frm_PagoCitas>();
         }
 
         //METODO PARA ARRASTRAR EL FORMULARIO
@@ -138,8 +179,6 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
                 pnl_Formularios.Controls.Add(formulario);
                 pnl_Formularios.Tag = formulario;
                 formulario.Show();

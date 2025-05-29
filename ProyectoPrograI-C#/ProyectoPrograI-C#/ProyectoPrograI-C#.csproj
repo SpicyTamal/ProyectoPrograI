@@ -57,9 +57,11 @@
     <Compile Include="Datos\CD_Empleados.cs" />
     <Compile Include="Datos\CD_Medicamentos.cs" />
     <Compile Include="Datos\CD_Habitaciones.cs" />
+    <Compile Include="Datos\CD_PagoPlanilla.cs" />
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Datos\CD_Citas.cs" />
+    <Compile Include="Logica\CL_PagoPlanilla.cs" />
     <Compile Include="Presentacion\frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +73,12 @@
     </Compile>
     <Compile Include="Presentacion\frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_PagoPlanilla.Designer.cs">
+      <DependentUpon>frm_PagoPlanilla.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Cache_Usuario.cs" />
     <Compile Include="Seguridad\DAO_Usuario.cs" />
@@ -93,12 +101,6 @@
     </Compile>
     <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
       <DependentUpon>frm_Tratamientos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frm_Habitaciones.Designer.cs">
-      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frm_Pacientes.cs">
       <SubType>Form</SubType>
@@ -150,9 +152,6 @@
     <EmbeddedResource Include="Presentacion\frm_Empleados.resx">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frm_Habitaciones.resx">
-      <DependentUpon>frm_Habitaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Medicamentos.resx">
       <DependentUpon>frm_Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_PagoCitas.resx">
       <DependentUpon>frm_PagoCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_PagoPlanilla.resx">
+      <DependentUpon>frm_PagoPlanilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frm_Tratamientos.resx">
       <DependentUpon>frm_Tratamientos.cs</DependentUpon>
