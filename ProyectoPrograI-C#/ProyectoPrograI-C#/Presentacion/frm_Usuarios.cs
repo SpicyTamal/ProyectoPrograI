@@ -116,12 +116,7 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             this.Close();
         }
-
-        private void btn_Minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
+        
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_Usuario.Text) || string.IsNullOrEmpty(txt_Clave.Text) || 

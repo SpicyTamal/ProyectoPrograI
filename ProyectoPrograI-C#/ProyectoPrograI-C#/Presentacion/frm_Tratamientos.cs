@@ -145,11 +145,6 @@ namespace ProyectoPrograI_C_.Presentacion
             this.Close();
         }
 
-        private void btn_Disminuir_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cbx_foreign_Codigo_Cita.Text) || string.IsNullOrEmpty(cbx_foreign_Codigo_Medicamento.Text) || string.IsNullOrEmpty(txt_Costo.Text) ||

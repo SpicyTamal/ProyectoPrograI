@@ -62,8 +62,10 @@ namespace ProyectoPrograI_C_.Datos
         }
         public void mtd_Agregar_Tratamientos(int CodigoCita, int CodigoMedicamento, double Costo, DateTime FechaTratamiento, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryAgregarTratamientos = "Insert into tbl_Tratamientos(CodigoCita,CodigoMedicamento,Costo, FechaTratamiento, Estado, FechaAuditoria, UsuarioAuditoria) values (@CodigoCita, @CodigoMedicamento, @Costo, @Stock, @FechaTratamiento, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
+            string QueryAgregarTratamientos = "Insert into tbl_Tratamiento(CodigoCita,CodigoMedicamento,Costo, FechaTratamiento, Estado, FechaAuditoria, UsuarioAuditoria) values (@CodigoCita, @CodigoMedicamento, @Costo, @FechaTratamiento, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
             SqlCommand cmd = new SqlCommand(QueryAgregarTratamientos, cd_conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoCita", CodigoCita);
+            cmd.Parameters.AddWithValue("@CodigoMedicamento", CodigoMedicamento);
             cmd.Parameters.AddWithValue("@Costo", Costo);
             cmd.Parameters.AddWithValue("@FechaTratamiento", FechaTratamiento);
             cmd.Parameters.AddWithValue("@Estado", Estado);
@@ -74,7 +76,7 @@ namespace ProyectoPrograI_C_.Datos
         }
         public void mtd_Actualizar_Tratamientos(int CodigoTratamiento, int CodigoCita, int CodigoMedicamento, double Costo, DateTime FechaTratamiento, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
-            string QueryActualizarTratamientos = "Update tbl_Tratamientos set CodigoCita=@CodigoCita, CodigoMedicamento=@CodigoMedicamento, Costo=@Costo, FechaTratamiento=@FechaTratamiento, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoTratamiento=@CodigoTratamiento";
+            string QueryActualizarTratamientos = "Update tbl_Tratamiento set CodigoCita=@CodigoCita, CodigoMedicamento=@CodigoMedicamento, Costo=@Costo, FechaTratamiento=@FechaTratamiento, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoTratamiento=@CodigoTratamiento";
             SqlCommand cmd = new SqlCommand(QueryActualizarTratamientos, cd_conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoTratamiento", CodigoTratamiento);
             cmd.Parameters.AddWithValue("@CodigoCita", CodigoCita);
@@ -89,7 +91,7 @@ namespace ProyectoPrograI_C_.Datos
         }
         public void mtd_Eliminar_Tratamientos(int CodigoTratamiento)
         {
-            string QueryEliminarTratamientos = "Delete tbl_Tratamientos where CodigoTratamiento=@CodigoTratamiento";
+            string QueryEliminarTratamientos = "Delete tbl_Tratamiento where CodigoTratamiento=@CodigoTratamiento";
             SqlCommand cmd = new SqlCommand(QueryEliminarTratamientos, cd_conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoTratamiento", CodigoTratamiento);
             cmd.ExecuteNonQuery();

@@ -52,7 +52,7 @@ namespace ProyectoProgra
                     else
                     {
                         msgError("Usuario o Contraseña incorrecta.");
-                        txt_Contrasena.Text = "Password";
+                        txt_Contrasena.Text = "CONTRASEÑA";
                         txt_Contrasena.UseSystemPasswordChar = false;
                         txt_Usuario.Focus();
                     }
