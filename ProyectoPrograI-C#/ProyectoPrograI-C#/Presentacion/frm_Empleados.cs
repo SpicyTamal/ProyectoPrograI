@@ -39,19 +39,6 @@ namespace ProyectoPrograI_C_.Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         } 
 
-        /* 
-        public void cbx_TipoTrabajo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(cbox_TipoTrabajo.Text))
-            {
-                MessageBox.Show("Seleccione un tipo de trabajo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                lbl_Sueldo.Text = sueldos.mtd_Salarios(cbox_TipoTrabajo.Text).ToString("2c");
-            }
-        } */
-
         private void mtd_ConsultarEmpleados()
         {
             DataTable Dt = empleados.mtd_ConsultarEmpleados();
@@ -82,7 +69,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     string CodigoEmpleado = dgv_Empleados.SelectedCells[0].Value.ToString(); ;
 
                     empleados.mtd_EliminarEmpleado(CodigoEmpleado);
-                    MessageBox.Show("Medicamento eliminado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Empleado eliminado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_ConsultarEmpleados();
                     mtd_VaciarEspacios();
                 }
@@ -103,7 +90,7 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_NombreEmpleado.Clear();
             cbox_TipoTrabajo.SelectedIndex = -1;
             txt_Especialidad.Clear();
-            lbl_Sueldo.Text = 0.ToString("2c");
+            lbl_Sueldo.Text = 0.ToString("c2");
             cbox_Estado.SelectedIndex = -1;
             txt_UsuarioAuditoria.Clear();
             dtp_FechaAlta.Value = DateTime.Now;
@@ -126,7 +113,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaAlta = dtp_FechaAlta.Value.Date;
                     string Estado = cbox_Estado.Text;
                     DateTime FechaAuditoria = DateTime.Today.Date;
-                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text; //pendiente de revision para funcionar con el sing in
+                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
 
                     empleados.mtd_AgregarEmpleado(Nombre, TipoTrabajo, Sueldo, Especialidad, FechaAlta, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Empleado agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

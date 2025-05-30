@@ -122,7 +122,7 @@
             this.btn_PagoCitas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             this.btn_PagoCitas.IconColor = System.Drawing.Color.Black;
             this.btn_PagoCitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_PagoCitas.Location = new System.Drawing.Point(25, 538);
+            this.btn_PagoCitas.Location = new System.Drawing.Point(17, 581);
             this.btn_PagoCitas.Name = "btn_PagoCitas";
             this.btn_PagoCitas.Size = new System.Drawing.Size(141, 54);
             this.btn_PagoCitas.TabIndex = 9;
@@ -141,7 +141,7 @@
             this.btn_Tratamientos.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
             this.btn_Tratamientos.IconColor = System.Drawing.Color.Black;
             this.btn_Tratamientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Tratamientos.Location = new System.Drawing.Point(25, 478);
+            this.btn_Tratamientos.Location = new System.Drawing.Point(19, 521);
             this.btn_Tratamientos.Name = "btn_Tratamientos";
             this.btn_Tratamientos.Size = new System.Drawing.Size(155, 54);
             this.btn_Tratamientos.TabIndex = 8;
@@ -160,7 +160,7 @@
             this.btn_Medicamentos.IconChar = FontAwesome.Sharp.IconChar.Pills;
             this.btn_Medicamentos.IconColor = System.Drawing.Color.Black;
             this.btn_Medicamentos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Medicamentos.Location = new System.Drawing.Point(25, 418);
+            this.btn_Medicamentos.Location = new System.Drawing.Point(24, 461);
             this.btn_Medicamentos.Name = "btn_Medicamentos";
             this.btn_Medicamentos.Size = new System.Drawing.Size(155, 54);
             this.btn_Medicamentos.TabIndex = 7;
@@ -179,7 +179,7 @@
             this.btn_Citas.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
             this.btn_Citas.IconColor = System.Drawing.Color.Black;
             this.btn_Citas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Citas.Location = new System.Drawing.Point(25, 358);
+            this.btn_Citas.Location = new System.Drawing.Point(10, 401);
             this.btn_Citas.Name = "btn_Citas";
             this.btn_Citas.Size = new System.Drawing.Size(141, 54);
             this.btn_Citas.TabIndex = 6;
@@ -198,7 +198,7 @@
             this.btn_Pacientes.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
             this.btn_Pacientes.IconColor = System.Drawing.Color.Black;
             this.btn_Pacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Pacientes.Location = new System.Drawing.Point(25, 298);
+            this.btn_Pacientes.Location = new System.Drawing.Point(19, 341);
             this.btn_Pacientes.Name = "btn_Pacientes";
             this.btn_Pacientes.Size = new System.Drawing.Size(141, 54);
             this.btn_Pacientes.TabIndex = 5;
@@ -217,7 +217,7 @@
             this.btn_GestionHabitaciones.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             this.btn_GestionHabitaciones.IconColor = System.Drawing.Color.Black;
             this.btn_GestionHabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_GestionHabitaciones.Location = new System.Drawing.Point(25, 238);
+            this.btn_GestionHabitaciones.Location = new System.Drawing.Point(24, 281);
             this.btn_GestionHabitaciones.Name = "btn_GestionHabitaciones";
             this.btn_GestionHabitaciones.Size = new System.Drawing.Size(141, 54);
             this.btn_GestionHabitaciones.TabIndex = 4;
@@ -236,7 +236,7 @@
             this.btn_Habitaciones.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
             this.btn_Habitaciones.IconColor = System.Drawing.Color.Black;
             this.btn_Habitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Habitaciones.Location = new System.Drawing.Point(25, 178);
+            this.btn_Habitaciones.Location = new System.Drawing.Point(23, 221);
             this.btn_Habitaciones.Name = "btn_Habitaciones";
             this.btn_Habitaciones.Size = new System.Drawing.Size(155, 54);
             this.btn_Habitaciones.TabIndex = 3;
@@ -255,7 +255,7 @@
             this.btn_PagoPlantillas.IconChar = FontAwesome.Sharp.IconChar.Handshake;
             this.btn_PagoPlantillas.IconColor = System.Drawing.Color.Black;
             this.btn_PagoPlantillas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_PagoPlantillas.Location = new System.Drawing.Point(25, 118);
+            this.btn_PagoPlantillas.Location = new System.Drawing.Point(20, 161);
             this.btn_PagoPlantillas.Name = "btn_PagoPlantillas";
             this.btn_PagoPlantillas.Size = new System.Drawing.Size(141, 54);
             this.btn_PagoPlantillas.TabIndex = 2;
@@ -274,7 +274,7 @@
             this.btn_Usuarios.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btn_Usuarios.IconColor = System.Drawing.Color.Black;
             this.btn_Usuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Usuarios.Location = new System.Drawing.Point(25, 58);
+            this.btn_Usuarios.Location = new System.Drawing.Point(19, 101);
             this.btn_Usuarios.Name = "btn_Usuarios";
             this.btn_Usuarios.Size = new System.Drawing.Size(141, 54);
             this.btn_Usuarios.TabIndex = 1;
@@ -293,7 +293,7 @@
             this.btn_Empleados.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btn_Empleados.IconColor = System.Drawing.Color.Black;
             this.btn_Empleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Empleados.Location = new System.Drawing.Point(25, 4);
+            this.btn_Empleados.Location = new System.Drawing.Point(25, 47);
             this.btn_Empleados.Name = "btn_Empleados";
             this.btn_Empleados.Size = new System.Drawing.Size(141, 48);
             this.btn_Empleados.TabIndex = 0;

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,8 @@ namespace ProyectoPrograI_C_.Presentacion
             mtd_MostrarEmpleados();
             mtd_MostrarHabitaciones();
             mtd_ConsultarGestiones();
-        }
+        } //cuando el formulario carga llama a los metodos que llenan los combobox y el datagridview
+        
         private void mtd_MostrarEmpleados()
         {
             var CodigoEmpleados = conexion.mtd_ListaEmpleados();
@@ -35,7 +37,8 @@ namespace ProyectoPrograI_C_.Presentacion
             }
             cbox_CodigoEmpleado.DisplayMember = "Text";
             cbox_CodigoEmpleado.ValueMember = "Value";
-        }
+        } //llena el combobox de codigoempleado - empleado con la tabla empleados de la base de datos 
+
         private void mtd_MostrarHabitaciones()
         {
             var CodigoHabitaciones = conexion.mtd_ListaHabitaciones();
@@ -45,18 +48,18 @@ namespace ProyectoPrograI_C_.Presentacion
             }
             cbox_CodigoHabitacion.DisplayMember = "Text";
             cbox_CodigoHabitacion.ValueMember = "Value";
-        }
+        } //llena el combobox de habitacion - ubicacion habitacion con la tabla habitaciones de la base de datos
 
         private void mtd_ConsultarGestiones()
         {
             DataTable Dt = conexion.mtd_ConsultarGestiones();
             dgv_GestionHabitaciones.DataSource = Dt;
-        }
+        } //llena el datagridview de con la tabla gestion habitaciones de la base de datos
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } //cierra el formulario con el boton cerrar
 
         private void mtd_VaciarEspacios()
         {
@@ -66,7 +69,7 @@ namespace ProyectoPrograI_C_.Presentacion
             cbox_Estado.Text = "";
             dtp_FechaGestion.Value = DateTime.Today;
             txt_UsuarioAuditoria.Clear();
-        }   
+        } //limpia los espacios de texto y combobox   
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
@@ -95,7 +98,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        } //agrega un nuevo registro a la tabla gestion habitaciones de la base de datos
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
@@ -119,7 +122,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        } //elimina el registro seleccionado de la tabla gestion habitaciones de la base de datos
 
         private void dgv_GestionHabitaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -144,12 +147,12 @@ namespace ProyectoPrograI_C_.Presentacion
                 txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[6].Value.ToString();
                 dtp_FechaGestion.Text = dgv_GestionHabitaciones.SelectedCells[4].Value.ToString();
             }
-        }
+        } //llena los cambos de texto y combobox con los datos de la fila seleccionada del datagridview
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             mtd_VaciarEspacios();
-        }
+        } //limpia los campos de texto y combobox con el boton cancelar
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
@@ -180,6 +183,6 @@ namespace ProyectoPrograI_C_.Presentacion
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        } //actualiza el registro seleccionado en la tabla gestion habitacion con los datos ingresados
     }
 }

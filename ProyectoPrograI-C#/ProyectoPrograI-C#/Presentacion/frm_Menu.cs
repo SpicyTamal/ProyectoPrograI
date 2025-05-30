@@ -16,7 +16,7 @@ namespace ProyectoPrograI_C_.Presentacion
         public frm_Menu()
         {
             InitializeComponent();
-            //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
+            //funciones que previenen un parpadeo en el menu
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
         }
@@ -26,31 +26,13 @@ namespace ProyectoPrograI_C_.Presentacion
             Application.Exit();
         }
 
-        //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
+        //*********metodos para redimensionar el formulario*********//
         private int tolerance = 12;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
-        private Rectangle sizeGripRectangle;
+        private Rectangle sizeGripRectangle;        
 
-        /*
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case WM_NCHITTEST:
-                    base.WndProc(ref m);
-                    var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
-                    if (sizeGripRectangle.Contains(hitPoint))
-                        m.Result = new IntPtr(HTBOTTOMRIGHT);
-                    break;
-                default:
-                    base.WndProc(ref m);
-                    break;
-            }
-        }
-        */
-
-        //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
+        //***********metodos para redimensionar el formulario***********//
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
@@ -61,8 +43,7 @@ namespace ProyectoPrograI_C_.Presentacion
             region.Exclude(sizeGripRectangle);
             this.pnl_Principal.Region = region;
             this.Invalidate();
-        }
-        //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
+        }        
         protected override void OnPaint(PaintEventArgs e)
         {
             SolidBrush blueBrush = new SolidBrush(Color.FromArgb(0, 0, 0));
@@ -70,24 +51,19 @@ namespace ProyectoPrograI_C_.Presentacion
 
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
-        }
-
-        private void frm_Menu_Load(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void btn_Cerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } //cierra todo el programa con el boton cerrar
 
         private void btn_Minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-        int lx, ly, sw, sh;
+        } //minimiza el formulario en la barra de tareas
 
+        int lx, ly, sw, sh;
         private void btn_Maximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;
@@ -98,13 +74,13 @@ namespace ProyectoPrograI_C_.Presentacion
             btn_Restaurar.Visible = true;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-        }
+        } //maximiza el formulario al tamaño de la pantalla y guarda el tamaño compacto para restaurarlo con el boton restaurar
 
         private void pnl_Titulo_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        } //esta funcion permite mover el formulario desde la barra superior del menu
 
         private void btn_Restaurar_Click(object sender, EventArgs e)
         {
@@ -112,72 +88,68 @@ namespace ProyectoPrograI_C_.Presentacion
             btn_Restaurar.Visible = false;
             this.Size = new Size(sw, sh);
             this.Location = new Point(lx, ly);
-        }
+        } //restaura el formulario a su tamaño compacto despues de estar maximizado
 
         private void btn_Empleados_Click(object sender, EventArgs e) 
-        {
-            
-            AbrirFormulario<frm_Empleados>();            
-        }
+        {            
+            AbrirFormulario<frm_Empleados>();
+        } //abre el formulario de empleados
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Tratamientos>();
-        }
+        } //abre el formulario de tratamientos
 
         private void btn_Usuarios_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Usuarios>();
-        }
+        } //abre el formulario de usuarios
 
         private void btn_PagoPlantillas_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_PagoPlanilla>();
-        }
+        } //abre el formulario de pago planilla
 
         private void btn_Habitaciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Habitaciones>();
-        }
+        } //abre el formulario de habitaciones
 
         private void btn_GestionHabitaciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_GestionHabitaciones>();
-        }
+        } //abre el formulario de gestion habitaciones
 
         private void btn_Pacientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Pacientes>();
-        }
+        } //abre el formulario de pacientes
 
         private void btn_Citas_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Citas>();
-        }
+        } //abre el formulario de citas
 
         private void btn_Medicamentos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_Medicamentos>();
-        }
+        } //abre el formulario de medicamentos
 
         private void btn_PagoCitas_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_PagoCitas>();
-        }
+        } //abre el formulario de pago citas
 
-        //METODO PARA ARRASTRAR EL FORMULARIO
+        //******metodos para mover el formulario desde la barra superior******//
         [DllImport("user32.dll")]    
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-
-        //INICIO DE VENTANAS EN EL MENU
+        
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
-            formulario = pnl_Formularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
+            formulario = pnl_Formularios.Controls.OfType<MiForm>().FirstOrDefault();
             if (formulario == null)
             {
                 formulario = new MiForm();
@@ -187,18 +159,12 @@ namespace ProyectoPrograI_C_.Presentacion
                 formulario.Show();
                 formulario.BringToFront();
             }
-            //si el formulario/instancia existe
             else
             {
                 formulario.BringToFront();
             }
-        }
+        } //abre el formulario dentro del panel de formularios del menu y lo pone hasta el frente si ya esta abierto
 
-
-
-
-
-        //FIN VENTANAS EN EL MENU
-
+        private void frm_Menu_Load(object sender, EventArgs e) { }
     }
 }

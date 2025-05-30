@@ -99,7 +99,7 @@
             this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btn_Agregar.IconColor = System.Drawing.Color.Black;
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.IconSize = 25;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(752, 232);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
@@ -116,7 +116,7 @@
             this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btn_Editar.IconColor = System.Drawing.Color.Black;
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.IconSize = 25;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Location = new System.Drawing.Point(843, 232);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
@@ -133,7 +133,7 @@
             this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.IconSize = 25;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Location = new System.Drawing.Point(843, 506);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
