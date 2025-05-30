@@ -14,7 +14,7 @@ namespace ProyectoPrograI_C_.Presentacion
 {
     public partial class frm_GestionHabitaciones : Form
     {
-        CD_GestionHabitaciones conexion = new CD_GestionHabitaciones();
+        CD_GestionHabitaciones conexion = new CD_GestionHabitaciones(); //instancia de la clase conexion
         public frm_GestionHabitaciones()
         {
             InitializeComponent();
@@ -108,8 +108,7 @@ namespace ProyectoPrograI_C_.Presentacion
             {
                 try
                 {
-                    string CodigoGestion = dgv_GestionHabitaciones.SelectedCells[0].Value.ToString(); ;
-
+                    string CodigoGestion = dgv_GestionHabitaciones.SelectedCells[0].Value.ToString();
                     conexion.mtd_EliminarGestion(CodigoGestion);
                     MessageBox.Show("Registro eliminado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_ConsultarGestiones();
@@ -140,52 +139,11 @@ namespace ProyectoPrograI_C_.Presentacion
                 string codigoTexto2 = cbox_CodigoHabitacion.Text;
                 var item2 = cbox_CodigoHabitacion.Items.Cast<dynamic>().FirstOrDefault(x => x.Value.ToString() == codigoTexto2);
                 cbox_CodigoHabitacion.SelectedItem = item2;
-
-
-
-                //cbox_CodigoEmpleado.Text = FilaSeleccionada.Cells[1].Value.ToString();
-                //cbox_CodigoHabitacion.Text = FilaSeleccionada.Cells[2].Value.ToString();
                 cbox_TipoGestion.Text = FilaSeleccionada.Cells[3].Value.ToString();
                 cbox_Estado.Text = FilaSeleccionada.Cells[5].Value.ToString();
                 txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[6].Value.ToString();
-                //string codigoTexto = cbox_CodigoEmpleado.Text;
                 dtp_FechaGestion.Text = dgv_GestionHabitaciones.SelectedCells[4].Value.ToString();
             }
-
-            /*
-
-            var FilaSeleccionada = dgv_GestionHabitaciones.SelectedRows[0];
-
-            if (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
-            {
-                MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                cbox_CodigoEmpleado.Text = FilaSeleccionada.Cells[1].Value.ToString();
-                cbox_CodigoHabitacion.Text = FilaSeleccionada.Cells[2].Value.ToString();
-                cbox_TipoGestion.Text = FilaSeleccionada.Cells[3].Value.ToString();
-                cbox_Estado.Text = FilaSeleccionada.Cells[5].Value.ToString();
-                txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[6].Value.ToString();
-                string codigoTexto = cbox_CodigoEmpleado.Text;
-                var item = cbox_CodigoEmpleado.Items.Cast<dynamic>().FirstOrDefault(x => x.Value.ToString() == codigoTexto);                
-                if (item != null)
-                {
-                    int codigoEmpleado = (int)item.Value;
-                    lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[3].Value).ToString("C2");
-                    lbl_Bono.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
-                    lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[6].Value).ToString("C2");
-                    txt_HorasExtras.Text = FilaSeleccionada.Cells[10].Value.ToString();
-                    txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[8].Value.ToString();
-                    dtp_FechaPago.Value = Convert.ToDateTime(FilaSeleccionada.Cells[2].Value);
-                    cbox_Estado.Text = FilaSeleccionada.Cells[7].Value.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Código de empleado no válido o no encontrado en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
-            }*/
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
