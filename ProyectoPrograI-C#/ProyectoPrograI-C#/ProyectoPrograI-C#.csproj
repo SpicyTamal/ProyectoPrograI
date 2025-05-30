@@ -54,9 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CD_Citas.cs" />
-    <Compile Include="Datos\CD_Conexion1.cs" />  
+    <Compile Include="Datos\CD_Conexion1.cs" />
     <Compile Include="Datos\CD_GestionHabitaciones.cs" />
-    <Compile Include="Datos\CD_Empleados.cs" />   
+    <Compile Include="Datos\CD_Empleados.cs" />
     <Compile Include="Datos\CD_PagoPlanilla.cs" />
     <Compile Include="Datos\CD_Habitaciones.cs" />
     <Compile Include="Datos\CD_Medicamentos.cs" />
@@ -107,7 +107,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\CL_Empleados.cs" />
-    <Compile Include="Logica\CL_Pacientes.cs" />
     <Compile Include="Logica\CL_Citas.cs" />
     <Compile Include="Logica\CL_PagoCitas.cs" />
     <Compile Include="Logica\CL_Tratamientos.cs" />

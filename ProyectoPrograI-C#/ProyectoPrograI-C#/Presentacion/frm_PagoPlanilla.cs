@@ -54,33 +54,44 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            int horas = 0;
             if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
             {
                 MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                try
-                {
-                    int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
-                    DateTime FechaPago = dtp_FechaPago.Value.Date;
-                    double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
-                    double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
-                    double MontoHorasExtras = string.IsNullOrEmpty(txt_HorasExtras.Text) ? 0 : double.Parse(txt_HorasExtras.Text);
-                    double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
-                    string Estado = cbox_Estado.Text;
-                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
-                    DateTime FechaAuditoria = DateTime.Today.Date;
-                    string HorasExtras = txt_HorasExtras.Text;
-                    conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
-                    MessageBox.Show("Pago realizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    mtd_ConsultarPagos();
-                    mtd_VaciarEspacios();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
+                    try
+                    {
+                        if (txt_HorasExtras.Text == "")
+                        {
+                            horas = 0;
+                        }
+                        else
+                        {
+                            horas = int.Parse(txt_HorasExtras.Text);
+                        }
+
+                        int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                        DateTime FechaPago = dtp_FechaPago.Value.Date;
+                        double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
+                        double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
+                        double MontoHorasExtras = horas * 20.0;
+                        double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
+                        string Estado = cbox_Estado.Text;
+                        string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                        DateTime FechaAuditoria = DateTime.Today.Date;
+                        int HorasExtras = horas;
+                        conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
+                        MessageBox.Show("Pago realizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mtd_ConsultarPagos();
+                        mtd_VaciarEspacios();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
             }
         }
 
@@ -101,7 +112,8 @@ namespace ProyectoPrograI_C_.Presentacion
 
                 if (item != null)
                 {
-                    int codigoEmpleado = (int)item.Value;
+                    //int codigoEmpleado = (int)item.Value;
+                    cbox_CodigoEmpleado.SelectedItem = item;
                     lbl_Sueldo.Text = Convert.ToDecimal(FilaSeleccionada.Cells[3].Value).ToString("C2");
                     lbl_Bono.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
                     lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[6].Value).ToString("C2");
@@ -160,6 +172,7 @@ namespace ProyectoPrograI_C_.Presentacion
 
         private void btn_Editar_Click(object sender, EventArgs e) //pendiente de arreglar
         {
+            int horas = 0;
             if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
             {
                 MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -169,19 +182,44 @@ namespace ProyectoPrograI_C_.Presentacion
                 
                 if (dgv_PagoPlanilla.CurrentRow != null)
                 {
+                    
                     try
                     {
+                        /*
+                        int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
+                        DateTime FechaPago = dtp_FechaPago.Value.Date;
+                        double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
+                        double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
+                        double MontoHorasExtras = horas * 20.0;
+                        double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
+                        string Estado = cbox_Estado.Text;
+                        string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                        DateTime FechaAuditoria = DateTime.Today.Date;
+                        int HorasExtras = horas;
+                        conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
+                        MessageBox.Show("Pago realizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mtd_ConsultarPagos();
+                        mtd_VaciarEspacios();
+                         */
+                        if (txt_HorasExtras.Text == "")
+                        {
+                            horas = 0;
+                        }
+                        else
+                        {
+                            horas = int.Parse(txt_HorasExtras.Text);
+                        }
                         string CodigoPago = dgv_PagoPlanilla.CurrentRow.Cells[0].Value.ToString();
                         int codigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
                         DateTime FechaPago = dtp_FechaPago.Value.Date;
                         double Sueldo = conexion.mtd_ConsultarSalario(codigoEmpleado);
                         double Bono = conexion.mtd_ConsultarBono(codigoEmpleado);
-                        double MontoHorasExtras = string.IsNullOrEmpty(txt_HorasExtras.Text) ? 0 : double.Parse(txt_HorasExtras.Text);
+                        double MontoHorasExtras = horas * 20.0;
                         double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
                         string Estado = cbox_Estado.Text;
                         string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
                         DateTime FechaAuditoria = DateTime.Today.Date;
-                        string HorasExtras = txt_HorasExtras.Text;
+                        int HorasExtras = horas;
 
                         conexion.mtd_ActualizarPago(CodigoPago, codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
                         MessageBox.Show("Empleado actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

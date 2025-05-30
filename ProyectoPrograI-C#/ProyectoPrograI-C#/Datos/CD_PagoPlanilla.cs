@@ -80,7 +80,7 @@ namespace ProyectoPrograI_C_.Datos
             return Dt;
         }
        
-        public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, string HorasExtras)
+        public void mtd_AgregarPago(int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, int HorasExtras)
         {
             string QueryAgregarPago = "Insert into tbl_PagoEmpleados(CodigoEmpleado,FechaPago, Sueldo, Bono, MontoHorasExtra, TotalMonto, Estado, UsuarioAuditoria, FechaAuditora, HorasExtras) values (@CodigoEmpleado, @FechaPago, @Sueldo, @Bono, @MontoHorasExtras, @TotalMonto, @Estado, @UsuarioAuditoria, @FechaAuditoria, @HorasExtras)";
             SqlCommand cmd = new SqlCommand(QueryAgregarPago, conexion.MtdAbrirConexion());
@@ -98,7 +98,7 @@ namespace ProyectoPrograI_C_.Datos
             conexion.MtdCerrarConexion();
         }
 
-        public void mtd_ActualizarPago(string CodigoPago, int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, string HorasExtras)
+        public void mtd_ActualizarPago(string CodigoPago, int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, int HorasExtras)
         {
             string QueryActualizarPago = "Update tbl_PagoEmpleados set CodigoEmpleado=@CodigoEmpleado, FechaPago=@FechaPago, Sueldo=@Sueldo, Bono=@Bono, MontoHorasExtra=@MontoHorasExtras, TotalMonto=@TotalMonto, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditora=@FechaAuditoria, HorasExtras=@HorasExtras where CodigoPago=@CodigoPago";
             SqlCommand cmd = new SqlCommand(QueryActualizarPago, conexion.MtdAbrirConexion());
