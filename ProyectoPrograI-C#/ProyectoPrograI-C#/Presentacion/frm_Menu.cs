@@ -141,6 +141,12 @@ namespace ProyectoPrograI_C_.Presentacion
         } //abre el formulario de pago citas
 
         //******metodos para mover el formulario desde la barra superior******//
+
+        private void pnl_Formularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         [DllImport("user32.dll")]    
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]

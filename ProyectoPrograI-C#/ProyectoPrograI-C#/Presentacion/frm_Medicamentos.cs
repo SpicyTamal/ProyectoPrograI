@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoPrograI_C_.Logica;
 using ProyectoPrograI_C_.Datos;
+using ProyectoPrograI_C_.Seguridad;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
@@ -47,6 +48,9 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             //Posiblemente coloque un label fecha aqui
             mtd_Consultar_Medicamentos();
+            txt_Fecha_Auditoria.Text = cl_medicamentos.mtd_Fecha_De_Hoy().ToString("dd/MM/yyyy");
+            string Usuario_Auditoria = Cache_Usuario.Usuario;
+            txt_Usuario_Auditoria.Text = Usuario_Auditoria;
         }
 
         private void mtd_Limpiar_Campos()
@@ -58,8 +62,6 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Stock.Text = "";
             dtp_Fecha_Vencimiento_Medicamentos.Text = "";
             cbx_Estado_Medicamentos.Text = "";
-            txt_Usuario_Auditoria.Text = "";
-            txt_Fecha_Auditoria.Text = "";
         }
 
         private void dgv_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -110,11 +112,6 @@ namespace ProyectoPrograI_C_.Presentacion
             this.Close();
         }
 
-        private void btnDisminuir_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_Nombre.Text) || string.IsNullOrEmpty(cbx_Tipo_Medicamento.Text) ||
@@ -134,7 +131,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Medicamentos.Value;
                     string Estado = cbx_Estado_Medicamentos.Text;
                     DateTime FechaAuditoria = cl_medicamentos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_medicamentos.mtd_Agregar_Medicamentos(Nombre, Tipo_Medicamento, Costo, Stock, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Medicamento agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -168,7 +165,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaVencimiento = dtp_Fecha_Vencimiento_Medicamentos.Value;
                     string Estado = cbx_Estado_Medicamentos.Text;
                     DateTime FechaAuditoria = cl_medicamentos.mtd_Fecha_De_Hoy();
-                    string UsuarioAuditoria = "Kevin_Monterroso";
+                    string UsuarioAuditoria = txt_Usuario_Auditoria.Text;
 
                     cd_medicamentos.mtd_Actualizar_Medicamentos(CodigoMedicamento, Nombre, TipoMedicamento, Costo, Stock, FechaVencimiento, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Medicamento actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

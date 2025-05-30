@@ -111,13 +111,7 @@
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
-    <Compile Include="Logica\CL_Citas.cs" />
-    <Compile Include="Presentacion\frm_Tratamientos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frm_Tratamientos.Designer.cs">
-      <DependentUpon>frm_Tratamientos.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Logica\CL_PagoPlanilla.cs" />
     <Compile Include="Presentacion\frm_Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
