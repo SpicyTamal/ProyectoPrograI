@@ -61,7 +61,7 @@
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(1440, 740);
+            this.pnl_Principal.Size = new System.Drawing.Size(1386, 740);
             this.pnl_Principal.TabIndex = 2;
             // 
             // pnl_Formularios
@@ -72,7 +72,7 @@
             this.pnl_Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Formularios.Location = new System.Drawing.Point(200, 40);
             this.pnl_Formularios.Name = "pnl_Formularios";
-            this.pnl_Formularios.Size = new System.Drawing.Size(1240, 700);
+            this.pnl_Formularios.Size = new System.Drawing.Size(1186, 700);
             this.pnl_Formularios.TabIndex = 2;
             // 
             // iconButton1
@@ -312,7 +312,7 @@
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(1440, 40);
+            this.pnl_Titulo.Size = new System.Drawing.Size(1386, 40);
             this.pnl_Titulo.TabIndex = 0;
             this.pnl_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Titulo_MouseMove);
             // 
@@ -327,7 +327,7 @@
             this.btn_Restaurar.IconColor = System.Drawing.Color.Black;
             this.btn_Restaurar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Restaurar.IconSize = 25;
-            this.btn_Restaurar.Location = new System.Drawing.Point(1380, 9);
+            this.btn_Restaurar.Location = new System.Drawing.Point(1326, 9);
             this.btn_Restaurar.Name = "btn_Restaurar";
             this.btn_Restaurar.Size = new System.Drawing.Size(21, 25);
             this.btn_Restaurar.TabIndex = 24;
@@ -346,7 +346,7 @@
             this.btn_Maximizar.IconColor = System.Drawing.Color.Black;
             this.btn_Maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Maximizar.IconSize = 25;
-            this.btn_Maximizar.Location = new System.Drawing.Point(1380, 9);
+            this.btn_Maximizar.Location = new System.Drawing.Point(1326, 9);
             this.btn_Maximizar.Name = "btn_Maximizar";
             this.btn_Maximizar.Size = new System.Drawing.Size(21, 25);
             this.btn_Maximizar.TabIndex = 23;
@@ -365,7 +365,7 @@
             this.btn_Cerrar.IconColor = System.Drawing.Color.Black;
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
-            this.btn_Cerrar.Location = new System.Drawing.Point(1407, 9);
+            this.btn_Cerrar.Location = new System.Drawing.Point(1353, 9);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(21, 25);
             this.btn_Cerrar.TabIndex = 22;
@@ -383,7 +383,7 @@
             this.btn_Minimizar.IconColor = System.Drawing.Color.Black;
             this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Minimizar.IconSize = 25;
-            this.btn_Minimizar.Location = new System.Drawing.Point(1353, 9);
+            this.btn_Minimizar.Location = new System.Drawing.Point(1299, 9);
             this.btn_Minimizar.Name = "btn_Minimizar";
             this.btn_Minimizar.Size = new System.Drawing.Size(21, 25);
             this.btn_Minimizar.TabIndex = 21;
@@ -395,7 +395,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1440, 740);
+            this.ClientSize = new System.Drawing.Size(1386, 740);
             this.Controls.Add(this.pnl_Principal);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -175,6 +176,35 @@ namespace ProyectoPrograI_C_.Presentacion
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void cbox_CodigoCita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int CodigoCita = (int)((dynamic)cbox_CodigoCita.SelectedItem).Value;
+            double MontoCita = logicaPagoCitas.Mtd_MontoCita(CodigoCita);
+            double Impuestos = logicaPagoCitas.Mtd_Impuestos(MontoCita);
+            double Descuento = logicaPagoCitas.Mtd_Descuento(MontoCita);
+            double TotalPago = logicaPagoCitas.Mtd_TotalPago(MontoCita, Impuestos, Descuento);
+
+            lbl_MontoCita.Text = MontoCita.ToString();
+            lbl_Impuestos.Text = Impuestos.ToString();
+            lbl_Descuento.Text = Descuento.ToString();
+            lbl_TotalPago.Text = TotalPago.ToString();
+        }
+
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        private void frm_PagoCitas_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
