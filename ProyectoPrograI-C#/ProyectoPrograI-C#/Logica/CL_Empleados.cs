@@ -15,6 +15,6 @@ namespace ProyectoPrograI_C_.Logica
             else if (puesto == "Enfermero") return 10000;
             else if (puesto == "Tecnico") return 7000;
             else return 6000;
-        }
+        } //devuelve el salario de acuerdo al puesto del empleado
     }
 }
