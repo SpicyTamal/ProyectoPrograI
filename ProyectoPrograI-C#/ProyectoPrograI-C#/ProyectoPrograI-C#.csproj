@@ -106,7 +106,6 @@
     <Compile Include="Logica\CL_Tratamientos.cs" />
     <Compile Include="Logica\CL_Habitaciones.cs" />
     <Compile Include="Logica\CL_Medicamentos.cs" />
-    <Compile Include="Logica\CL_Citas.cs" />
     <Compile Include="Presentacion\frm_Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
