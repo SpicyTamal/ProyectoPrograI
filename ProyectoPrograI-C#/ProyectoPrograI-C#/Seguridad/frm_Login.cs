@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using ProyectoPrograI_C_.Seguridad;
+using ProyectoPrograI_C_.Presentacion;
 
 namespace ProyectoProgra
 {
@@ -21,7 +22,7 @@ namespace ProyectoProgra
         }
 
         //METODOS Y LOGICA DEL FORM
-
+        
         private void msgError(string msg)
         {
             lbl_Error.Text = "    " + msg;
@@ -43,16 +44,17 @@ namespace ProyectoProgra
                     var validLogin = user.LoginUsuario(txt_Usuario.Text, txt_Contrasena.Text);
                     if (validLogin == true)
                     {
-                        //FrmMenuPrincipal menuPrincipal = new FrmMenuPrincipal(); Esperando a que Alex haga el form Munu
+                        Cache_Usuario.Usuario = txt_Usuario.Text;
+                        frm_Menu menu = new frm_Menu();
                         MessageBox.Show("Bienvenido " + Cache_Usuario.Usuario + ", " + Cache_Usuario.TipoUsuario);
-                        //mainMenu.Show();
-                        //mainMenu.FormClosed += Logout;
+                        menu.Show();
+                        menu.FormClosed += Logout;
                         this.Hide();
                     }
                     else
                     {
                         msgError("Usuario o Contraseña incorrecta.");
-                        txt_Contrasena.Text = "Password";
+                        txt_Contrasena.Text = "CONTRASEÑA";
                         txt_Contrasena.UseSystemPasswordChar = false;
                         txt_Usuario.Focus();
                     }
