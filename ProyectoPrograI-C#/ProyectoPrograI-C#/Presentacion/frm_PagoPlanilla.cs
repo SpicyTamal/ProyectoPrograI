@@ -14,8 +14,8 @@ namespace ProyectoPrograI_C_.Presentacion
 {
     public partial class frm_PagoPlanilla : Form
     {
-        CD_PagoPlanilla conexion = new CD_PagoPlanilla();
-        CL_PagoPlanilla logica = new CL_PagoPlanilla();
+        CD_PagoPlanilla conexion = new CD_PagoPlanilla(); //instancia de la clase conexion 
+
         public frm_PagoPlanilla()
         {
             InitializeComponent();

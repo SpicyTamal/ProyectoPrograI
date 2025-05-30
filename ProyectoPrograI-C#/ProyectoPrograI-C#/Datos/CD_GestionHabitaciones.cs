@@ -10,15 +10,13 @@ namespace ProyectoPrograI_C_.Datos
 {
     internal class CD_GestionHabitaciones
     {
-        CD_Conexion1 conexion = new CD_Conexion1();
+        CD_Conexion1 conexion = new CD_Conexion1(); //instancia de la clase de conexión a la base de datos
         public List<dynamic> mtd_ListaEmpleados()
         {
             List<dynamic> ListaEmpleados = new List<dynamic>();
-            // Consulta modificada para obtener CodigoEmpleado y NombreEmpleado
             string QueryListaEmpleados = "SELECT CodigoEmpleado, Nombres FROM tbl_Empleados";
             SqlCommand cmd = new SqlCommand(QueryListaEmpleados, conexion.MtdAbrirConexion());
             SqlDataReader reader = cmd.ExecuteReader();
-
             while (reader.Read())
             {
                 ListaEmpleados.Add(new
@@ -27,18 +25,16 @@ namespace ProyectoPrograI_C_.Datos
                     Text = $"{reader["CodigoEmpleado"]} - {reader["Nombres"]}"
                 });
             }
-
             conexion.MtdCerrarConexion();
             return ListaEmpleados;
-        }
+        } //se usa para llenar el combobox de codigoempleado - empleado en el formulario de gestion habitaciones
+        
         public List<dynamic> mtd_ListaHabitaciones()
         {
             List<dynamic> ListaHabitaciones = new List<dynamic>();
-            // Consulta modificada para obtener CodigoEmpleado y NombreEmpleado
             string QueryListaHabitaciones = "SELECT CodigoHabitacion, Ubicacion FROM tbl_Habitaciones";
             SqlCommand cmd = new SqlCommand(QueryListaHabitaciones, conexion.MtdAbrirConexion());
             SqlDataReader reader = cmd.ExecuteReader();
-
             while (reader.Read())
             {
                 ListaHabitaciones.Add(new
@@ -47,10 +43,10 @@ namespace ProyectoPrograI_C_.Datos
                     Text = $"{reader["CodigoHabitacion"]} - {reader["Ubicacion"]}"
                 });
             }
-
             conexion.MtdCerrarConexion();
             return ListaHabitaciones;
-        }
+        } //se usa para llenar el combobox de codigohabitacion - habitacion en el formulario de gestion habitaciones de la base de datos
+        
         public DataTable mtd_ConsultarGestiones()
         {
             string QueryConsultarGestiones = "Select * from tbl_GestionHabitaciones";
@@ -59,7 +55,7 @@ namespace ProyectoPrograI_C_.Datos
             Adapter.Fill(Dt);
             conexion.MtdCerrarConexion();
             return Dt;
-        }
+        } //se usa para llenar el datagridview del form de gestion habitaciones desde la base de datos
 
         public void mtd_AgregarGestion(int CodigoEmpleado, int CodigoHabitacion, string TipoGestion, string Estado, DateTime FechaGestion, string UsuarioAuditoria, DateTime FechaAuditoria)
         {
@@ -74,7 +70,8 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);    
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
-        }
+        } //aqui se crea una nueva gestion de habitaciones en la base de datos
+        
         public void mtd_EliminarGestion(string CodigoGestion)
         {
             string QueryEliminarGestion = "Delete from tbl_GestionHabitaciones where CodigoGestion=@CodigoGestion";
@@ -82,11 +79,11 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@CodigoGestion", CodigoGestion);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
-        }
+        } //elimina la gestion de habitaciones seleccionada de la base de datos
+        
         public void mtd_ActualizarGestion(string CodigoGestion, int CodigoEmpleado, int CodigoHabitacion, string TipoGestion, string Estado, DateTime FechaGestion, String UsuarioAuditoria, DateTime FechaAuditoria)
         {
             string QueryActualizarEmpleados = "Update tbl_GestionHabitaciones set CodigoEmpleado=@CodigoEmpleado, CodigoHabitacion=@CodigoHabitacion, TipoGestion=@TipoGestion, Estado=@Estado, FechaGestion=@FechaGestion, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditoria=@FechaAuditoria where CodigoGestion=@CodigoGestion";
-
             SqlCommand cmd = new SqlCommand(QueryActualizarEmpleados, conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoGestion", CodigoGestion);
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
@@ -98,6 +95,6 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
             cmd.ExecuteNonQuery();
             conexion.MtdCerrarConexion();
-        }
+        } //actualiza una gestion de habitaciones seleccionada en la base de datos con los datos enviados desde el formulario
     }
 }

@@ -65,7 +65,6 @@
     <Compile Include="Datos\CD_Tratamientos.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Datos\CD_Citas.cs" />
-    <Compile Include="Logica\CL_PagoPlanilla.cs" />
     <Compile Include="Presentacion\frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
