@@ -104,6 +104,8 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Especialidad.Clear();
             lbl_Sueldo.Text = 0.ToString("2c");
             cbox_Estado.SelectedIndex = -1;
+            txt_UsuarioAuditoria.Clear();
+            dtp_FechaAlta.Value = DateTime.Now;
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)

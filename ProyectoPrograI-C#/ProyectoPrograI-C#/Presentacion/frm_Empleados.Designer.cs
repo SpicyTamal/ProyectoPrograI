@@ -51,8 +51,6 @@
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_HorasExtras = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -177,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(328, 223);
+            this.label5.Location = new System.Drawing.Point(328, 194);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
@@ -190,7 +188,7 @@
             this.lbl_Sueldo.AutoSize = true;
             this.lbl_Sueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Sueldo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Sueldo.Location = new System.Drawing.Point(397, 223);
+            this.lbl_Sueldo.Location = new System.Drawing.Point(397, 194);
             this.lbl_Sueldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Sueldo.Name = "lbl_Sueldo";
             this.lbl_Sueldo.Size = new System.Drawing.Size(66, 17);
@@ -371,33 +369,12 @@
             this.txt_UsuarioAuditoria.TabIndex = 42;
             this.txt_UsuarioAuditoria.TextChanged += new System.EventHandler(this.txt_UsuarioAuditoria_TextChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(275, 194);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "Horas Extras:";
-            // 
-            // txt_HorasExtras
-            // 
-            this.txt_HorasExtras.Location = new System.Drawing.Point(398, 190);
-            this.txt_HorasExtras.Name = "txt_HorasExtras";
-            this.txt_HorasExtras.Size = new System.Drawing.Size(142, 20);
-            this.txt_HorasExtras.TabIndex = 44;
-            // 
             // frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
-            this.Controls.Add(this.txt_HorasExtras);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_UsuarioAuditoria);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Agregar);
@@ -459,7 +436,5 @@
         private FontAwesome.Sharp.IconButton btn_Editar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_HorasExtras;
     }
 }

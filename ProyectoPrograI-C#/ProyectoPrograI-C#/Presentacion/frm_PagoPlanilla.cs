@@ -99,7 +99,7 @@ namespace ProyectoPrograI_C_.Presentacion
         {
             var FilaSeleccionada = dgv_PagoPlanilla.SelectedRows[0];
 
-            if (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
+            if                   (FilaSeleccionada.Cells[0].Value == null || string.IsNullOrWhiteSpace(FilaSeleccionada.Cells[0].Value.ToString()))
             {
                 MessageBox.Show("Seleccione una fila con datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
