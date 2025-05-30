@@ -51,8 +51,9 @@
             this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 330);
+            this.panel1.Size = new System.Drawing.Size(333, 406);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -63,10 +64,11 @@
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 196;
-            this.iconPictureBox3.Location = new System.Drawing.Point(27, 71);
+            this.iconPictureBox3.IconSize = 244;
+            this.iconPictureBox3.Location = new System.Drawing.Point(36, 87);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(196, 198);
+            this.iconPictureBox3.Size = new System.Drawing.Size(261, 244);
             this.iconPictureBox3.TabIndex = 10;
             this.iconPictureBox3.TabStop = false;
             // 
@@ -79,9 +81,10 @@
             this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Usuario.Location = new System.Drawing.Point(291, 71);
+            this.txt_Usuario.Location = new System.Drawing.Point(388, 87);
+            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Usuario.Name = "txt_Usuario";
-            this.txt_Usuario.Size = new System.Drawing.Size(450, 15);
+            this.txt_Usuario.Size = new System.Drawing.Size(600, 19);
             this.txt_Usuario.TabIndex = 1;
             this.txt_Usuario.Text = "USUARIO";
             this.txt_Usuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -97,9 +100,10 @@
             this.txt_Contrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Contrasena.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Contrasena.Location = new System.Drawing.Point(291, 119);
+            this.txt_Contrasena.Location = new System.Drawing.Point(388, 146);
+            this.txt_Contrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Contrasena.Name = "txt_Contrasena";
-            this.txt_Contrasena.Size = new System.Drawing.Size(450, 15);
+            this.txt_Contrasena.Size = new System.Drawing.Size(600, 19);
             this.txt_Contrasena.TabIndex = 2;
             this.txt_Contrasena.Text = "CONTRASEÑA";
             this.txt_Contrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
@@ -113,9 +117,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(482, 11);
+            this.label1.Location = new System.Drawing.Point(643, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 25);
+            this.label1.Size = new System.Drawing.Size(99, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "LOGIN";
             // 
@@ -131,9 +136,10 @@
             this.btn_Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Acceder.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Acceder.Location = new System.Drawing.Point(291, 258);
+            this.btn_Acceder.Location = new System.Drawing.Point(388, 318);
+            this.btn_Acceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Acceder.Name = "btn_Acceder";
-            this.btn_Acceder.Size = new System.Drawing.Size(450, 40);
+            this.btn_Acceder.Size = new System.Drawing.Size(600, 49);
             this.btn_Acceder.TabIndex = 3;
             this.btn_Acceder.Text = "ACCEDER";
             this.btn_Acceder.UseVisualStyleBackColor = false;
@@ -145,9 +151,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(291, 100);
+            this.panel2.Location = new System.Drawing.Point(388, 123);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 2);
+            this.panel2.Size = new System.Drawing.Size(600, 2);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -156,9 +163,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(291, 148);
+            this.panel3.Location = new System.Drawing.Point(388, 182);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 2);
+            this.panel3.Size = new System.Drawing.Size(600, 2);
             this.panel3.TabIndex = 6;
             // 
             // btn_Disminuir
@@ -173,9 +181,10 @@
             this.btn_Disminuir.IconColor = System.Drawing.SystemColors.GrayText;
             this.btn_Disminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Disminuir.IconSize = 25;
-            this.btn_Disminuir.Location = new System.Drawing.Point(722, 11);
+            this.btn_Disminuir.Location = new System.Drawing.Point(963, 14);
+            this.btn_Disminuir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Disminuir.Name = "btn_Disminuir";
-            this.btn_Disminuir.Size = new System.Drawing.Size(21, 21);
+            this.btn_Disminuir.Size = new System.Drawing.Size(28, 26);
             this.btn_Disminuir.TabIndex = 10;
             this.btn_Disminuir.UseVisualStyleBackColor = false;
             this.btn_Disminuir.Click += new System.EventHandler(this.iconButton1_Click);
@@ -193,9 +202,10 @@
             this.btn_Cerrar.IconColor = System.Drawing.SystemColors.GrayText;
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
-            this.btn_Cerrar.Location = new System.Drawing.Point(749, 11);
+            this.btn_Cerrar.Location = new System.Drawing.Point(999, 14);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(21, 22);
+            this.btn_Cerrar.Size = new System.Drawing.Size(28, 27);
             this.btn_Cerrar.TabIndex = 11;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -204,18 +214,19 @@
             // 
             this.lbl_Error.AutoSize = true;
             this.lbl_Error.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_Error.Location = new System.Drawing.Point(291, 167);
+            this.lbl_Error.Location = new System.Drawing.Point(388, 206);
+            this.lbl_Error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(87, 13);
+            this.lbl_Error.Size = new System.Drawing.Size(110, 16);
             this.lbl_Error.TabIndex = 12;
             this.lbl_Error.Text = "Mensaje de Error";
             // 
             // frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.ClientSize = new System.Drawing.Size(1040, 406);
             this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.btn_Disminuir);
@@ -227,6 +238,7 @@
             this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -242,7 +254,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_Usuario;
         private System.Windows.Forms.TextBox txt_Contrasena;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Acceder;
@@ -252,6 +263,7 @@
         private FontAwesome.Sharp.IconButton btn_Disminuir;
         private FontAwesome.Sharp.IconButton btn_Cerrar;
         private System.Windows.Forms.Label lbl_Error;
+        public System.Windows.Forms.TextBox txt_Usuario;
     }
 }
 

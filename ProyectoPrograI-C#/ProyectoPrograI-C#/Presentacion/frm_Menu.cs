@@ -162,6 +162,11 @@ namespace ProyectoPrograI_C_.Presentacion
             AbrirFormulario<frm_PagoCitas>();
         }
 
+        private void pnl_Formularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //METODO PARA ARRASTRAR EL FORMULARIO
         [DllImport("user32.dll")]    
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);

@@ -60,8 +60,9 @@
             this.pnl_Principal.Controls.Add(this.pnl_Titulo);
             this.pnl_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Principal.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Principal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Principal.Name = "pnl_Principal";
-            this.pnl_Principal.Size = new System.Drawing.Size(1386, 740);
+            this.pnl_Principal.Size = new System.Drawing.Size(1920, 911);
             this.pnl_Principal.TabIndex = 2;
             // 
             // pnl_Formularios
@@ -70,10 +71,12 @@
             this.pnl_Formularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnl_Formularios.Controls.Add(this.iconButton1);
             this.pnl_Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Formularios.Location = new System.Drawing.Point(200, 40);
+            this.pnl_Formularios.Location = new System.Drawing.Point(267, 49);
+            this.pnl_Formularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Formularios.Name = "pnl_Formularios";
-            this.pnl_Formularios.Size = new System.Drawing.Size(1186, 700);
+            this.pnl_Formularios.Size = new System.Drawing.Size(1653, 862);
             this.pnl_Formularios.TabIndex = 2;
+            this.pnl_Formularios.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Formularios_Paint);
             // 
             // iconButton1
             // 
@@ -86,9 +89,10 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 300;
-            this.iconButton1.Location = new System.Drawing.Point(379, 152);
+            this.iconButton1.Location = new System.Drawing.Point(505, 187);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(502, 329);
+            this.iconButton1.Size = new System.Drawing.Size(669, 405);
             this.iconButton1.TabIndex = 10;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
@@ -107,9 +111,10 @@
             this.pnl_Menu.Controls.Add(this.btn_Usuarios);
             this.pnl_Menu.Controls.Add(this.btn_Empleados);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_Menu.Location = new System.Drawing.Point(0, 40);
+            this.pnl_Menu.Location = new System.Drawing.Point(0, 49);
+            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(200, 700);
+            this.pnl_Menu.Size = new System.Drawing.Size(267, 862);
             this.pnl_Menu.TabIndex = 1;
             // 
             // btn_PagoCitas
@@ -122,9 +127,10 @@
             this.btn_PagoCitas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             this.btn_PagoCitas.IconColor = System.Drawing.Color.Black;
             this.btn_PagoCitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_PagoCitas.Location = new System.Drawing.Point(25, 538);
+            this.btn_PagoCitas.Location = new System.Drawing.Point(33, 662);
+            this.btn_PagoCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_PagoCitas.Name = "btn_PagoCitas";
-            this.btn_PagoCitas.Size = new System.Drawing.Size(141, 54);
+            this.btn_PagoCitas.Size = new System.Drawing.Size(188, 66);
             this.btn_PagoCitas.TabIndex = 9;
             this.btn_PagoCitas.Text = "Pago de Citas";
             this.btn_PagoCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -141,9 +147,10 @@
             this.btn_Tratamientos.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
             this.btn_Tratamientos.IconColor = System.Drawing.Color.Black;
             this.btn_Tratamientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Tratamientos.Location = new System.Drawing.Point(25, 478);
+            this.btn_Tratamientos.Location = new System.Drawing.Point(33, 588);
+            this.btn_Tratamientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Tratamientos.Name = "btn_Tratamientos";
-            this.btn_Tratamientos.Size = new System.Drawing.Size(155, 54);
+            this.btn_Tratamientos.Size = new System.Drawing.Size(207, 66);
             this.btn_Tratamientos.TabIndex = 8;
             this.btn_Tratamientos.Text = "Tratamientos";
             this.btn_Tratamientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -160,9 +167,10 @@
             this.btn_Medicamentos.IconChar = FontAwesome.Sharp.IconChar.Pills;
             this.btn_Medicamentos.IconColor = System.Drawing.Color.Black;
             this.btn_Medicamentos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Medicamentos.Location = new System.Drawing.Point(25, 418);
+            this.btn_Medicamentos.Location = new System.Drawing.Point(33, 514);
+            this.btn_Medicamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Medicamentos.Name = "btn_Medicamentos";
-            this.btn_Medicamentos.Size = new System.Drawing.Size(155, 54);
+            this.btn_Medicamentos.Size = new System.Drawing.Size(207, 66);
             this.btn_Medicamentos.TabIndex = 7;
             this.btn_Medicamentos.Text = "Medicamentos";
             this.btn_Medicamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -179,9 +187,10 @@
             this.btn_Citas.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
             this.btn_Citas.IconColor = System.Drawing.Color.Black;
             this.btn_Citas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Citas.Location = new System.Drawing.Point(25, 358);
+            this.btn_Citas.Location = new System.Drawing.Point(33, 441);
+            this.btn_Citas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Citas.Name = "btn_Citas";
-            this.btn_Citas.Size = new System.Drawing.Size(141, 54);
+            this.btn_Citas.Size = new System.Drawing.Size(188, 66);
             this.btn_Citas.TabIndex = 6;
             this.btn_Citas.Text = "Citas";
             this.btn_Citas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,9 +207,10 @@
             this.btn_Pacientes.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
             this.btn_Pacientes.IconColor = System.Drawing.Color.Black;
             this.btn_Pacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Pacientes.Location = new System.Drawing.Point(25, 298);
+            this.btn_Pacientes.Location = new System.Drawing.Point(33, 367);
+            this.btn_Pacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Pacientes.Name = "btn_Pacientes";
-            this.btn_Pacientes.Size = new System.Drawing.Size(141, 54);
+            this.btn_Pacientes.Size = new System.Drawing.Size(188, 66);
             this.btn_Pacientes.TabIndex = 5;
             this.btn_Pacientes.Text = "Pacientes";
             this.btn_Pacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -217,9 +227,10 @@
             this.btn_GestionHabitaciones.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             this.btn_GestionHabitaciones.IconColor = System.Drawing.Color.Black;
             this.btn_GestionHabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_GestionHabitaciones.Location = new System.Drawing.Point(25, 238);
+            this.btn_GestionHabitaciones.Location = new System.Drawing.Point(33, 293);
+            this.btn_GestionHabitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_GestionHabitaciones.Name = "btn_GestionHabitaciones";
-            this.btn_GestionHabitaciones.Size = new System.Drawing.Size(141, 54);
+            this.btn_GestionHabitaciones.Size = new System.Drawing.Size(188, 66);
             this.btn_GestionHabitaciones.TabIndex = 4;
             this.btn_GestionHabitaciones.Text = "Gestion de Habitaciones";
             this.btn_GestionHabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -236,9 +247,10 @@
             this.btn_Habitaciones.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
             this.btn_Habitaciones.IconColor = System.Drawing.Color.Black;
             this.btn_Habitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Habitaciones.Location = new System.Drawing.Point(25, 178);
+            this.btn_Habitaciones.Location = new System.Drawing.Point(33, 219);
+            this.btn_Habitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Habitaciones.Name = "btn_Habitaciones";
-            this.btn_Habitaciones.Size = new System.Drawing.Size(155, 54);
+            this.btn_Habitaciones.Size = new System.Drawing.Size(207, 66);
             this.btn_Habitaciones.TabIndex = 3;
             this.btn_Habitaciones.Text = "Habitaciones";
             this.btn_Habitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -255,9 +267,10 @@
             this.btn_PagoPlantillas.IconChar = FontAwesome.Sharp.IconChar.Handshake;
             this.btn_PagoPlantillas.IconColor = System.Drawing.Color.Black;
             this.btn_PagoPlantillas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_PagoPlantillas.Location = new System.Drawing.Point(25, 118);
+            this.btn_PagoPlantillas.Location = new System.Drawing.Point(33, 145);
+            this.btn_PagoPlantillas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_PagoPlantillas.Name = "btn_PagoPlantillas";
-            this.btn_PagoPlantillas.Size = new System.Drawing.Size(141, 54);
+            this.btn_PagoPlantillas.Size = new System.Drawing.Size(188, 66);
             this.btn_PagoPlantillas.TabIndex = 2;
             this.btn_PagoPlantillas.Text = "Pago de Planillas";
             this.btn_PagoPlantillas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,9 +287,10 @@
             this.btn_Usuarios.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btn_Usuarios.IconColor = System.Drawing.Color.Black;
             this.btn_Usuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Usuarios.Location = new System.Drawing.Point(25, 58);
+            this.btn_Usuarios.Location = new System.Drawing.Point(33, 71);
+            this.btn_Usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Usuarios.Name = "btn_Usuarios";
-            this.btn_Usuarios.Size = new System.Drawing.Size(141, 54);
+            this.btn_Usuarios.Size = new System.Drawing.Size(188, 66);
             this.btn_Usuarios.TabIndex = 1;
             this.btn_Usuarios.Text = "Usuarios";
             this.btn_Usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -293,9 +307,10 @@
             this.btn_Empleados.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btn_Empleados.IconColor = System.Drawing.Color.Black;
             this.btn_Empleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Empleados.Location = new System.Drawing.Point(25, 4);
+            this.btn_Empleados.Location = new System.Drawing.Point(33, 5);
+            this.btn_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Empleados.Name = "btn_Empleados";
-            this.btn_Empleados.Size = new System.Drawing.Size(141, 48);
+            this.btn_Empleados.Size = new System.Drawing.Size(188, 59);
             this.btn_Empleados.TabIndex = 0;
             this.btn_Empleados.Text = "Empleados";
             this.btn_Empleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -311,8 +326,9 @@
             this.pnl_Titulo.Controls.Add(this.btn_Minimizar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(1386, 40);
+            this.pnl_Titulo.Size = new System.Drawing.Size(1920, 49);
             this.pnl_Titulo.TabIndex = 0;
             this.pnl_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Titulo_MouseMove);
             // 
@@ -327,9 +343,10 @@
             this.btn_Restaurar.IconColor = System.Drawing.Color.Black;
             this.btn_Restaurar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Restaurar.IconSize = 25;
-            this.btn_Restaurar.Location = new System.Drawing.Point(1326, 9);
+            this.btn_Restaurar.Location = new System.Drawing.Point(1840, 11);
+            this.btn_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Restaurar.Name = "btn_Restaurar";
-            this.btn_Restaurar.Size = new System.Drawing.Size(21, 25);
+            this.btn_Restaurar.Size = new System.Drawing.Size(28, 31);
             this.btn_Restaurar.TabIndex = 24;
             this.btn_Restaurar.UseVisualStyleBackColor = false;
             this.btn_Restaurar.Visible = false;
@@ -346,9 +363,10 @@
             this.btn_Maximizar.IconColor = System.Drawing.Color.Black;
             this.btn_Maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Maximizar.IconSize = 25;
-            this.btn_Maximizar.Location = new System.Drawing.Point(1326, 9);
+            this.btn_Maximizar.Location = new System.Drawing.Point(1840, 11);
+            this.btn_Maximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(21, 25);
+            this.btn_Maximizar.Size = new System.Drawing.Size(28, 31);
             this.btn_Maximizar.TabIndex = 23;
             this.btn_Maximizar.UseVisualStyleBackColor = false;
             this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
@@ -365,9 +383,10 @@
             this.btn_Cerrar.IconColor = System.Drawing.Color.Black;
             this.btn_Cerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_Cerrar.IconSize = 25;
-            this.btn_Cerrar.Location = new System.Drawing.Point(1353, 9);
+            this.btn_Cerrar.Location = new System.Drawing.Point(1876, 11);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(21, 25);
+            this.btn_Cerrar.Size = new System.Drawing.Size(28, 31);
             this.btn_Cerrar.TabIndex = 22;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click_1);
@@ -383,23 +402,25 @@
             this.btn_Minimizar.IconColor = System.Drawing.Color.Black;
             this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Minimizar.IconSize = 25;
-            this.btn_Minimizar.Location = new System.Drawing.Point(1299, 9);
+            this.btn_Minimizar.Location = new System.Drawing.Point(1804, 11);
+            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(21, 25);
+            this.btn_Minimizar.Size = new System.Drawing.Size(28, 31);
             this.btn_Minimizar.TabIndex = 21;
             this.btn_Minimizar.UseVisualStyleBackColor = false;
             this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
             // 
             // frm_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1386, 740);
+            this.ClientSize = new System.Drawing.Size(1920, 911);
             this.Controls.Add(this.pnl_Principal);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(650, 650);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(867, 800);
             this.Name = "frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
