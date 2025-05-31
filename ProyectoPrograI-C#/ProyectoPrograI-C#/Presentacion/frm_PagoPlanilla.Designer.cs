@@ -49,8 +49,6 @@
             this.lbl_Bono = new System.Windows.Forms.Label();
             this.lbl_MontoTotal = new System.Windows.Forms.Label();
             this.cbox_Estado = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
             this.txt_HorasExtras = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -334,25 +332,6 @@
             this.cbox_Estado.Size = new System.Drawing.Size(135, 21);
             this.cbox_Estado.TabIndex = 68;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(606, 150);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 17);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "Usuario Auditoria:";
-            // 
-            // txt_UsuarioAuditoria
-            // 
-            this.txt_UsuarioAuditoria.Location = new System.Drawing.Point(732, 147);
-            this.txt_UsuarioAuditoria.Name = "txt_UsuarioAuditoria";
-            this.txt_UsuarioAuditoria.Size = new System.Drawing.Size(154, 20);
-            this.txt_UsuarioAuditoria.TabIndex = 70;
-            // 
             // txt_HorasExtras
             // 
             this.txt_HorasExtras.Location = new System.Drawing.Point(393, 185);
@@ -381,8 +360,6 @@
             this.ClientSize = new System.Drawing.Size(930, 569);
             this.Controls.Add(this.txt_HorasExtras);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_UsuarioAuditoria);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbox_Estado);
             this.Controls.Add(this.lbl_MontoTotal);
             this.Controls.Add(this.lbl_Bono);
@@ -439,8 +416,6 @@
         private System.Windows.Forms.Label lbl_Bono;
         private System.Windows.Forms.Label lbl_MontoTotal;
         private System.Windows.Forms.ComboBox cbox_Estado;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
         private System.Windows.Forms.TextBox txt_HorasExtras;
         private System.Windows.Forms.Label label9;
     }

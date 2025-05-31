@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
@@ -92,7 +93,6 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Especialidad.Clear();
             lbl_Sueldo.Text = 0.ToString("c2");
             cbox_Estado.SelectedIndex = -1;
-            txt_UsuarioAuditoria.Clear();
             dtp_FechaAlta.Value = DateTime.Now;
         } //limpia los espacios donde se ingresan los datos
 
@@ -113,7 +113,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaAlta = dtp_FechaAlta.Value.Date;
                     string Estado = cbox_Estado.Text;
                     DateTime FechaAuditoria = DateTime.Today.Date;
-                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
 
                     empleados.mtd_AgregarEmpleado(Nombre, TipoTrabajo, Sueldo, Especialidad, FechaAlta, Estado, FechaAuditoria, UsuarioAuditoria);
                     MessageBox.Show("Empleado agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

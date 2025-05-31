@@ -1,11 +1,13 @@
 ﻿using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -80,7 +82,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     int CodigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
                     DateTime FechaIngreso = dt_FechaIngreso.Value;
                     DateTime FechaEgreso = dt_FechaEgreso.Value;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = logicaCitas.Mtd_FechaHoy();
 
 
@@ -98,6 +100,7 @@ namespace ProyectoPrograI_C_.Presentacion
 
         public void Mtd_LimpiarCampos()
         {
+            txt_CodigoCita.Text = "";
             cbox_CodigoEmpleado.Text = "";
             cbox_CodigoPacientes.Text = "";
             dt_FechaIngreso.Text = "";
@@ -154,7 +157,7 @@ namespace ProyectoPrograI_C_.Presentacion
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Aqui esta el error "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -180,5 +183,21 @@ namespace ProyectoPrograI_C_.Presentacion
                 Mtd_LimpiarCampos();
             }
         }
+
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        private void frm_Citas_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
     }
 }

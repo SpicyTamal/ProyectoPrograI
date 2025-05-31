@@ -1,10 +1,12 @@
 ﻿using ProyectoPrograI_C_.Datos;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,7 +72,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaNacimiento = dt_FechaNacimiento.Value;
                     string TipoPaciente = cbox_TipoPaciente.Text;
                     string Estado = cbox_Estado.Text;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = DateTime.Now;
 
                     conexion.Mtd_AgregarPacientes(CodigoHabitacion, Nombre, Nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria);
@@ -162,6 +164,20 @@ namespace ProyectoPrograI_C_.Presentacion
             }
         }
 
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        private void frm_Pacientes_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
     }
 }
