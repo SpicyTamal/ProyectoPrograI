@@ -264,16 +264,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 569);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 139;
-            this.iconPictureBox1.Location = new System.Drawing.Point(53, 143);
+            this.iconPictureBox1.Location = new System.Drawing.Point(53, 203);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(139, 139);
             this.iconPictureBox1.TabIndex = 0;
@@ -409,6 +410,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Pacientes";
             this.Load += new System.EventHandler(this.frm_Pacientes_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Pacientes_MouseDown_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
