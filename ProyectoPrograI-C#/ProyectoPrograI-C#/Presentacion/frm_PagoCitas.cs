@@ -1,5 +1,6 @@
 ﻿using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,7 +83,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     double TotalPago = logicaPagoCitas.Mtd_TotalPago(MontoCita, Impuestos, Descuento);
                     DateTime FechaPago = dt_FechaPago.Value;
                     string TipoPago = cbox_TipoPago.Text;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = DateTime.Now;
 
                     conexion.Mtd_AgregarPagoCitas(CodigoCita, MontoCita, Impuestos, Descuento, TotalPago, FechaPago, TipoPago, UsuarioAuditoria, FechaAuditoria);

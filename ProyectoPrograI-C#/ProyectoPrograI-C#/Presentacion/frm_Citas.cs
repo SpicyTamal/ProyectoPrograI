@@ -1,5 +1,6 @@
 ﻿using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +82,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     int CodigoEmpleado = (int)((dynamic)cbox_CodigoEmpleado.SelectedItem).Value;
                     DateTime FechaIngreso = dt_FechaIngreso.Value;
                     DateTime FechaEgreso = dt_FechaEgreso.Value;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = logicaCitas.Mtd_FechaHoy();
 
 

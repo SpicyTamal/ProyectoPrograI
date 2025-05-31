@@ -1,5 +1,6 @@
 ﻿using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,7 +79,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     string TipoHabitacion = cbox_TipoHabitacion.Text;
                     double Costo = double.Parse(lbl_Costo.Text);
                     string Estado  = cbox_Estado.Text;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = CL_Habitaciones.MtdFechaHoy();
 
                     CD_Habitaciones.Mtd_AgregarHabitaciones(NuumeroHabitacion, Ubicacion, TipoHabitacion, Costo, Estado, UsuarioAuditoria, FechaAuditoria);

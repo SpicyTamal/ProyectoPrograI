@@ -1,4 +1,5 @@
 ﻿using ProyectoPrograI_C_.Datos;
+using ProyectoPrograI_C_.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,7 +72,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     DateTime FechaNacimiento = dt_FechaNacimiento.Value;
                     string TipoPaciente = cbox_TipoPaciente.Text;
                     string Estado = cbox_Estado.Text;
-                    string UsuarioAuditoria = "Dylan";
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = DateTime.Now;
 
                     conexion.Mtd_AgregarPacientes(CodigoHabitacion, Nombre, Nit, FechaNacimiento, TipoPaciente, Estado, UsuarioAuditoria, FechaAuditoria);
