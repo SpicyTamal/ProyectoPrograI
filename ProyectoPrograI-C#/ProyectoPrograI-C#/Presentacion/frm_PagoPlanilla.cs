@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPrograI_C_.Datos;
 using ProyectoPrograI_C_.Logica;
+using ProyectoPrograI_C_.Seguridad;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
@@ -69,7 +70,7 @@ namespace ProyectoPrograI_C_.Presentacion
                         double MontoHorasExtras = horas * 20.0;
                         double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
                         string Estado = cbox_Estado.Text;
-                        string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                        string UsuarioAuditoria = Cache_Usuario.Usuario;
                         DateTime FechaAuditoria = DateTime.Today.Date;
                         int HorasExtras = horas;
                         conexion.mtd_AgregarPago(codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);

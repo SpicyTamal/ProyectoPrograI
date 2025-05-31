@@ -49,8 +49,6 @@
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -348,35 +346,12 @@
             this.btn_Editar.UseVisualStyleBackColor = true;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(581, 169);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 17);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Usuario Auditoria:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txt_UsuarioAuditoria
-            // 
-            this.txt_UsuarioAuditoria.Location = new System.Drawing.Point(700, 169);
-            this.txt_UsuarioAuditoria.Name = "txt_UsuarioAuditoria";
-            this.txt_UsuarioAuditoria.Size = new System.Drawing.Size(158, 20);
-            this.txt_UsuarioAuditoria.TabIndex = 42;
-            this.txt_UsuarioAuditoria.TextChanged += new System.EventHandler(this.txt_UsuarioAuditoria_TextChanged);
-            // 
             // frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
-            this.Controls.Add(this.txt_UsuarioAuditoria);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Cancelar);
@@ -434,7 +409,5 @@
         private FontAwesome.Sharp.IconButton btn_Eliminar;
         private FontAwesome.Sharp.IconButton btn_Agregar;
         private FontAwesome.Sharp.IconButton btn_Editar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
     }
 }

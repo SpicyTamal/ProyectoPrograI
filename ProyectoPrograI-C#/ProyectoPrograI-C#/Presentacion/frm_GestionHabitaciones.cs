@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPrograI_C_.Datos;
+using ProyectoPrograI_C_.Seguridad;
 
 namespace ProyectoPrograI_C_.Presentacion
 {
@@ -86,7 +87,7 @@ namespace ProyectoPrograI_C_.Presentacion
                     string TipoGestion = cbox_TipoGestion.Text;
                     string Estado = cbox_Estado.Text;
                     DateTime FechaGestion = dtp_FechaGestion.Value.Date;
-                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+                    string UsuarioAuditoria = Cache_Usuario.Usuario;
                     DateTime FechaAuditoria = DateTime.Today.Date;
                     conexion.mtd_AgregarGestion(CodigoEmpleado, CodigoHabitacion, TipoGestion, Estado, FechaGestion, UsuarioAuditoria, FechaAuditoria);
                     MessageBox.Show("Registro guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
