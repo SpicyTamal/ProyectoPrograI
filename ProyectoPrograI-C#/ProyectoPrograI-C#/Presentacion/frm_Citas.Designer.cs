@@ -45,9 +45,6 @@
             this.dgv_Citas = new System.Windows.Forms.DataGridView();
             this.btn_Salir = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
-
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-
             this.label8 = new System.Windows.Forms.Label();
             this.txt_CodigoCita = new System.Windows.Forms.TextBox();
             this.cbox_CodigoPacientes = new System.Windows.Forms.ComboBox();
@@ -56,10 +53,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_CostoHabitacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,22 +67,21 @@
             this.panel1.Size = new System.Drawing.Size(250, 569);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 139;
-            this.iconPictureBox1.Location = new System.Drawing.Point(22, 105);
+            this.iconPictureBox1.Location = new System.Drawing.Point(56, 190);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(139, 139);
             this.iconPictureBox1.TabIndex = 1;
             this.iconPictureBox1.TabStop = false;
-
             // 
             // btn_Cancelar
             // 
@@ -295,22 +289,6 @@
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Orange;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 139;
-            this.iconPictureBox1.Location = new System.Drawing.Point(22, 105);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(139, 139);
-            this.iconPictureBox1.TabIndex = 1;
-            this.iconPictureBox1.TabStop = false;
-            // 
-
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -431,11 +409,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Citas";
             this.Load += new System.EventHandler(this.frm_Citas_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Citas_MouseDown_1);
             this.panel1.ResumeLayout(false);
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Citas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

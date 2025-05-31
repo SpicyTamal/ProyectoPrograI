@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoPrograI_C_.Seguridad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -149,6 +150,17 @@ namespace ProyectoPrograI_C_.Presentacion
 
         [DllImport("user32.dll")]    
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl_Titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         
@@ -171,6 +183,8 @@ namespace ProyectoPrograI_C_.Presentacion
             }
         } //abre el formulario dentro del panel de formularios del menu y lo pone hasta el frente si ya esta abierto
 
-        private void frm_Menu_Load(object sender, EventArgs e) { }
+        private void frm_Menu_Load(object sender, EventArgs e) {
+            lbl_UsuarioAuditoria.Text = Cache_Usuario.Usuario;
+        }
     }
 }
