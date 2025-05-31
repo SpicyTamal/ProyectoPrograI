@@ -11,7 +11,7 @@ namespace ProyectoPrograI_C_.Datos
 {
     internal class CD_Empleados
     {
-        CD_Conexion1 cd_conexion = new CD_Conexion1();
+        CD_Conexion1 cd_conexion = new CD_Conexion1(); //instancia de la clase de conexion a la base de datos
 
         public DataTable mtd_ConsultarEmpleados() 
         {
@@ -21,7 +21,8 @@ namespace ProyectoPrograI_C_.Datos
             Adapter.Fill(Dt);
             cd_conexion.MtdCerrarConexion();
             return Dt;
-        }
+        } //devuelve los datos de empleados para el datagridview_Empleados
+
         public void mtd_AgregarEmpleado(string Nombre, string TipoTrabajo, double Sueldo,string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
             string QueryAgregarEmpleado = "Insert into tbl_Empleados(Nombres,TipoTrabajo, Especialidad, Sueldo, FechaAlta, Estado, FechaAuditoria, UsuarioAuditoria) values (@Nombres, @TipoTrabajo, @Especialidad, @Sueldo, @FechaAlta, @Estado, @FechaAuditoria, @UsuarioAuditoria)";
@@ -36,8 +37,8 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
-        }
-        
+        }  //agrega un nuevo empleado a la base de datos
+
         public void mtd_ActualizarEmpleado(string CodigoEmpleado, string Nombre, string TipoTrabajo, double Sueldo, string Especialidad, DateTime FechaAlta, string Estado, DateTime FechaAuditoria, string UsuarioAuditoria)
         {
             string QueryActualizarEmpleados = "Update tbl_Empleados set Nombres=@Nombres, TipoTrabajo=@TipoTrabajo, Especialidad=@Especialidad, Sueldo=@Sueldo, Estado=@Estado, FechaAuditoria=@FechaAuditoria, UsuarioAuditoria=@UsuarioAuditoria where CodigoEmpleado=@CodigoEmpleado";
@@ -54,7 +55,7 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
-        }
+        } //actualiza los datos de un empleado ya existente en la base de datos
 
         public void mtd_EliminarEmpleado(string CodigoEmpleado)
         {
@@ -63,6 +64,6 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
-        }
+        } //elimina a un empleado de la base de datos
     }
 }

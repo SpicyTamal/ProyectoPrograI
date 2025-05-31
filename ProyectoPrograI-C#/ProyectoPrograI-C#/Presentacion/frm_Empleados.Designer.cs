@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Cerrar = new FontAwesome.Sharp.IconButton();
-            this.btn_Disminuir = new FontAwesome.Sharp.IconButton();
             this.dgv_Empleados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,8 +51,6 @@
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_HorasExtras = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -104,25 +101,6 @@
             this.btn_Cerrar.TabIndex = 22;
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
-            // 
-            // btn_Disminuir
-            // 
-            this.btn_Disminuir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Disminuir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Disminuir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Disminuir.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Disminuir.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btn_Disminuir.IconColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Disminuir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Disminuir.IconSize = 25;
-            this.btn_Disminuir.Location = new System.Drawing.Point(868, 11);
-            this.btn_Disminuir.Name = "btn_Disminuir";
-            this.btn_Disminuir.Size = new System.Drawing.Size(21, 25);
-            this.btn_Disminuir.TabIndex = 21;
-            this.btn_Disminuir.UseVisualStyleBackColor = false;
-            this.btn_Disminuir.Click += new System.EventHandler(this.btn_Disminuir_Click);
             // 
             // dgv_Empleados
             // 
@@ -197,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(328, 223);
+            this.label5.Location = new System.Drawing.Point(328, 194);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
@@ -210,7 +188,7 @@
             this.lbl_Sueldo.AutoSize = true;
             this.lbl_Sueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Sueldo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Sueldo.Location = new System.Drawing.Point(397, 223);
+            this.lbl_Sueldo.Location = new System.Drawing.Point(397, 194);
             this.lbl_Sueldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Sueldo.Name = "lbl_Sueldo";
             this.lbl_Sueldo.Size = new System.Drawing.Size(66, 17);
@@ -307,7 +285,7 @@
             this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.IconSize = 25;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Location = new System.Drawing.Point(844, 508);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
@@ -324,7 +302,7 @@
             this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
             this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Eliminar.IconSize = 35;
+            this.btn_Eliminar.IconSize = 25;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Eliminar.Location = new System.Drawing.Point(763, 508);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -341,7 +319,7 @@
             this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btn_Agregar.IconColor = System.Drawing.Color.Black;
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.IconSize = 25;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(753, 234);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
@@ -358,7 +336,7 @@
             this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btn_Editar.IconColor = System.Drawing.Color.Black;
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.IconSize = 25;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Location = new System.Drawing.Point(844, 234);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
@@ -391,33 +369,12 @@
             this.txt_UsuarioAuditoria.TabIndex = 42;
             this.txt_UsuarioAuditoria.TextChanged += new System.EventHandler(this.txt_UsuarioAuditoria_TextChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(275, 194);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "Horas Extras:";
-            // 
-            // txt_HorasExtras
-            // 
-            this.txt_HorasExtras.Location = new System.Drawing.Point(398, 190);
-            this.txt_HorasExtras.Name = "txt_HorasExtras";
-            this.txt_HorasExtras.Size = new System.Drawing.Size(142, 20);
-            this.txt_HorasExtras.TabIndex = 44;
-            // 
             // frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
-            this.Controls.Add(this.txt_HorasExtras);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_UsuarioAuditoria);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Agregar);
@@ -439,7 +396,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_Empleados);
             this.Controls.Add(this.btn_Cerrar);
-            this.Controls.Add(this.btn_Disminuir);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -460,7 +416,6 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton btn_Cerrar;
-        private FontAwesome.Sharp.IconButton btn_Disminuir;
         private System.Windows.Forms.DataGridView dgv_Empleados;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -481,7 +436,5 @@
         private FontAwesome.Sharp.IconButton btn_Editar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_HorasExtras;
     }
 }
