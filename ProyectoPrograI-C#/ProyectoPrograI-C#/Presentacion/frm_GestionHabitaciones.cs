@@ -69,7 +69,6 @@ namespace ProyectoPrograI_C_.Presentacion
             cbox_TipoGestion.Text = "";
             cbox_Estado.Text = "";
             dtp_FechaGestion.Value = DateTime.Today;
-            txt_UsuarioAuditoria.Clear();
         } //limpia los espacios de texto y combobox   
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -145,7 +144,6 @@ namespace ProyectoPrograI_C_.Presentacion
                 cbox_CodigoHabitacion.SelectedItem = item2;
                 cbox_TipoGestion.Text = FilaSeleccionada.Cells[3].Value.ToString();
                 cbox_Estado.Text = FilaSeleccionada.Cells[5].Value.ToString();
-                txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[6].Value.ToString();
                 dtp_FechaGestion.Text = dgv_GestionHabitaciones.SelectedCells[4].Value.ToString();
             }
         } //llena los cambos de texto y combobox con los datos de la fila seleccionada del datagridview
@@ -171,10 +169,9 @@ namespace ProyectoPrograI_C_.Presentacion
                     string TipoGestion = cbox_TipoGestion.Text;
                     string Estado = cbox_Estado.Text;
                     DateTime FechaGestion = dtp_FechaGestion.Value.Date;
-                    string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
                     DateTime FechaAuditoria = DateTime.Today.Date;
 
-                    conexion.mtd_ActualizarGestion(CodigoGestion, CodigoEmpleado, CodigoHabitacion, TipoGestion, Estado, FechaGestion, UsuarioAuditoria, FechaAuditoria);
+                    conexion.mtd_ActualizarGestion(CodigoGestion, CodigoEmpleado, CodigoHabitacion, TipoGestion, Estado, FechaGestion, FechaAuditoria);
                     MessageBox.Show("Registro actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtd_ConsultarGestiones();
                     mtd_VaciarEspacios();

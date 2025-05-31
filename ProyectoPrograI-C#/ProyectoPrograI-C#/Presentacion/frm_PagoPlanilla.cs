@@ -47,7 +47,7 @@ namespace ProyectoPrograI_C_.Presentacion
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             int horas = 0;
-            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text))
             {
                 MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -105,7 +105,6 @@ namespace ProyectoPrograI_C_.Presentacion
                     lbl_Bono.Text = Convert.ToDecimal(FilaSeleccionada.Cells[4].Value).ToString("C2");
                     lbl_MontoTotal.Text = Convert.ToDecimal(FilaSeleccionada.Cells[6].Value).ToString("C2");
                     txt_HorasExtras.Text = FilaSeleccionada.Cells[10].Value.ToString();
-                    txt_UsuarioAuditoria.Text = FilaSeleccionada.Cells[8].Value.ToString();
                     dtp_FechaPago.Value = Convert.ToDateTime(FilaSeleccionada.Cells[2].Value);
                     cbox_Estado.Text = FilaSeleccionada.Cells[7].Value.ToString();
                 }
@@ -143,7 +142,6 @@ namespace ProyectoPrograI_C_.Presentacion
             lbl_Bono.Text = "0.00";
             lbl_MontoTotal.Text = "0.00";
             cbox_Estado.SelectedIndex = -1;
-            txt_UsuarioAuditoria.Clear();
         } //vacia los espacios de los controles en pantalla
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -154,7 +152,7 @@ namespace ProyectoPrograI_C_.Presentacion
         private void btn_Editar_Click(object sender, EventArgs e) //pendiente de arreglar
         {
             int horas = 0;
-            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text) || string.IsNullOrEmpty(txt_UsuarioAuditoria.Text))
+            if (string.IsNullOrEmpty(cbox_CodigoEmpleado.Text) || string.IsNullOrEmpty(cbox_Estado.Text))
             {
                 MessageBox.Show("Por favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -180,10 +178,10 @@ namespace ProyectoPrograI_C_.Presentacion
                         double MontoHorasExtras = horas * 20.0;
                         double TotalMonto = conexion.mtd_ConsultarMontoTotal(codigoEmpleado, txt_HorasExtras.Text);
                         string Estado = cbox_Estado.Text;
-                        string UsuarioAuditoria = txt_UsuarioAuditoria.Text;
+
                         DateTime FechaAuditoria = DateTime.Today.Date;
                         int HorasExtras = horas;
-                        conexion.mtd_ActualizarPago(CodigoPago, codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, UsuarioAuditoria, FechaAuditoria, HorasExtras);
+                        conexion.mtd_ActualizarPago(CodigoPago, codigoEmpleado, FechaPago, Sueldo, Bono, MontoHorasExtras, TotalMonto, Estado, FechaAuditoria, HorasExtras);
                         MessageBox.Show("Empleado actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         mtd_ConsultarPagos();
                         mtd_VaciarEspacios();

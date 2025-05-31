@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_UsuarioAuditoria = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Cerrar = new FontAwesome.Sharp.IconButton();
             this.dgv_Empleados = new System.Windows.Forms.DataGridView();
@@ -49,21 +49,23 @@
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_Agregar = new FontAwesome.Sharp.IconButton();
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_UsuarioAuditoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // txt_UsuarioAuditoria
             // 
-            this.panel1.BackColor = System.Drawing.Color.Orange;
-            this.panel1.Controls.Add(this.iconPictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 569);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.txt_UsuarioAuditoria.BackColor = System.Drawing.Color.Orange;
+            this.txt_UsuarioAuditoria.Controls.Add(this.iconPictureBox1);
+            this.txt_UsuarioAuditoria.Location = new System.Drawing.Point(0, 0);
+            this.txt_UsuarioAuditoria.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_UsuarioAuditoria.Name = "txt_UsuarioAuditoria";
+            this.txt_UsuarioAuditoria.Size = new System.Drawing.Size(250, 569);
+            this.txt_UsuarioAuditoria.TabIndex = 0;
+            this.txt_UsuarioAuditoria.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             // 
             // iconPictureBox1
             // 
@@ -346,12 +348,34 @@
             this.btn_Editar.UseVisualStyleBackColor = true;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label6.Location = new System.Drawing.Point(646, 164);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 17);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Usuario Auditoria";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(767, 164);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(89, 20);
+            this.textBox1.TabIndex = 42;
+            // 
             // frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Cancelar);
@@ -371,14 +395,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_Empleados);
             this.Controls.Add(this.btn_Cerrar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txt_UsuarioAuditoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Empleados";
             this.Text = "frm_Empleados";
             this.Load += new System.EventHandler(this.frm_Empleados_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Empleados_MouseDown_1);
-            this.panel1.ResumeLayout(false);
+            this.txt_UsuarioAuditoria.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).EndInit();
             this.ResumeLayout(false);
@@ -388,7 +412,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel txt_UsuarioAuditoria;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton btn_Cerrar;
         private System.Windows.Forms.DataGridView dgv_Empleados;
@@ -409,5 +433,7 @@
         private FontAwesome.Sharp.IconButton btn_Eliminar;
         private FontAwesome.Sharp.IconButton btn_Agregar;
         private FontAwesome.Sharp.IconButton btn_Editar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

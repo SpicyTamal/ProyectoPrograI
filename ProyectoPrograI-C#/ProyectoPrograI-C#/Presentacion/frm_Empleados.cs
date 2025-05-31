@@ -93,7 +93,6 @@ namespace ProyectoPrograI_C_.Presentacion
             txt_Especialidad.Clear();
             lbl_Sueldo.Text = 0.ToString("c2");
             cbox_Estado.SelectedIndex = -1;
-            txt_UsuarioAuditoria.Clear();
             dtp_FechaAlta.Value = DateTime.Now;
         } //limpia los espacios donde se ingresan los datos
 

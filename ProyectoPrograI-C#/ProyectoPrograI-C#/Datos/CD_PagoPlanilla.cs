@@ -92,9 +92,9 @@ namespace ProyectoPrograI_C_.Datos
             conexion.MtdCerrarConexion();
         } //agrega un pago a la base de datos con los datos proporcionados por el usuario
 
-        public void mtd_ActualizarPago(string CodigoPago, int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, string UsuarioAuditoria, DateTime FechaAuditoria, int HorasExtras)
+        public void mtd_ActualizarPago(string CodigoPago, int CodigoEmpleado, DateTime FechaPago, double Sueldo, double Bono, double MontoHorasExtras, double TotalMonto, string Estado, DateTime FechaAuditoria, int HorasExtras)
         {
-            string QueryActualizarPago = "Update tbl_PagoEmpleados set CodigoEmpleado=@CodigoEmpleado, FechaPago=@FechaPago, Sueldo=@Sueldo, Bono=@Bono, MontoHorasExtra=@MontoHorasExtras, TotalMonto=@TotalMonto, Estado=@Estado, UsuarioAuditoria=@UsuarioAuditoria, FechaAuditora=@FechaAuditoria, HorasExtras=@HorasExtras where CodigoPago=@CodigoPago";
+            string QueryActualizarPago = "Update tbl_PagoEmpleados set CodigoEmpleado=@CodigoEmpleado, FechaPago=@FechaPago, Sueldo=@Sueldo, Bono=@Bono, MontoHorasExtra=@MontoHorasExtras, TotalMonto=@TotalMonto, Estado=@Estado, FechaAuditora=@FechaAuditoria, HorasExtras=@HorasExtras where CodigoPago=@CodigoPago";
             SqlCommand cmd = new SqlCommand(QueryActualizarPago, conexion.MtdAbrirConexion());
             cmd.Parameters.AddWithValue("@CodigoPago", CodigoPago);
             cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
@@ -104,7 +104,6 @@ namespace ProyectoPrograI_C_.Datos
             cmd.Parameters.AddWithValue("@MontoHorasExtras", MontoHorasExtras);
             cmd.Parameters.AddWithValue("@TotalMonto", TotalMonto);
             cmd.Parameters.AddWithValue("@Estado", Estado);
-            cmd.Parameters.AddWithValue("@UsuarioAuditoria", UsuarioAuditoria);
             cmd.Parameters.AddWithValue("@FechaAuditoria", FechaAuditoria);
             cmd.Parameters.AddWithValue("@HorasExtras", HorasExtras);
             cmd.ExecuteNonQuery();
