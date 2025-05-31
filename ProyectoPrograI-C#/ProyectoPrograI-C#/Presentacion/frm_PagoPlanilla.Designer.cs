@@ -45,11 +45,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_PagoPlanilla = new System.Windows.Forms.DataGridView();
             this.btn_Cerrar = new FontAwesome.Sharp.IconButton();
-            this.btn_Minimizar = new FontAwesome.Sharp.IconButton();
             this.cbox_CodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.lbl_Bono = new System.Windows.Forms.Label();
             this.lbl_MontoTotal = new System.Windows.Forms.Label();
             this.cbox_Estado = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_UsuarioAuditoria = new System.Windows.Forms.TextBox();
+            this.txt_HorasExtras = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PagoPlanilla)).BeginInit();
@@ -84,7 +87,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(605, 162);
+            this.label6.Location = new System.Drawing.Point(324, 234);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
@@ -96,7 +99,7 @@
             this.btn_Agregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btn_Agregar.IconColor = System.Drawing.Color.Black;
             this.btn_Agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Agregar.IconSize = 35;
+            this.btn_Agregar.IconSize = 25;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(752, 232);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
@@ -113,7 +116,7 @@
             this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btn_Editar.IconColor = System.Drawing.Color.Black;
             this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Editar.IconSize = 35;
+            this.btn_Editar.IconSize = 25;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Location = new System.Drawing.Point(843, 232);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(2);
@@ -123,13 +126,14 @@
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Cancelar.IconColor = System.Drawing.Color.Black;
             this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Cancelar.IconSize = 35;
+            this.btn_Cancelar.IconSize = 25;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Location = new System.Drawing.Point(843, 506);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
@@ -139,13 +143,14 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Eliminar
             // 
             this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btn_Eliminar.IconColor = System.Drawing.Color.Black;
             this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Eliminar.IconSize = 35;
+            this.btn_Eliminar.IconSize = 25;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Eliminar.Location = new System.Drawing.Point(762, 506);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -155,6 +160,7 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // dtp_FechaPago
             // 
@@ -284,25 +290,6 @@
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
-            // btn_Minimizar
-            // 
-            this.btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Minimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Minimizar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btn_Minimizar.IconColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Minimizar.IconSize = 25;
-            this.btn_Minimizar.Location = new System.Drawing.Point(867, 9);
-            this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(21, 25);
-            this.btn_Minimizar.TabIndex = 43;
-            this.btn_Minimizar.UseVisualStyleBackColor = false;
-            this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
-            // 
             // cbox_CodigoEmpleado
             // 
             this.cbox_CodigoEmpleado.FormattingEnabled = true;
@@ -342,10 +329,49 @@
             "Proceso",
             "Pagado",
             "Rechazado"});
-            this.cbox_Estado.Location = new System.Drawing.Point(674, 160);
+            this.cbox_Estado.Location = new System.Drawing.Point(393, 232);
             this.cbox_Estado.Name = "cbox_Estado";
             this.cbox_Estado.Size = new System.Drawing.Size(135, 21);
             this.cbox_Estado.TabIndex = 68;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Location = new System.Drawing.Point(606, 150);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 17);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Usuario Auditoria:";
+            // 
+            // txt_UsuarioAuditoria
+            // 
+            this.txt_UsuarioAuditoria.Location = new System.Drawing.Point(732, 147);
+            this.txt_UsuarioAuditoria.Name = "txt_UsuarioAuditoria";
+            this.txt_UsuarioAuditoria.Size = new System.Drawing.Size(154, 20);
+            this.txt_UsuarioAuditoria.TabIndex = 70;
+            // 
+            // txt_HorasExtras
+            // 
+            this.txt_HorasExtras.Location = new System.Drawing.Point(393, 185);
+            this.txt_HorasExtras.Name = "txt_HorasExtras";
+            this.txt_HorasExtras.Size = new System.Drawing.Size(154, 20);
+            this.txt_HorasExtras.TabIndex = 72;
+            this.txt_HorasExtras.TextChanged += new System.EventHandler(this.txt_HorasExtras_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(290, 188);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 17);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Horas Extras:";
             // 
             // frm_PagoPlanilla
             // 
@@ -353,6 +379,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(930, 569);
+            this.Controls.Add(this.txt_HorasExtras);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txt_UsuarioAuditoria);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbox_Estado);
             this.Controls.Add(this.lbl_MontoTotal);
             this.Controls.Add(this.lbl_Bono);
@@ -372,7 +402,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_PagoPlanilla);
             this.Controls.Add(this.btn_Cerrar);
-            this.Controls.Add(this.btn_Minimizar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_PagoPlanilla";
@@ -406,10 +435,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_PagoPlanilla;
         private FontAwesome.Sharp.IconButton btn_Cerrar;
-        private FontAwesome.Sharp.IconButton btn_Minimizar;
         private System.Windows.Forms.ComboBox cbox_CodigoEmpleado;
         private System.Windows.Forms.Label lbl_Bono;
         private System.Windows.Forms.Label lbl_MontoTotal;
         private System.Windows.Forms.ComboBox cbox_Estado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_UsuarioAuditoria;
+        private System.Windows.Forms.TextBox txt_HorasExtras;
+        private System.Windows.Forms.Label label9;
     }
 }
